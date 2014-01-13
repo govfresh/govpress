@@ -1,0 +1,552 @@
+/*
+Theme Name: GovFresh WP
+Theme URL: http://wp.govfresh.com/
+Description: Theme by <a href="http://govfresh.com/">GovFresh</a>.
+Author: GovFresh
+Author URI: http://wp.govfresh.com/
+Tags: government
+
+	Designed and built by GovFresh and friends (and Twitter Bootstrap).
+
+*/
+
+/* Basic HTML */
+
+body {
+	color: #000 !important;
+	font-family: 'Open Sans', Helvetica, sans-serif !important;
+	-webkit-font-smoothing: antialiased;
+}
+a {
+	color: #0072BC;
+}
+a:hover, a:focus {
+	color: #0072BC;
+	filter: alpha(opacity=80);
+	opacity: 0.5;
+	zoom: 1;
+}
+h1, h2, h3, h4, h5, blockquote {
+	color: #000 !important;
+	font-family: 'Open Sans', Helvetica, sans-serif !important;
+	line-height: normal !important;
+}
+h1, h2, h3, h4, h5 {
+	margin-top: 0 !important;
+}
+h1, h2 {
+	letter-spacing: -.03em;
+}
+h1 {
+	border-bottom: 1px solid #f8f8f8;
+	font-size: 3em !important;
+	margin-bottom: .5em !important;
+	padding-bottom: .5em !important;
+}
+h1, h2 {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+h3 {
+	padding-bottom: .5em !important;
+}
+img {
+	height: auto;
+	max-width: 100%;
+}
+blockquote {
+	border-left: none !important;
+	padding: 10px 50px;
+}
+blockquote p {
+	color: #999 !important;
+	font-weight: normal !important;
+	line-height: normal !important;
+}
+
+/* Navbar */
+
+.navbar-default {
+	background: #0072BC !important;
+	border-bottom: none !important;
+	color: #fff !important;
+	margin-bottom: 0 !important;
+}
+.navbar-default a {
+	color: #fff !important;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	background-color: #f8f8f8 !important;
+	color: #333 !important;
+}
+.nav .navbar-nav, .nav ul.navbar-nav, .nav ul.nav {
+	float: none !important;
+	margin: 0 auto !important;
+}
+.dropdown-menu {
+	background-color: #f8f8f8 !important;
+}
+.dropdown-menu > li > a {
+	color: #333 !important;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+	background-color: #0072BC !important;
+	color: #fff !important;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: #fff !important;
+}
+
+/* Header */
+
+.header {
+	margin-bottom: 0 !important;
+	padding-bottom: 1em !important;
+	padding-top: 1em !important;
+	text-align: center;
+}
+.header img {
+	height: auto;
+	max-width: 100%;
+	width: auto;
+}
+
+/* Homepage */
+
+.jumbotron {
+	background-color: #0072BC !important;
+	color: #fff !important;
+	font-weight: normal !important;
+	line-height: normal !important;
+	margin-bottom: 0 !important;
+	padding-bottom: 2em !important;
+	padding-top: 2em !important;
+	text-align: center;
+}
+.jumbotron h2, .jumbotron h4 {
+	color: #fff !important;
+}
+.jumbotron h2 {
+	padding-bottom: .5em;
+}
+.jumbotron h4 {
+	letter-spacing: normal;
+	margin-bottom: 0 !important;
+	padding-bottom: .25em !important;
+}
+.jumbotron .widget p {
+	font-size: .8em !important;
+}
+.jumbotron .widget .searchform {
+	padding: 0;
+}
+.jumbotron .searchform .btn-default {
+	padding: 10px 16px;
+	font-size: 18px !important;
+	line-height: 1.33;
+ }
+ .jumbotron .navbar-form .form-group .form-control {
+	font-size: 18px !important;
+	height: 46px !important;
+}
+.home-links {
+	text-align: center;
+}
+.home-links-icon {
+	padding-bottom: 1em;
+}
+.home-box {
+	border-bottom: 5px solid #f8f8f8;
+	margin-bottom: 1em;
+	padding-bottom: 1.5em;
+	padding-top: 1.5em;
+}
+.home-box a, .home-box a:visited {
+	color: #888;
+}
+.home-box a:hover {
+	color: #0072BC;
+}
+.content {
+	background: #fff;
+	border-top: 1px solid #f8f8f8;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 5px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.home .content {
+	border-top: none;
+	margin-top: 1em;
+}
+
+/*Widgets*/
+
+.widget h3 {
+	background: #0072BC;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 5px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	color: #fff !important;
+	font-size: 1em;
+	letter-spacing: normal;
+	margin-bottom: 0;
+	padding: .5em .75em;	
+}
+.widget h3 a, .widget h3 a:visited {
+	color: #fff !important;
+}
+.widget .textwidget {
+	background: #f8f8f8;
+	padding: 1em 0 .5em 0;
+}
+.widget, .textwidget {
+	background: #f8f8f8;
+	margin: 0 0 1em 0;
+}
+.widget ul {
+	list-style: none;;
+	margin: 0;
+	padding: 0;
+}
+.widget li  {
+	list-style: none;
+}
+.widget ul li a:link, .widget ul li a:visited {
+	display: block;
+	padding: .5em .75em;
+}
+.widget ul li a:hover {
+	background: #fff;
+	color: #0072BC;
+}
+.textwidget {
+	padding: 1em 0 0 0;
+}
+.textwidget p {
+	padding: 0 .75em .75em .75em;
+}
+.rsswidget img {
+	display: none;
+}
+.widget .searchform {
+	padding: 1em;
+}
+.tagcloud {
+	padding: 1em .75em;
+}
+#calendar_wrap {
+	padding: .75em;
+	}
+#calendar_wrap th {
+	background: #fff;
+	font-size: 1.3em;
+	padding: .25em;
+}
+#calendar_wrap td {
+	background: #fff;
+}
+#wp-calendar {
+	width: 100%;
+}
+#wp-calendar tr td {
+	font-size: 1.3em;
+	padding: .25em;
+}
+#wp-calendar caption {
+	background: #fff;
+	font-size: .9em;
+	padding: .5em .25em;
+	text-align: left;
+}
+.widget_categories select.postform {
+	margin: .75em 1em;
+}
+.socialmedia-buttons {
+	padding: .75em;
+}
+
+/* Photo captions */
+
+.wp-caption p.wp-caption-text {
+	color: #fff;
+	font-size: .9em;
+	line-height: 1.3em;
+	padding: .75em;
+}
+.wp-caption {
+	background: #000;
+	color: #fff;
+	margin: 0 0 2em 0;
+	padding: 0;
+	text-align: left;
+	max-width: 100% !important;
+}
+.wp-caption a, .wp-caption a:visited {
+	color: #fff;
+}
+.wp-caption img {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 100% !important;
+}
+img.alignleft  {
+	float: left;
+	margin: 0 2em 2em 0;
+	width: auto;
+}
+img.alignright  {
+	float: right;
+	width: auto;
+	margin: 0 0 1em 2em;
+}
+img.aligncenter  {
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* page.php */
+
+.breadcrumb {
+	margin-top: 2em !important;
+	background-color: #f8f8f8 !important;
+}
+
+/* Author info .single.php + author.php */
+
+.icons-author {
+	display: inline-block;
+	margin-right: 1em;
+}
+.authorpage-bio {
+	font-size: 1.4em;
+}
+.author-bio, .authorpage-bio {
+	border-bottom: 1px solid #f8f8f8;
+	color: #666;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+}
+.author-bio {
+	border-top: 1px solid #f8f8f8;
+	margin-top: 2em;
+	padding-top: 1em;
+}
+.author-bio img, .authorpage-avatar img {
+	border-radius: 50%;
+	margin-right: 1em;
+}
+
+/* Byline, post display for archive.php, author.php, home-page.php, index.php, single.php */
+
+p.byline {
+	color: #666;
+	margin-bottom: 0;
+	padding-bottom: .5em;
+}
+.byline a, .byline a:visited {
+	color: #666;
+}
+.single .byline {
+	border-bottom: 1px solid #f8f8f8;
+	margin-bottom: 2em;
+	padding-bottom: 1em;
+}
+.post {
+	border-bottom: 1px solid #f8f8f8;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+}
+.post-meta ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 1em 0 1.5em 0;
+}
+.post-meta li {
+	color: #666;
+	display: inline-block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.post-meta li a, .post-meta li a:visited {
+	background: #efefef;
+	border-radius: 5px 5px 5px 5px;
+	color: #666;
+	display: inline-block;
+	list-style: none;
+	margin: 0 .25em .5em 0;
+	padding: .5em;
+}
+.post-meta li a:hover {
+	background: #0072BC;
+	color: #fff;
+}
+.post-thumbnail {
+	text-align: center;
+}
+
+/* Search box + search.php */
+
+.search-result-entry {
+	padding-bottom: 1em;
+}
+.search-results h4 {
+	margin: 0;
+	padding: 0 0 .25em 0;
+}
+.search-result {
+	background-color: #f8f8f8;
+	border-radius: 5px;
+	margin-bottom: 2em;
+	padding: 1.25em;
+	text-align: center;
+}
+.search-url p {
+	margin: 0;
+	padding: 0;
+}
+.search-url a {
+	color: #999;
+}
+input[type="submit"] {
+    font-family: FontAwesome;
+}
+.jumbotron .navbar-form, .search-result .navbar-form  {
+	padding-left: 0;
+}
+
+/*Category*/
+
+.category-description {
+	border-bottom: 1px solid #f8f8f8;
+	color: #666;
+	font-size: 1.3em;
+	line-height: 1.4em;
+	margin-bottom: 1em;	
+	padding-bottom: .5em;	
+}
+
+/*Gallery*/
+
+.gallery {
+	clear: both;
+	margin: auto;
+	text-align: center;
+}
+.gallery .gallery-item {
+	display: inline-block;
+	padding: 0 1em;
+	vertical-align: top;
+}
+.gallery img {
+	border: 1px solid #f8f8f8;
+}
+
+/* links.php & sitemap.php */
+
+.links h2 {
+	font-size: 1.4em;
+}
+.links ul {
+	padding-bottom: 1.5em;
+}
+.links li {
+	list-style: none;
+}
+.links ul li {
+	font-size: 1em;
+	list-style-type: disc;
+}
+.sitemap ul {
+	margin: 0 0 .5em 0;
+	padding: 0 0 .5em 0;
+}
+.sitemap li {
+	margin: 0;
+	padding: 0;
+}
+.sitemap ul, #sitemap ul li {
+	list-style: none;
+}
+.sitemap ul li ul {
+	padding: 0 0 .35em 3em;
+}
+.sitemap ul li {
+	font-size: 1em;
+}
+.sitemap ul li ul li {
+	list-style-type: disc;
+}
+
+/* Footer */
+
+.footer {
+	background: #f8f8f8;
+	color: #666;
+	padding-top: 1em;
+}
+.footer ul {
+	list-style: none;
+	margin 0 0 1em 0;
+	padding: 0 0 1em 0;
+}
+.footer li, {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.footer a, .footer a:visited, .footer h4 a, .footer h4 a:visited {
+	color: #666;
+}
+.footer a:hover {
+	color: #000;
+}
+.footer .textwidget, .copyright .textwidget {
+	padding: 0;
+}
+
+/* Copyright */
+
+.copyright {
+	background: #0072BC;
+	color: #fff;
+	padding-bottom: 1.5em;
+	padding-top: 1.5em;
+	text-align: center;
+}
+.copyright a, .copyright  a:visited {
+	color: #fff;
+}
+.copyright .textwidget p, .copyright p {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.copyright .widget .textwidget, .jumbotron .widget .textwidget {
+	background: #0072BC;
+	padding: 0 !important;
+}
+.copyright .widget, .copyright .textwidget, .jumbotron .widget, .jumbotron .textwidget {
+	background: #0072BC;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.copyright-search {
+	padding-bottom: 1em;
+}
