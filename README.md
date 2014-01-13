@@ -3,4 +3,6 @@ govfreshwp
 
 Government WordPress Theme
 
-http://wp.govfresh.com
+About: http://wp.govfresh.com/about
+
+Website: http://wp.govfresh.com
