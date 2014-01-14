@@ -5,7 +5,7 @@ function custom_theme_features()  {
 
   // Add theme support for Custom Background
   $background_args = array(
-    'default-color'          => 'ffffff',
+    'default-color'          => 'f8f8f8',
     'default-image'          => '',
     'wp-head-callback'       => '_custom_background_cb',
     'admin-head-callback'    => '',
