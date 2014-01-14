@@ -14,74 +14,94 @@
 
 			<div class="col-md-8">
 
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<div class="row">
 
-				<p class="byline">By <?php the_author_posts_link(); ?> &middot; <?php the_time('l') ?>, <?php echo my_entry_published_link(); ?> &middot; <?php the_time('g:i a') ?></p>
+					<div class="col-md-12">
 
-				<?php the_content(); ?>
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-				<p><?php wp_link_pages('parameters'); ?></p>
+						<p class="byline">By <?php the_author_posts_link(); ?> &middot; <?php the_time('l') ?>, <?php echo my_entry_published_link(); ?> &middot; <?php the_time('g:i a') ?></p>
 
-				<div class="row author-bio">
+						<?php the_content(); ?>
 
-					<div class="col-md-2">
-						<?php echo get_avatar( get_the_author_id() , 75 ); ?> 
+						<p><?php wp_link_pages('parameters'); ?></p>
+
 					</div>
 
-					<div class="col-md-10">
-						<p><?php echo $twtr; ?>
-						<?php if ( get_the_author_meta('facebook') ): ?>   
-						<div class="icons-author">
-						<a href="<?php the_author_meta('facebook'); ?>" ><i class="fa fa-facebook fa-2x"></i></a>
-						</div>    
-						<?php else: endif; ?>
-						<?php echo $twtr; ?>
-						<?php if ( get_the_author_meta('twitter') ): ?>   
-						<div class="icons-author">
-						<a href="https://twitter.com/<?php the_author_meta('twitter'); ?>" ><i class="fa fa-twitter fa-2x"></i></a>
-						</div>    
-						<?php else: endif; ?>
-						<?php echo $twtr; ?>
-						<?php if ( get_the_author_meta('googleplus') ): ?>   
-						<div class="icons-author">
-						<a href="<?php the_author_meta('googleplus'); ?>" ><i class="fa fa-google-plus fa-2x"></i></a>
-						</div>    
-						<?php else: endif; ?>
-						<?php echo $twtr; ?>
-						<?php if ( get_the_author_meta('linkedin') ): ?>
-						<div class="icons-author">
-						<a href="<?php the_author_meta('linkedin'); ?>" ><i class="fa fa-linkedin fa-2x"></i></a>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+
+						<div class="author-bio">
+
+							<div class="row">
+
+								<div class="col-md-2">
+									<?php echo get_avatar( get_the_author_id() , 75 ); ?> 
+								</div>
+
+								<div class="col-md-10">
+									<p><?php echo $twtr; ?>
+									<?php if ( get_the_author_meta('facebook') ): ?>   
+									<div class="icons-author">
+									<a href="<?php the_author_meta('facebook'); ?>" ><i class="fa fa-facebook fa-2x"></i></a>
+									</div>    
+									<?php else: endif; ?>
+									<?php echo $twtr; ?>
+									<?php if ( get_the_author_meta('twitter') ): ?>   
+									<div class="icons-author">
+									<a href="https://twitter.com/<?php the_author_meta('twitter'); ?>" ><i class="fa fa-twitter fa-2x"></i></a>
+									</div>    
+									<?php else: endif; ?>
+									<?php echo $twtr; ?>
+									<?php if ( get_the_author_meta('googleplus') ): ?>   
+									<div class="icons-author">
+									<a href="<?php the_author_meta('googleplus'); ?>" ><i class="fa fa-google-plus fa-2x"></i></a>
+									</div>    
+									<?php else: endif; ?>
+									<?php echo $twtr; ?>
+									<?php if ( get_the_author_meta('linkedin') ): ?>
+									<div class="icons-author">
+									<a href="<?php the_author_meta('linkedin'); ?>" ><i class="fa fa-linkedin fa-2x"></i></a>
+									</div>
+									<?php else: endif; ?>
+									<?php echo $twtr; ?>
+									<?php if ( get_the_author_meta('instagram') ): ?>   
+									<div class="icons-author">
+									<a href="<?php the_author_meta('instagram'); ?>" ><i class="fa fa-instagram fa-2x"></i></a>
+									</div>    
+									<?php else: endif; ?>
+									<?php echo $twtr; ?>
+									<?php if ( get_the_author_meta('flickr') ): ?>   
+									<div class="icons-author">
+									<a href="<?php the_author_meta('flickr'); ?>" ><i class="fa fa-flickr fa-2x"></i></a>
+									</div>    
+									<?php else: endif; ?>
+									<?php echo $twtr; ?>
+									<?php if ( get_the_author_meta('tumblr') ): ?>   
+									<div class="icons-author">
+									<a href="<?php the_author_meta('tumblr'); ?>" ><i class="fa fa-tumblr fa-2x"></i></a>
+									</div>    
+									<?php else: endif; ?>
+									<?php echo $twtr; ?>
+									<?php if ( get_the_author_meta('github') ): ?>   
+									<div class="icons-author">
+									<a href="<?php the_author_meta('github'); ?>" ><i class="fa fa-github fa-2x"></i></a>
+									</div>    
+									<?php else: endif; ?>
+									<div class="icons-author">
+									<a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>feed" ><i class="fa fa-rss fa-2x"></i></a>
+									</div>
+									</p>
+									<p><?php the_author_description(); ?></p>
+								</div>
+
+							</div>
+
 						</div>
-						<?php else: endif; ?>
-						<?php echo $twtr; ?>
-						<?php if ( get_the_author_meta('instagram') ): ?>   
-						<div class="icons-author">
-						<a href="<?php the_author_meta('instagram'); ?>" ><i class="fa fa-instagram fa-2x"></i></a>
-						</div>    
-						<?php else: endif; ?>
-						<?php echo $twtr; ?>
-						<?php if ( get_the_author_meta('flickr') ): ?>   
-						<div class="icons-author">
-						<a href="<?php the_author_meta('flickr'); ?>" ><i class="fa fa-flickr fa-2x"></i></a>
-						</div>    
-						<?php else: endif; ?>
-						<?php echo $twtr; ?>
-						<?php if ( get_the_author_meta('tumblr') ): ?>   
-						<div class="icons-author">
-						<a href="<?php the_author_meta('tumblr'); ?>" ><i class="fa fa-tumblr fa-2x"></i></a>
-						</div>    
-						<?php else: endif; ?>
-						<?php echo $twtr; ?>
-						<?php if ( get_the_author_meta('github') ): ?>   
-						<div class="icons-author">
-						<a href="<?php the_author_meta('github'); ?>" ><i class="fa fa-github fa-2x"></i></a>
-						</div>    
-						<?php else: endif; ?>
-						<div class="icons-author">
-						<a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>feed" ><i class="fa fa-rss fa-2x"></i></a>
-						</div>
-						</p>
-						<p><?php the_author_description(); ?></p>
+
 					</div>
 
 				</div>
