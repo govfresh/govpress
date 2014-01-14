@@ -78,23 +78,10 @@ Template Name: Home Page
 
 				<div class="row post">
 
-					<div class="col-xs-4 col-md-3">
-
-						<?php if ( has_post_thumbnail()) : ?>
-						<div class="post-thumbnail">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>" >
-							<?php the_post_thumbnail( 'thumbnail' , array('alt' => '' , 'title' => '')); ?>
-							</a>
-						</div>
-						<?php endif; ?>
-
-					</div>
-
-					<div class="col-xs-8 col-md-9">
+					<div class="col-md-12">
 
 						<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
 						<p class="byline"><?php echo my_entry_published_link(); ?> &middot; <?php the_time('g:i a') ?></p>
-						<?php the_excerpt(); ?> 
 
 					</div>
 
