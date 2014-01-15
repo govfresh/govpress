@@ -18,10 +18,10 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 a {
-	color: #0072BC;
+	color: #0072BC !important;
 }
 a:hover, a:focus {
-	color: #0072BC;
+	color: #0072BC !important;
 	filter: alpha(opacity=80);
 	opacity: 0.5;
 	zoom: 1;
@@ -306,12 +306,12 @@ blockquote p {
 	padding: 0;
 	width: 100% !important;
 }
-img.alignleft  {
+img.alignleft, .wp-caption.alignleft  {
 	float: left;
 	margin: 0 2em 2em 0;
 	width: auto;
 }
-img.alignright  {
+img.alignright, .wp-caption.alignright  {
 	float: right;
 	width: auto;
 	margin: 0 0 1em 2em;
@@ -526,13 +526,13 @@ input[type="submit"] {
 
 .copyright {
 	background: #0072BC;
-	color: #fff;
+	color: #fff !important;
 	padding-bottom: 1.5em;
 	padding-top: 1.5em;
 	text-align: center;
 }
 .copyright a, .copyright  a:visited {
-	color: #fff;
+	color: #fff !important;
 }
 .copyright .textwidget p, .copyright p {
 	margin: 0 !important;
