@@ -9,7 +9,7 @@ Template Name: Home Page
 	<div class="jumbotron">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 callout">
 					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home Page Hero Unit') ) ?>
 				</div>
 			</div>

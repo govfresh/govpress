@@ -124,6 +124,20 @@ blockquote p {
 	padding-top: 2em !important;
 	text-align: center;
 }
+.jumbotron .callout {
+	background: rgba(255,255,255, 0.3);
+	border-radius: 10px;
+	padding: 1em 1.5em;
+}
+.jumbotron .widget h3, .copyright .widget .textwidget, .jumbotron .widget .textwidget {
+	background: none;
+	padding: 0 !important;
+}
+.copyright .widget, .copyright .textwidget, .jumbotron .widget, .jumbotron .textwidget {
+	background: none;
+	margin: 0 !important;
+	padding: 0 !important;
+}
 .jumbotron h2, .jumbotron h4 {
 	color: #fff !important;
 }
@@ -513,10 +527,10 @@ input[type="submit"] {
 	padding: 0;
 }
 .footer a, .footer a:visited, .footer h4 a, .footer h4 a:visited {
-	color: #666;
+	color: #666 !important;
 }
 .footer a:hover {
-	color: #000;
+	color: #000 !important;
 }
 .footer .textwidget, .copyright .textwidget {
 	padding: 0;
@@ -538,11 +552,11 @@ input[type="submit"] {
 	margin: 0 !important;
 	padding: 0 !important;
 }
-.copyright .widget .textwidget, .jumbotron .widget .textwidget {
+.copyright .widget .textwidget {
 	background: #0072BC;
 	padding: 0 !important;
 }
-.copyright .widget, .copyright .textwidget, .jumbotron .widget, .jumbotron .textwidget {
+.copyright .widget, .copyright .textwidget {
 	background: #0072BC;
 	margin: 0 !important;
 	padding: 0 !important;
