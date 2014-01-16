@@ -19,9 +19,6 @@
 				<div class="search-result-entry">
 					<?php $title = get_the_title(); $keys= explode(" ",$s); $title = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search-excerpt">\0</span>', $title); ?>
 					<h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php echo $title; ?></a></h4>
-					<div class="search-url">
-						<p><a href="<?php echo get_permalink(); ?>"><?php echo get_permalink(); ?></a></p>
-					</div>
 					<?php the_excerpt(); ?> 
 				</div>
 

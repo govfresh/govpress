@@ -15,9 +15,9 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
     <link href="<?php bloginfo('url'); ?>/wp-content/themes/govfreshwp/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('url'); ?>/wp-content/themes/govfreshwp/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="screen" />
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->

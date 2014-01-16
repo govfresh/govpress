@@ -38,9 +38,9 @@ Template Name: Home Page
 					</div>
 					<div class="col-xs-4 col-md-2 home-links">
 						<div class="home-links-icon">
-							<a href="/codes"><i class="fa fa-gavel fa-4x"></i></a>
+							<a href="/government"><i class="fa fa-gavel fa-4x"></i></a>
 						</div>
-						<p><a href="/codes">Codes & ordinances</i></a></p>
+						<p><a href="/government">Government</i></a></p>
 					</div>
 					<div class="col-xs-4 col-md-2 home-links">
 						<div class="home-links-icon">

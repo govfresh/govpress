@@ -375,7 +375,7 @@ p.byline {
 	padding-bottom: .5em;
 }
 .byline a, .byline a:visited {
-	color: #666;
+	color: #666 !important;
 }
 .single .byline {
 	border-bottom: 1px solid #f8f8f8;
@@ -402,14 +402,14 @@ p.byline {
 .post-meta li a, .post-meta li a:visited {
 	background: #efefef;
 	border-radius: 5px 5px 5px 5px;
-	color: #666;
+	color: #666 !important;
 	display: inline-block;
 	list-style: none;
 	margin: 0 .25em .5em 0;
 	padding: .5em;
 }
 .post-meta li a:hover {
-	background: #0072BC;
+	background: #0072BC !important;
 	color: #fff;
 }
 .post-thumbnail {
@@ -431,13 +431,6 @@ p.byline {
 	margin-bottom: 2em;
 	padding: 1.25em;
 	text-align: center;
-}
-.search-url p {
-	margin: 0;
-	padding: 0;
-}
-.search-url a {
-	color: #999;
 }
 input[type="submit"] {
     font-family: FontAwesome;
