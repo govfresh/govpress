@@ -8,14 +8,6 @@ get_header(); ?>
 
 		<div class="row">
 
-			<div class="col-md-12">
-
-				<?php if ( function_exists('yoast_breadcrumb') ) {
-					yoast_breadcrumb('<div class="breadcrumb">','</div>');
-					} ?>
-
-			</div>
-
 			<div class="col-md-3">
 
 				<div class="">
@@ -43,6 +35,10 @@ get_header(); ?>
 				<?php endwhile; else: ?>
 					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 				<?php endif; ?>
+
+				<?php if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb('<div class="breadcrumb">','</div>');
+					} ?>
 
 			</div>
 
