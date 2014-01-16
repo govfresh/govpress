@@ -24,6 +24,10 @@ Template Name: Full Page
 				<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 			<?php endif; ?>
 
+			<?php if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb('<div class="breadcrumb">','</div>');
+				} ?>
+
 			</div>
 
 		</div>
