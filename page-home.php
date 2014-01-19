@@ -16,7 +16,7 @@ Template Name: Home Page
 		</div>
 	</div>
 
-	<div class="container content">
+	<div class="container home content">
 
 		<div class="row">
 

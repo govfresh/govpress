@@ -182,7 +182,7 @@ blockquote p {
 .home-box a:hover {
 	color: #0072BC;
 }
-.content {
+.content, .homecontent {
 	background: #fff;
 	border-top: 1px solid #f8f8f8;
 	margin-bottom: 1em;
@@ -201,7 +201,7 @@ blockquote p {
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
-.home .content {
+.home .content, .homecontent {
 	border-top: none;
 	margin-top: 1em;
 }

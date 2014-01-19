@@ -16,7 +16,7 @@ Template Name: Home Page Plain
 		</div>
 	</div>
 
-	<div class="container content">
+	<div class="container homecontent">
 
 		<div class="row">
 
