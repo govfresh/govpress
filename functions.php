@@ -80,7 +80,7 @@ require_once('wp_bootstrap_navwalker.php');
 if ( function_exists('register_sidebar') )
 
 register_sidebar(array(
-'name' => 'Homepage Sidebar',
+'name' => 'Sidebar Top',
 'before_widget' => '<div class="widget %2$s">',
 'after_widget' => '</div>',
 'before_title' => '<h3>',

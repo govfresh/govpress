@@ -26,15 +26,15 @@ Template Name: Home Page
 
 					<div class="col-xs-4 col-md-2 home-links">
 						<div class="home-links-icon">
-							<a href="/calendar"><i class="fa fa-calendar fa-4x"></i></a>
+							<a href="/about"><i class="fa fa-info-circle fa-4x"></i></a>
 						</div>
-						<p><a href="/calendar">Calendar</i></a></p>
+						<p><a href="/about">About</i></a></p>
 					</div>
 					<div class="col-xs-4 col-md-2 home-links">
 						<div class="home-links-icon">
-							<a href="/pay"><i class="fa fa-money fa-4x"></i></a>
+							<a href="/calendar"><i class="fa fa-calendar fa-4x"></i></a>
 						</div>
-						<p><a href="/pay">Pay a bill</i></a></p>
+						<p><a href="/calendar">Calendar</i></a></p>
 					</div>
 					<div class="col-xs-4 col-md-2 home-links">
 						<div class="home-links-icon">
@@ -103,7 +103,7 @@ Template Name: Home Page
 
 			<div class="col-md-4 sidebar">
 
-				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Homepage Sidebar') ) ?>
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar Top') ) ?>
 
 			</div>
 
