@@ -1,73 +1,112 @@
 <?php
+/**
+ * GovFresh functions and definitions
+ *
+ * @package GovFresh
+ */
 
-// Register Theme Features
-function custom_theme_features()  {
-
-	// Add theme support for Custom Background
-	$background_args = array(
-		'default-color'          => 'f8f8f8',
-		'default-image'          => '',
-		'wp-head-callback'       => '_custom_background_cb',
-		'admin-head-callback'    => '',
-		'admin-preview-callback' => '',
-	);
-	add_theme_support( 'custom-background', $background_args );
-
-	// Add theme support for Custom Header
-	$header_args = array(
-		'default-image'          => 'http://govfresh.com/wp-content/themes/govfreshwp/images/logo.png',
-		'width'                  => 125,
-		'height'                 => 125,
-		'flex-width'             => true,
-		'flex-height'            => true,
-		'random-default'         => false,
-		'header-text'            => false,
-		'default-text-color'     => '',
-		'uploads'                => true,
-
-	);
-	add_theme_support( 'custom-header', $header_args );
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ */
+if ( ! isset( $content_width ) ) {
+        $content_width = 880; /* pixels */
 }
 
-// Hook into the 'after_setup_theme' action
-add_action( 'after_setup_theme', 'custom_theme_features' );
+if ( ! function_exists( 'govfresh_setup' ) ) :
+
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ */
+function govfresh_setup() {
+
+        /*
+         * Make theme available for translation.
+         * Translations can be filed in the /languages/ directory.
+         * If you're building a theme based on GovFresh, use a find and replace
+         * to change 'govfresh' to the name of your theme in all the template files
+         */
+        load_theme_textdomain( 'govfreshwp', get_template_directory() . '/languages' );
+
+        // Add default posts and comments RSS feed links to head.
+        add_theme_support( 'automatic-feed-links' );
+
+        /*
+         * Enable support for Post Thumbnails on posts and pages.
+         *
+         * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+         */
+        //add_theme_support( 'post-thumbnails' );
+
+        // This theme uses wp_nav_menu() in two locations.
+        register_nav_menus( array(
+        		'primary' => __( 'Primary navigation', 'govfreshwp' ),
+                'quick-links' => __( 'Quick Links', 'govfreshwp' ),
+        ) );
+
+        // Enable support for Post Formats.
+        //add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
+        // Setup the WordPress core custom background feature.
+        add_theme_support(
+        	'custom-background', apply_filters( 'govfresh_custom_background_args',
+        	array(
+                'default-color' => 'f8f8f8',
+                'default-image' => ''
+        ) ) );
+
+        // Add theme support for Custom Header
+        // Fixes for this coming in a later commit (@DEBUG)
+		$header_args = array(
+			'default-image'          => 'http://govfresh.com/wp-content/themes/govfreshwp/images/logo.png',
+			'width'                  => 125,
+			'height'                 => 125,
+			'flex-width'             => true,
+			'flex-height'            => true,
+			'random-default'         => false,
+			'header-text'            => false,
+			'default-text-color'     => '',
+			'uploads'                => true,
+
+		);
+
+		add_theme_support( 'custom-header', $header_args );
+}
+endif;
 
 /**
  * If more than one page exists, return TRUE.
  */
 function show_posts_nav() {
 	global $wp_query;
-	return ($wp_query->max_num_pages > 10);
+	return ( $wp_query->max_num_pages > 10 );
 }
 
+// @DEBUG will be be moving this in a later commit
 if ( function_exists( 'add_theme_support' ) ) {
-	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 150, 150 ); // default Post Thumbnail dimensions
 }
+
 if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'thumb', 100, 100, true );
 }
 
-// register wp_nav_menu
-add_action( 'init', 'register_my_menus' );
-function register_my_menus() {
-	register_nav_menus( array(
-			'quick-links' => __( 'Quick Links', 'govfreshwp' ))
-	);
-}
-
-/* Ties WordPress menu to Bootstrap style */
-add_action( 'after_setup_theme', 'wpt_setup' );
-if ( ! function_exists( 'wpt_setup' ) ):
-	function wpt_setup() {
-		register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
-	} endif;
-
+/**
+ * Register Javascript
+ */
 function wpt_register_js() {
 	wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery');
 	wp_enqueue_script('jquery.bootstrap.min');
 }
+
 add_action( 'init', 'wpt_register_js' );
+
+/**
+ * Register Styles
+ */
 function wpt_register_css() {
 	wp_register_style( 'bootstrap.min', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'bootstrap.min' );
@@ -75,19 +114,22 @@ function wpt_register_css() {
 add_action( 'wp_enqueue_scripts', 'wpt_register_css' );
 
 // Register Custom Navigation Walker
-require_once('wp_bootstrap_navwalker.php');
+require_once( 'wp_bootstrap_navwalker.php' );
 
-if ( function_exists('register_sidebar') )
+/**
+ * Register Widget Areas
+ */
+if ( function_exists( 'register_sidebar' ) ) {
 
 	register_sidebar(array(
-			'name' => 'Sidebar Top',
-			'before_widget' => '<div class="widget %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3>',
-			'after_title' => '</h3>',
-		));
+		'name' => 'Sidebar Top',
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
 
-register_sidebar(array(
+	register_sidebar(array(
 		'name' => 'Sidebar',
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget' => '</div>',
@@ -95,7 +137,7 @@ register_sidebar(array(
 		'after_title' => '</h3>',
 	));
 
-register_sidebar(array(
+	register_sidebar(array(
 		'name' => 'Footer 1',
 		'before_widget' => '<div class="footerwidget">',
 		'after_widget' => '</div>',
@@ -103,7 +145,7 @@ register_sidebar(array(
 		'after_title' => '</h4>',
 	));
 
-register_sidebar(array(
+	register_sidebar(array(
 		'name' => 'Footer 2',
 		'before_widget' => '<div class="footerwidget">',
 		'after_widget' => '</div>',
@@ -111,7 +153,7 @@ register_sidebar(array(
 		'after_title' => '</h4>',
 	));
 
-register_sidebar(array(
+	register_sidebar(array(
 		'name' => 'Footer 3',
 		'before_widget' => '<div class="footerwidget">',
 		'after_widget' => '</div>',
@@ -119,7 +161,7 @@ register_sidebar(array(
 		'after_title' => '</h4>',
 	));
 
-register_sidebar(array(
+	register_sidebar(array(
 		'name' => 'Footer Text',
 		'before_widget' => '<div id="">',
 		'after_widget' => '</div>',
@@ -127,7 +169,7 @@ register_sidebar(array(
 		'after_title' => '</h2>',
 	));
 
-register_sidebar(array(
+	register_sidebar(array(
 		'name' => 'Home Page Hero Unit',
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget' => '</div>',
@@ -135,7 +177,7 @@ register_sidebar(array(
 		'after_title' => '</h3>',
 	));
 
-register_sidebar(array(
+	register_sidebar(array(
 		'name' => 'Home Page Featured',
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget' => '</div>',
@@ -143,6 +185,11 @@ register_sidebar(array(
 		'after_title' => '</h3>',
 	));
 
+}
+
+/**
+ * Contact Methods
+ */
 function my_new_contactmethods( $contactmethods ) {
 	// Add Twitter
 	$contactmethods['twitter'] = 'Twitter @';
@@ -162,10 +209,13 @@ function my_new_contactmethods( $contactmethods ) {
 	$contactmethods['github'] = 'GitHub URL';
 	return $contactmethods;
 }
+
 add_filter('user_contactmethods','my_new_contactmethods',10,1);
 
-add_shortcode( 'entry-link-published', 'my_entry_published_link' );
 
+/**
+ * Output for bylines
+ */
 function my_entry_published_link() {
 
 	/* Get the year, month, and day of the current post. */
@@ -186,32 +236,36 @@ function my_entry_published_link() {
 	return $out;
 }
 
+add_shortcode( 'entry-link-published', 'my_entry_published_link' );
+
+/**
+ * Remove version number
+ */
 function wpbeginner_remove_version() {
 	return '';
 }
 add_filter('the_generator', 'wpbeginner_remove_version');
 
-// custom excerpt ellipses for 2.9
-function custom_excerpt_more($more) {
+/**
+ * Custom ellipses for more tag
+ */
+function custom_excerpt_more( $more ) {
 	return '…';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
 
-/* custom excerpt ellipses for 2.8-
-function custom_excerpt_more($excerpt) {
-return str_replace('[...]', '…', $excerpt);
-}
-add_filter('wp_trim_excerpt', 'custom_excerpt_more');
-*/
-
+/**
+ * Trim Excerpts to 100 characters
+ */
 function new_excerpt_length($length) {
 	return 100;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 
-/*Prevents YouTube embed override*/
-
-function add_video_wmode_transparent($html, $url, $attr) {
+/**
+ * Prevents YouTube embed override
+ */
+function add_video_wmode_transparent( $html, $url, $attr ) {
 
 	if ( strpos( $html, "<embed src=" ) !== false )
 		{ return str_replace('</param><embed', '</param><param name="wmode" value="opaque"></param><embed wmode="opaque" ', $html); }
@@ -222,27 +276,33 @@ function add_video_wmode_transparent($html, $url, $attr) {
 }
 add_filter( 'embed_oembed_html', 'add_video_wmode_transparent', 10, 3);
 
-/*Tag cloud*/
-
+/**
+ * Tag cloud
+ */
 add_filter( 'widget_tag_cloud_args', 'my_tag_cloud_args' );
+
 function my_tag_cloud_args($in){
 	return 'smallest=11&amp;largest=11&amp;number=25&amp;orderby=name&amp;unit=px';
 }
 
+/**
+ * Add first and last classes to menus
+ */
 function wpb_first_and_last_menu_class($items) {
 	$items[1]->classes[] = 'first';
 	$items[count($items)]->classes[] = 'last';
 	return $items;
 }
-add_filter('wp_nav_menu_objects', 'wpb_first_and_last_menu_class');
+add_filter( 'wp_nav_menu_objects', 'wpb_first_and_last_menu_class' );
 
-//---------------------------- [ Pagenavi Function ] ------------------------------//
-
+/**
+ * Pagenavi Functions
+ */
 function wp_pagenavi() {
 	global $wp_query, $wp_rewrite;
 	$pages = '';
 	$max = $wp_query->max_num_pages;
-	if (!$current = get_query_var('paged')) $current = 1;
+	if ( !$current = get_query_var( 'paged') ) $current = 1;
 	$args['base'] = str_replace(999999999, '%#%', get_pagenum_link(999999999));
 	$args['total'] = $max;
 	$args['current'] = $current;
@@ -257,6 +317,5 @@ function wp_pagenavi() {
 <div class="wp-pagenavi">';
 	if ($total == 1 && $max > 1) $pages = '<span class="pages">Page ' . $current . ' of ' . $max . '</span>';
 	echo $pages . paginate_links($args);
-	if ($max > 1) echo '</div>
-';
+	if ($max > 1) echo '</div>';
 }
