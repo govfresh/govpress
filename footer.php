@@ -30,7 +30,7 @@
 							<?php get_search_form(); ?>
 						</div>
 						<p><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> &middot; <a href="/sitemap">Sitemap</a> &middot; <a href="http://wp.govfresh.com">GovFresh WP Theme</a></p>
-						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer text') ) ?>
+						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Text') ) ?>
 					</div>
 				</div>
 

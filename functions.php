@@ -120,7 +120,7 @@ register_sidebar(array(
 ));
 
 register_sidebar(array(
-'name' => 'Footer text',
+'name' => 'Footer Text',
 'before_widget' => '<div id="">',
 'after_widget' => '</div>',
 'before_title' => '<h2>',
@@ -128,15 +128,7 @@ register_sidebar(array(
 ));
 
 register_sidebar(array(
-'name' => 'Quick links',
-'before_widget' => '<div id="quick-links">',
-'after_widget' => '</div>',
-'before_title' => '<h2>',
-'after_title' => '</h2>',
-));
-
-register_sidebar(array(
-'name' => 'Home Page Featured',
+'name' => 'Home Page Hero Unit',
 'before_widget' => '<div class="widget %2$s">',
 'after_widget' => '</div>',
 'before_title' => '<h3>',
@@ -144,7 +136,7 @@ register_sidebar(array(
 ));
 
 register_sidebar(array(
-'name' => 'Home Page Hero Unit',
+'name' => 'Home Page Featured',
 'before_widget' => '<div class="widget %2$s">',
 'after_widget' => '</div>',
 'before_title' => '<h3>',
