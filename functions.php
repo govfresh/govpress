@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
         $content_width = 880; /* pixels */
 }
 
-if ( ! function_exists( 'govfresh_setup' ) ) :
+if ( ! function_exists( 'govfreshwp_setup' ) ) :
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -39,7 +39,7 @@ function govfresh_setup() {
          *
          * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
          */
-        //add_theme_support( 'post-thumbnails' );
+        add_theme_support( 'post-thumbnails' );
 
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus( array(
@@ -77,14 +77,6 @@ function govfresh_setup() {
 }
 endif;
 
-/**
- * If more than one page exists, return TRUE.
- */
-function show_posts_nav() {
-	global $wp_query;
-	return ( $wp_query->max_num_pages > 10 );
-}
-
 // @DEBUG will be be moving this in a later commit
 if ( function_exists( 'add_theme_support' ) ) {
 	set_post_thumbnail_size( 150, 150 ); // default Post Thumbnail dimensions
@@ -97,21 +89,21 @@ if ( function_exists( 'add_image_size' ) ) {
 /**
  * Register Javascript
  */
-function wpt_register_js() {
+function govfreshwp_register_js() {
 	wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery');
 	wp_enqueue_script('jquery.bootstrap.min');
 }
 
-add_action( 'init', 'wpt_register_js' );
+add_action( 'wp_enqueue_scripts', 'govfreshwp_register_js' );
 
 /**
  * Register Styles
  */
-function wpt_register_css() {
+function govfreshwp_register_css() {
 	wp_register_style( 'bootstrap.min', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'bootstrap.min' );
 }
-add_action( 'wp_enqueue_scripts', 'wpt_register_css' );
+add_action( 'wp_enqueue_scripts', 'govfreshwp_register_css' );
 
 // Register Custom Navigation Walker
 require_once( 'wp_bootstrap_navwalker.php' );
@@ -190,7 +182,7 @@ if ( function_exists( 'register_sidebar' ) ) {
 /**
  * Contact Methods
  */
-function my_new_contactmethods( $contactmethods ) {
+function govfresh_contactmethods( $contactmethods ) {
 	// Add Twitter
 	$contactmethods['twitter'] = 'Twitter @';
 	//add Facebook
@@ -210,13 +202,13 @@ function my_new_contactmethods( $contactmethods ) {
 	return $contactmethods;
 }
 
-add_filter('user_contactmethods','my_new_contactmethods',10,1);
+add_filter('user_contactmethods','govfresh_contactmethods',10,1);
 
 
 /**
  * Output for bylines
  */
-function my_entry_published_link() {
+function govfresh_publish_link() {
 
 	/* Get the year, month, and day of the current post. */
 	$year = get_the_time( 'Y' );
@@ -236,36 +228,36 @@ function my_entry_published_link() {
 	return $out;
 }
 
-add_shortcode( 'entry-link-published', 'my_entry_published_link' );
+add_shortcode( 'entry-link-published', 'govfresh_publish_link' );
 
 /**
  * Remove version number
  */
-function wpbeginner_remove_version() {
+function govfreshwp_remove_version() {
 	return '';
 }
-add_filter('the_generator', 'wpbeginner_remove_version');
+add_filter('the_generator', 'govfreshwp_remove_version');
 
 /**
  * Custom ellipses for more tag
  */
-function custom_excerpt_more( $more ) {
+function govfreshwp_excerpt_more( $more ) {
 	return '…';
 }
-add_filter('excerpt_more', 'custom_excerpt_more');
+add_filter('excerpt_more', 'govfreshwp_excerpt_more');
 
 /**
  * Trim Excerpts to 100 characters
  */
-function new_excerpt_length($length) {
+function govfreshwp_excerpt_length($length) {
 	return 100;
 }
-add_filter('excerpt_length', 'new_excerpt_length');
+add_filter('excerpt_length', 'govfreshwp_excerpt_length');
 
 /**
  * Prevents YouTube embed override
  */
-function add_video_wmode_transparent( $html, $url, $attr ) {
+function govfreshwp_video_wmode_transparent( $html, $url, $attr ) {
 
 	if ( strpos( $html, "<embed src=" ) !== false )
 		{ return str_replace('</param><embed', '</param><param name="wmode" value="opaque"></param><embed wmode="opaque" ', $html); }
@@ -274,30 +266,33 @@ function add_video_wmode_transparent( $html, $url, $attr ) {
 	else
 		{ return $html; }
 }
-add_filter( 'embed_oembed_html', 'add_video_wmode_transparent', 10, 3);
+add_filter( 'embed_oembed_html', 'govfreshwp_video_wmode_transparent', 10, 3);
 
 /**
  * Tag cloud
  */
-add_filter( 'widget_tag_cloud_args', 'my_tag_cloud_args' );
+add_filter( 'widget_tag_cloud_args', 'govfreshwp_tag_cloud_args' );
 
-function my_tag_cloud_args($in){
+function govfreshwp_tag_cloud_args($in){
 	return 'smallest=11&amp;largest=11&amp;number=25&amp;orderby=name&amp;unit=px';
 }
 
 /**
  * Add first and last classes to menus
  */
-function wpb_first_and_last_menu_class($items) {
+function govfreshwp_first_and_last_menu_class($items) {
 	$items[1]->classes[] = 'first';
 	$items[count($items)]->classes[] = 'last';
 	return $items;
 }
-add_filter( 'wp_nav_menu_objects', 'wpb_first_and_last_menu_class' );
+add_filter( 'wp_nav_menu_objects', 'govfreshwp_first_and_last_menu_class' );
 
 /**
  * Pagenavi Functions
+ * @DEBUG this will create a name conflict if wp_pagenavi plugin is installed
+ * Leaving for update for later commit
  */
+
 function wp_pagenavi() {
 	global $wp_query, $wp_rewrite;
 	$pages = '';
