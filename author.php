@@ -5,11 +5,11 @@
 		<div class="row">
 
 			<?php
-			if(isset($_GET['author_name'])) :
-			$curauth = get_userdatabylogin($author_name);
-			else :
-			$curauth = get_userdata(intval($author));
-			endif;
+				if( isset($_GET['author_name']) ) :
+					$curauth = get_userdatabylogin( $author_name );
+				else :
+					$curauth = get_userdata( intval($author) );
+				endif;
 			?>
 
 			<div class="col-md-12">
@@ -59,8 +59,8 @@
 				<?php endif; ?>
 
 				<?php if(function_exists('wp_pagenavi')) { ?>
-				<?php wp_pagenavi(); ?>   
-				<?php } else { ?>      
+				<?php wp_pagenavi(); ?>
+				<?php } else { ?>
 				<div class="navigation"><p><?php posts_nav_link('&#8734;','&laquo;&laquo; Newer','Older &raquo;&raquo;'); ?></p></div>
 				<?php } ?>
 
