@@ -42,10 +42,10 @@ function show_posts_nav() {
 
 if ( function_exists( 'add_theme_support' ) ) {
   add_theme_support( 'post-thumbnails' );
-        set_post_thumbnail_size( 150, 150 ); // default Post Thumbnail dimensions   
+        set_post_thumbnail_size( 150, 150 ); // default Post Thumbnail dimensions
 }
-if ( function_exists( 'add_image_size' ) ) { 
-  add_image_size( 'thumb', 100, 100, true ); 
+if ( function_exists( 'add_image_size' ) ) {
+  add_image_size( 'thumb', 100, 100, true );
 }
 
 // register wp_nav_menu
@@ -59,7 +59,7 @@ function register_my_menus() {
 /* Ties WordPress menu to Bootstrap style */
 add_action( 'after_setup_theme', 'wpt_setup' );
     if ( ! function_exists( 'wpt_setup' ) ):
-        function wpt_setup() {  
+        function wpt_setup() {
             register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
         } endif;
 
@@ -86,7 +86,7 @@ register_sidebar(array(
 'before_title' => '<h3>',
 'after_title' => '</h3>',
 ));
-	
+
 register_sidebar(array(
 'name' => 'Sidebar',
 'before_widget' => '<div class="widget %2$s">',
@@ -102,7 +102,7 @@ register_sidebar(array(
 'before_title' => '<h4>',
 'after_title' => '</h4>',
 ));
-	
+
 register_sidebar(array(
 'name' => 'Footer 2',
 'before_widget' => '<div class="footerwidget">',
@@ -110,7 +110,7 @@ register_sidebar(array(
 'before_title' => '<h4>',
 'after_title' => '</h4>',
 ));
-	
+
 register_sidebar(array(
 'name' => 'Footer 3',
 'before_widget' => '<div class="footerwidget">',
@@ -224,7 +224,7 @@ add_filter( 'embed_oembed_html', 'add_video_wmode_transparent', 10, 3);
 
 /*Tag cloud*/
 
-add_filter( 'widget_tag_cloud_args', my_tag_cloud_args );
+add_filter( 'widget_tag_cloud_args', 'my_tag_cloud_args' );
 function my_tag_cloud_args($in){
 return 'smallest=11&amp;largest=11&amp;number=25&amp;orderby=name&amp;unit=px';
 }
@@ -237,7 +237,7 @@ function wpb_first_and_last_menu_class($items) {
 add_filter('wp_nav_menu_objects', 'wpb_first_and_last_menu_class');
 
 //---------------------------- [ Pagenavi Function ] ------------------------------//
- 
+
 function wp_pagenavi() {
   global $wp_query, $wp_rewrite;
   $pages = '';
@@ -246,13 +246,13 @@ function wp_pagenavi() {
   $args['base'] = str_replace(999999999, '%#%', get_pagenum_link(999999999));
   $args['total'] = $max;
   $args['current'] = $current;
- 
+
   $total = 1;
   $args['mid_size'] = 3;
   $args['end_size'] = 1;
   $args['prev_text'] = '«';
   $args['next_text'] = '»';
- 
+
   if ($max > 1) echo '
 <div class="wp-pagenavi">';
  if ($total == 1 && $max > 1) $pages = '<span class="pages">Page ' . $current . ' of ' . $max . '</span>';
