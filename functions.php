@@ -50,8 +50,79 @@ function govfresh_setup() {
         // Enable support for Post Formats.
         //add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 }
-endif; // _s_setup
+endif; // govfresh_setup
 add_action( 'after_setup_theme', 'govfresh_setup' );
+
+/**
+ * Register widgetized area and update sidebar with default widgets.
+ */
+function govfresh_widgets_init() {
+    register_sidebar( array(
+            'name'          => __( 'Sidebar Top', 'govfresh' ),
+            'id'            => 'sidebar-top',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+    ) );
+    register_sidebar( array(
+            'name'          => __( 'Sidebar', 'govfresh' ),
+            'id'            => 'sidebar',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+    ) );
+    register_sidebar( array(
+            'name'          => __( 'Footer 1', 'govfresh' ),
+            'id'            => 'footer-1',
+            'before_widget' => '<div id="%1$s" class="footerwidget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+    ) );
+    register_sidebar( array(
+            'name'          => __( 'Footer 2', 'govfresh' ),
+            'id'            => 'footer-2',
+            'before_widget' => '<div id="%1$s" class="footerwidget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+    ) );
+    register_sidebar( array(
+            'name'          => __( 'Footer 3', 'govfresh' ),
+            'id'            => 'footer-3',
+            'before_widget' => '<div id="%1$s" class="footerwidget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+    ) );
+    register_sidebar( array(
+            'name'          => __( 'Footer Text', 'govfresh' ),
+            'id'            => 'footer-text',
+            'before_widget' => '<div id="%1$s" class="%2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2>',
+            'after_title'   => '</h2>',
+    ) );
+    register_sidebar( array(
+            'name'          => __( 'Home Page Hero', 'govfresh' ),
+            'id'            => 'home-page-hero',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+    ) );
+    register_sidebar( array(
+            'name'          => __( 'Home Page Featured', 'govfresh' ),
+            'id'            => 'home-page-featured',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+    ) );
+}
+add_action( 'widgets_init', 'govfresh_widgets_init' );
 
 
 // @DEBUG will be be moving this in a later commit
@@ -85,76 +156,6 @@ add_action( 'wp_enqueue_scripts', 'govfreshwp_register_css' );
 // Register Custom Navigation Walker
 require_once( 'wp_bootstrap_navwalker.php' );
 
-/**
- * Register Widget Areas
- */
-if ( function_exists( 'register_sidebar' ) ) {
-
-	register_sidebar(array(
-		'name' => 'Sidebar Top',
-		'before_widget' => '<div class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
-	));
-
-	register_sidebar(array(
-		'name' => 'Sidebar',
-		'before_widget' => '<div class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
-	));
-
-	register_sidebar(array(
-		'name' => 'Footer 1',
-		'before_widget' => '<div class="footerwidget">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-	));
-
-	register_sidebar(array(
-		'name' => 'Footer 2',
-		'before_widget' => '<div class="footerwidget">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-	));
-
-	register_sidebar(array(
-		'name' => 'Footer 3',
-		'before_widget' => '<div class="footerwidget">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-	));
-
-	register_sidebar(array(
-		'name' => 'Footer Text',
-		'before_widget' => '<div id="">',
-		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
-	));
-
-	register_sidebar(array(
-		'name' => 'Home Page Hero Unit',
-		'before_widget' => '<div class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
-	));
-
-	register_sidebar(array(
-		'name' => 'Home Page Featured',
-		'before_widget' => '<div class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
-	));
-
-}
 
 /**
  * Implement the Custom Header feature.
