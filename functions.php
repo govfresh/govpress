@@ -2,7 +2,7 @@
 /**
  * GovFresh functions and definitions
  *
- * @package GovFresh
+ * @package govfreshwp
  */
 
 /**
@@ -49,33 +49,10 @@ function govfresh_setup() {
 
         // Enable support for Post Formats.
         //add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
-
-        // Setup the WordPress core custom background feature.
-        add_theme_support(
-        	'custom-background', apply_filters( 'govfresh_custom_background_args',
-        	array(
-                'default-color' => 'f8f8f8',
-                'default-image' => ''
-        ) ) );
-
-        // Add theme support for Custom Header
-        // Fixes for this coming in a later commit (@DEBUG)
-		$header_args = array(
-			'default-image'          => 'http://govfresh.com/wp-content/themes/govfreshwp/images/logo.png',
-			'width'                  => 125,
-			'height'                 => 125,
-			'flex-width'             => true,
-			'flex-height'            => true,
-			'random-default'         => false,
-			'header-text'            => false,
-			'default-text-color'     => '',
-			'uploads'                => true,
-
-		);
-
-		add_theme_support( 'custom-header', $header_args );
 }
-endif;
+endif; // _s_setup
+add_action( 'after_setup_theme', 'govfresh_setup' );
+
 
 // @DEBUG will be be moving this in a later commit
 if ( function_exists( 'add_theme_support' ) ) {
@@ -178,6 +155,11 @@ if ( function_exists( 'register_sidebar' ) ) {
 	));
 
 }
+
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Contact Methods

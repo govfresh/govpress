@@ -62,12 +62,16 @@
 
 	    </div>
 	</nav>
-	
+
 	<div class="header">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" /></a>
+					<?php if ( get_header_image() ) : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+						</a>
+					<?php endif; // End header image check. ?>
 				</div>
 			</div>
 		</div>
