@@ -20,7 +20,7 @@
 
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-						<p class="byline">By <?php the_author_posts_link(); ?> &middot; <?php the_time('l') ?>, <?php echo my_entry_published_link(); ?> &middot; <?php the_time('g:i a') ?></p>
+						<p class="byline">By <?php the_author_posts_link(); ?> &middot; <?php the_time('l') ?>, <?php echo govfresh_publish_link(); ?> &middot; <?php the_time('g:i a') ?></p>
 
 						<?php the_content(); ?>
 

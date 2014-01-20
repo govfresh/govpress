@@ -5,11 +5,11 @@
 		<div class="row">
 
 			<?php
-			if(isset($_GET['author_name'])) :
-			$curauth = get_userdatabylogin($author_name);
-			else :
-			$curauth = get_userdata(intval($author));
-			endif;
+				if( isset($_GET['author_name']) ) :
+					$curauth = get_userdatabylogin( $author_name );
+				else :
+					$curauth = get_userdata( intval($author) );
+				endif;
 			?>
 
 			<div class="col-md-12">
@@ -48,7 +48,7 @@
 					<div class="col-md-12">
 
 						<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-						<p class="byline"><?php echo my_entry_published_link(); ?> &middot; <?php the_time('g:i a') ?></p>
+						<p class="byline"><?php echo govfresh_publish_link(); ?> &middot; <?php the_time('g:i a') ?></p>
 
 					</div>
 
@@ -59,8 +59,8 @@
 				<?php endif; ?>
 
 				<?php if(function_exists('wp_pagenavi')) { ?>
-				<?php wp_pagenavi(); ?>   
-				<?php } else { ?>      
+				<?php wp_pagenavi(); ?>
+				<?php } else { ?>
 				<div class="navigation"><p><?php posts_nav_link('&#8734;','&laquo;&laquo; Newer','Older &raquo;&raquo;'); ?></p></div>
 				<?php } ?>
 

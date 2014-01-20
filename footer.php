@@ -6,13 +6,13 @@
 				<div class="row">
 
 					<div class="col-md-4">
-						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer 1') ) ?>
+						<?php if ( !dynamic_sidebar( 'footer-1' ) ) ?>
 					</div>
 					<div class="col-md-4">
-						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer 2') ) ?>
+						<?php if ( !dynamic_sidebar( 'footer-2' ) ) ?>
 					</div>
 					<div class="col-md-4">
-						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer 3') ) ?>
+						<?php if ( !dynamic_sidebar( 'footer-3') ) ?>
 					</div>
 
 				</div>
@@ -30,7 +30,7 @@
 							<?php get_search_form(); ?>
 						</div>
 						<p><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> &middot; <a href="/sitemap">Sitemap</a> &middot; <a href="http://wp.govfresh.com">GovFresh WP Theme</a></p>
-						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Text') ) ?>
+						<?php if ( !dynamic_sidebar( 'footer-text' ) ) ?>
 					</div>
 				</div>
 
