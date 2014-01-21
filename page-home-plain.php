@@ -45,7 +45,7 @@ Template Name: Home Page Plain
 				<?php the_content(); ?>
 
 				<?php endwhile; else: ?>
-					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+					<p><?php _e( 'Sorry, no posts matched your criteria.', 'govfreshwp' ); ?></p>
 				<?php endif; ?>
 
 				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home Page Featured') ) ?>

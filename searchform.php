@@ -1,5 +1,5 @@
 
-<?php 
+<?php
 	$message="";
 
 	if(get_search_query()!='')

@@ -7,11 +7,12 @@
 
 			<div class="col-md-8">
 
-				<h1>Whoops</h1>
-
-				<p>The page you were looking for is no longer available.</p>
+				<h1><?php _e( 'Whoops', 'govfreshwp' ); ?></h1>
+				<p><?php _e( 'The page you were looking for is no longer available.', 'govfreshwp' ); ?></p>
+				<p></p>
 
 				<div class="search-result">
+					<?php /* @DEBUG - Should not be hardcoded */ ?>
 					<p>Try searching or see our <a href="/sitemap">sitemap</a>:</p>
 					<?php get_search_form(); ?>
 				</div>

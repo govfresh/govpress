@@ -20,7 +20,7 @@
 					$children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
 					if ($children) { ?>
 					<div class="widget">
-						<h3>Related</h3>
+						<h3><?php _e( 'Related', 'govfreshwp' ); ?></h3>
 						<ul>
 						<?php echo $children; ?>
 						</ul>
@@ -39,7 +39,7 @@
 				<?php comments_template('', true); ?>
 
 				<?php endwhile; else: ?>
-					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+					<p><?php _e( 'Sorry, no posts matched your criteria.', 'govfreshwp' ); ?></p>
 				<?php endif; ?>
 
 				<?php if ( function_exists('yoast_breadcrumb') ) {

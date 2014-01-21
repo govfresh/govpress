@@ -21,11 +21,11 @@
 				<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
 				<h1><?php the_time('Y'); ?></h1>
 				<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-				<h1>Blog</h1>
+				<h1><?php _e( 'Blog', 'govfreshwp' ); ?></h1>
 				<?php } ?>
 
 			</div>
-			
+
 		</div>
 
 		<div class="row">
@@ -36,7 +36,7 @@
 			    $category_description = category_description();
 			    if (!empty( $category_description)) {
 			        echo '<div class="category-description">'
-			              . do_shortcode($category_description) . 
+			              . do_shortcode($category_description) .
 			             '</div>';
 			    }
 			    ?>
@@ -57,8 +57,8 @@
 				<?php endwhile; ?>
 
 				<?php if(function_exists('wp_pagenavi')) { ?>
-				<?php wp_pagenavi(); ?>   
-				<?php } else { ?>      
+				<?php wp_pagenavi(); ?>
+				<?php } else { ?>
 				<div class="navigation"><p><?php posts_nav_link('&#8734;','&laquo;&laquo; Newer','Older &raquo;&raquo;'); ?></p></div>
 				<?php } ?>
 
@@ -80,7 +80,7 @@
 
 				?>
 
-				<?php endif; ?>	 
+				<?php endif; ?>
 
 			</div>
 

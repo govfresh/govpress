@@ -21,12 +21,12 @@
 				</div>
 
 				<?php endwhile; else: ?>
-					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+					<p><?php _e( 'Sorry, no posts matched your criteria.', 'govfreshwp' ); ?></p>
 				<?php endif; ?>
 
 				<?php if(function_exists('wp_pagenavi')) { ?>
-				<?php wp_pagenavi(); ?>   
-				<?php } else { ?>      
+				<?php wp_pagenavi(); ?>
+				<?php } else { ?>
 				<div class="navigation"><p><?php posts_nav_link('&#8734;','&laquo;&laquo; Newer','Older &raquo;&raquo;'); ?></p></div>
 				<?php } ?>
 

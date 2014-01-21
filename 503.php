@@ -7,9 +7,9 @@
 
 			<div class="col-md-12">
 
-				<h1>We'll be back!</h1>
+				<h1><?php _e( 'We\'ll be back!', 'govfreshwp' ); ?></h1>
 
-				<p>We're updating the site. We'll be back shortly.</p>
+				<p><?php _e( 'We\'re updating the site. We\'ll be back shortly.', 'govfreshwp' ); ?></p>
 
 			</div>
 
