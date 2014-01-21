@@ -13,7 +13,7 @@ Template Name: Search
 			<div class="col-md-12">
 
 				<div class="search-result">
-					<?php 
+					<?php
 						$message="";
 
 						if(get_search_query()!='')
@@ -36,7 +36,7 @@ Template Name: Search
 				<?php comments_template('', true); ?>
 
 				<?php endwhile; else: ?>
-					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+					<p><?php _e( 'Sorry, no posts matched your criteria.', 'govfreshwp' ); ?></p>
 				<?php endif; ?>
 
 			</div>

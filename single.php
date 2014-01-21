@@ -39,27 +39,27 @@
 							<div class="row">
 
 								<div class="col-md-2">
-									<?php echo get_avatar( get_the_author_id() , 75 ); ?> 
+									<?php echo get_avatar( get_the_author_id() , 75 ); ?>
 								</div>
 
 								<div class="col-md-10">
 									<p><?php echo $twtr; ?>
-									<?php if ( get_the_author_meta('facebook') ): ?>   
+									<?php if ( get_the_author_meta('facebook') ): ?>
 									<div class="icons-author">
 									<a href="<?php the_author_meta('facebook'); ?>" ><i class="fa fa-facebook fa-2x"></i></a>
-									</div>    
+									</div>
 									<?php else: endif; ?>
 									<?php echo $twtr; ?>
-									<?php if ( get_the_author_meta('twitter') ): ?>   
+									<?php if ( get_the_author_meta('twitter') ): ?>
 									<div class="icons-author">
 									<a href="https://twitter.com/<?php the_author_meta('twitter'); ?>" ><i class="fa fa-twitter fa-2x"></i></a>
-									</div>    
+									</div>
 									<?php else: endif; ?>
 									<?php echo $twtr; ?>
-									<?php if ( get_the_author_meta('googleplus') ): ?>   
+									<?php if ( get_the_author_meta('googleplus') ): ?>
 									<div class="icons-author">
 									<a href="<?php the_author_meta('googleplus'); ?>" ><i class="fa fa-google-plus fa-2x"></i></a>
-									</div>    
+									</div>
 									<?php else: endif; ?>
 									<?php echo $twtr; ?>
 									<?php if ( get_the_author_meta('linkedin') ): ?>
@@ -68,28 +68,28 @@
 									</div>
 									<?php else: endif; ?>
 									<?php echo $twtr; ?>
-									<?php if ( get_the_author_meta('instagram') ): ?>   
+									<?php if ( get_the_author_meta('instagram') ): ?>
 									<div class="icons-author">
 									<a href="<?php the_author_meta('instagram'); ?>" ><i class="fa fa-instagram fa-2x"></i></a>
-									</div>    
+									</div>
 									<?php else: endif; ?>
 									<?php echo $twtr; ?>
-									<?php if ( get_the_author_meta('flickr') ): ?>   
+									<?php if ( get_the_author_meta('flickr') ): ?>
 									<div class="icons-author">
 									<a href="<?php the_author_meta('flickr'); ?>" ><i class="fa fa-flickr fa-2x"></i></a>
-									</div>    
+									</div>
 									<?php else: endif; ?>
 									<?php echo $twtr; ?>
-									<?php if ( get_the_author_meta('tumblr') ): ?>   
+									<?php if ( get_the_author_meta('tumblr') ): ?>
 									<div class="icons-author">
 									<a href="<?php the_author_meta('tumblr'); ?>" ><i class="fa fa-tumblr fa-2x"></i></a>
-									</div>    
+									</div>
 									<?php else: endif; ?>
 									<?php echo $twtr; ?>
-									<?php if ( get_the_author_meta('github') ): ?>   
+									<?php if ( get_the_author_meta('github') ): ?>
 									<div class="icons-author">
 									<a href="<?php the_author_meta('github'); ?>" ><i class="fa fa-github fa-2x"></i></a>
-									</div>    
+									</div>
 									<?php else: endif; ?>
 									<div class="icons-author">
 									<a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>feed" ><i class="fa fa-rss fa-2x"></i></a>
@@ -111,11 +111,11 @@
 						<li><?php the_category(' '); ?> <?php the_tags(' ',' '); ?></li>
 					</ul>
 				</div>
-				
+
 				<?php comments_template('', true); ?>
 
 				<?php endwhile; else: ?>
-					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+					<p><?php _e( 'Sorry, no posts matched your criteria.', 'govfreshwp' ); ?></p>
 				<?php endif; ?>
 
 			</div>

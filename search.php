@@ -19,16 +19,16 @@
 				<div class="search-result-entry">
 					<?php $title = get_the_title(); $keys= explode(" ",$s); $title = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search-excerpt">\0</span>', $title); ?>
 					<h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php echo $title; ?></a></h4>
-					<?php the_excerpt(); ?> 
+					<?php the_excerpt(); ?>
 				</div>
 
 					<?php endwhile; else: ?>
-						<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+						<p><?php _e( 'Sorry, no posts matched your criteria.', 'govfreshwp' ); ?></p>
 					<?php endif; ?>
 
 				<?php if(function_exists('wp_pagenavi')) { ?>
-				<?php wp_pagenavi(); ?>   
-				<?php } else { ?>      
+				<?php wp_pagenavi(); ?>
+				<?php } else { ?>
 				<div class="navigation"><p><?php posts_nav_link('&#8734;','&laquo;&laquo; Newer','Older &raquo;&raquo;'); ?></p></div>
 				<?php } ?>
 

@@ -55,7 +55,7 @@
 				</div>
 
 				<?php endwhile; else: ?>
-					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+					<p><?php _e('Sorry, no posts matched your criteria.', 'govfresh' ); ?></p>
 				<?php endif; ?>
 
 				<?php if(function_exists('wp_pagenavi')) { ?>
