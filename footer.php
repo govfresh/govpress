@@ -1,4 +1,3 @@
-
 		<div class="footer">
 
 			<div class="container">
@@ -40,12 +39,6 @@
 		</div>
 
 	<?php wp_footer(); ?>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/jquery.js"></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/bootstrap.min.js"></script>
 
 </body>
 
