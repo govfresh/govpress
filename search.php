@@ -1,43 +1,38 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying Search Results pages.
+ *
+ * @package govfresh
+ */
 
-	<div class="container content">
+get_header(); ?>
 
-		<div class="row">
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-			<div class="col-md-12">
-				<h1>Results for <?php /* Search Count */ $allsearch = &new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' ('); echo $count . ''; _e(')'); wp_reset_query(); ?></h1>
-			</div>
+		<?php if ( have_posts() ) : ?>
 
-			<div class="col-md-8">
+			<header class="page-header">
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'govfresh' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			</header><!-- .page-header -->
 
-				<div class="search-result">
-					<?php get_search_form(); ?>
-				</div>
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', 'search' ); ?>
 
-				<div class="search-result-entry">
-					<?php $title = get_the_title(); $keys= explode(" ",$s); $title = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search-excerpt">\0</span>', $title); ?>
-					<h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php echo $title; ?></a></h4>
-					<?php the_excerpt(); ?>
-				</div>
+			<?php endwhile; ?>
 
-					<?php endwhile; else: ?>
-						<p><?php _e( 'Sorry, no posts matched your criteria.', 'govfreshwp' ); ?></p>
-					<?php endif; ?>
+			<?php govfresh_paging_nav(); ?>
 
-				<?php if(function_exists('wp_pagenavi')) { ?>
-				<?php wp_pagenavi(); ?>
-				<?php } else { ?>
-				<div class="navigation"><p><?php posts_nav_link('&#8734;','&laquo;&laquo; Newer','Older &raquo;&raquo;'); ?></p></div>
-				<?php } ?>
+		<?php else : ?>
 
-			</div>
+			<?php get_template_part( 'content', 'none' ); ?>
 
-				<?php get_sidebar(); ?>
+		<?php endif; ?>
 
-		</div>
+		</main><!-- #main -->
+	</section><!-- #primary -->
 
-	</div>
-
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

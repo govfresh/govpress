@@ -1,0 +1,536 @@
+/*
+Theme Name: GovFresh
+Theme URI: http://govfresh.com/
+Author: GovFresh
+Author URI: http://govfresh.com/
+Description: A well-built theme for government websites.
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: govfresh
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Govfresh is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+*/
+
+/* =Global Variables
+----------------------------------------------- */
+
+$font-stack: 'Open Sans', sans-serif;
+$text-color: #111;
+$link-color: #428bca;
+$link-visited: #0072BC;
+$link-hover: #0072BC;
+$background: #f8f8f8;
+$background-alt: #0072BC;
+
+@import "reset";
+
+@import "global";
+
+/* =General
+----------------------------------------------- */
+
+body {
+	background: $background;
+}
+a {
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+/* =Layout
+----------------------------------------------- */
+
+.content-area {
+	float: left;
+	margin: 0 -25% 0 0;
+	width: 100%;
+}
+.col-width {
+	max-width: 1160px;
+	padding:0 20px;
+	margin:0 auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+}
+.site-main {
+	margin: 0 30% 0 0;
+}
+.site-content .widget-area {
+	float: right;
+	overflow: hidden;
+	width: 25%;
+}
+.site-footer {
+	clear: both;
+	width: 100%;
+}
+
+/* =Menu
+----------------------------------------------- */
+
+#site-navigation {
+	background: $background-alt;
+	position: relative;
+	font-weight:300;
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+}
+.main-navigation li {
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.main-navigation ul ul {
+	margin-left: 20px;
+}
+.main-navigation a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+}
+.main-navigation a:hover {
+	color: #555;
+}
+.main-navigation .current_page_item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-ancestor > a {
+	background: $background;
+	color: #555;
+}
+.main-navigation {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+	font-size: 14px;
+	padding-top: 24px;
+	min-height: 48px;
+}
+.main-navigation.toggled-on {
+	padding: 72px 0 36px;
+}
+.main-navigation .nav-menu {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	display: none;
+}
+.main-navigation.toggled-on .nav-menu {
+	display: block;
+}
+.main-navigation a {
+	padding: 7px 0;
+}
+.menu-toggle {
+	cursor: pointer;
+	font-size: 0;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 12px;
+	right: 10px;
+	text-align: center;
+}
+.menu-toggle:before {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font: normal 16px/1 Genericons;
+	text-decoration: inherit;
+	vertical-align: text-bottom;
+	color: #fff;
+	content: "\f419";
+	margin:0;
+}
+
+/* =Header
+----------------------------------------------- */
+
+.site-header {
+	font-weight:400;
+	padding: 3em 0;
+	text-align: center;
+}
+.site-title {
+	font-size:36px;
+	font-size:3.6rem;
+}
+.site-title a {
+	text-decoration: none;
+}
+
+
+/* =Content
+----------------------------------------------- */
+
+#content {
+	background:#fff;
+	border-radius:5px;
+	padding:1.75em 1.5em;
+	margin:0 0 3em;
+}
+.sticky {
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.entry-title {
+	font-size:36px;
+	font-size:3.6rem;
+	border-bottom: 1px solid #f8f8f8;
+	padding:0 0 .5em;
+	margin:0 0 .5em;
+}
+.entry-meta {
+	color: #666;
+	font-size:14px;
+}
+.entry-header .entry-meta {
+	border-bottom: 1px solid #f8f8f8;
+	padding:0 0 1em;
+	margin:0 0 .5em;
+}
+.byline,
+.updated {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+
+/* =Asides
+----------------------------------------------- */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+
+/* =Media
+----------------------------------------------- */
+
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-main .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-main .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.site-main .gallery dd {
+	margin: 0;
+}
+.site-main .gallery-columns-4 .gallery-item {
+}
+.site-main .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-main [class*="navigation"] {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+[class*="navigation"] .nav-previous {
+	float: left;
+	width: 50%;
+}
+[class*="navigation"] .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+
+/* =Comments
+----------------------------------------------- */
+
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+}
+
+
+/* =Widgets
+----------------------------------------------- */
+
+.widget {
+	font-size:14px;
+	margin: 0 0 1.5em;
+}
+.widget ul {
+	list-style: none;
+}
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+
+/* Sidebar Widgets */
+
+#secondary .widget {
+	background:$background;
+	padding:0 0 1.5em;
+	overflow: hidden;
+	border-radius:5px;
+}
+#secondary .widget-title {
+	color:#fff;
+	background:$background-alt;
+	padding:.5em .75em;
+	margin-bottom:1em;
+}
+#secondary .widget ul {
+	margin:0 .75em;
+}
+
+/* Footer Widgets */
+
+#footer-widgets a {
+	color:#666;
+	text-decoration: none;
+}
+#footer-widgets a:hover {
+	color:#111;
+	text-decoration: underline;
+}
+#footer-widgets .widget-title {
+	margin-bottom:1em;
+}
+#footer-widgets .widget ul {
+	margin: 0 0 1.5em;
+}
+#footer-widgets .widget ul ul {
+	margin:0 0 0 1.5em;
+}
+#footer-widgets.widgets-count-2 .widget-area {
+	float:left;
+	width:47.5%;
+	margin-right:5%;
+}
+#footer-widgets.widgets-count-2 #footer-widget-2 {
+	margin-right:0;
+}
+#footer-widgets.widgets-count-3 .widget-area {
+	float:left;
+	width:30%;
+	margin-right:5%;
+}
+#footer-widgets.widgets-count-3 #footer-widget-3 {
+	margin-right:0;
+}
+
+/* =Footer
+----------------------------------------------- */
+
+#colophon {
+	background: $background-alt;
+	color:#fff;
+	padding:1.5em 0;
+}
+
+#colophon a {
+	color:#fff;
+}
+
+
+/* =Infinite Scroll
+----------------------------------------------- */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/* =Responsive
+----------------------------------------------- */
+
+@media screen and (min-width: 1100px) {
+
+	/* Primary Navigation */
+
+	.main-navigation {
+		padding: 0;
+	}
+
+	.main-navigation .menu-toggle {
+		display: none;
+		padding: 0;
+	}
+
+	.main-navigation .nav-menu {
+		border-bottom: 0;
+		display: block;
+	}
+
+	.main-navigation.toggled-on {
+		border-bottom: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	.main-navigation li {
+		border: 0;
+		display: inline-block;
+		height: 48px;
+		line-height: 48px;
+		position: relative;
+	}
+
+	.main-navigation a {
+		display: inline-block;
+		padding: 0 12px;
+		white-space: nowrap;
+	}
+
+	.main-navigation ul ul {
+		background-color: $background;
+		border:1px solid #ccc;
+		border-top:none;
+		float: left;
+		margin: 0 0 0 -1px;
+		position: absolute;
+		top: 48px;
+		left: -999em;
+		z-index: 99999;
+	}
+
+	.main-navigation li li {
+		border: 0;
+		display: block;
+		height: auto;
+		line-height: 1.0909090909;
+	}
+
+	.main-navigation ul ul ul {
+		left: -999em;
+		top: 0;
+	}
+
+	.main-navigation ul ul a {
+		color:#555;
+		padding: 18px 12px;
+		white-space: normal;
+		width: 190px;
+	}
+
+	.main-navigation li:hover > a,
+	.main-navigation li.focus > a {
+		background-color: $background;
+		color: #555;
+	}
+
+	.main-navigation ul ul a:hover,
+	.main-navigation ul ul li.focus > a {
+		background-color: #fefefe;
+	}
+
+	.main-navigation ul li:hover > ul,
+	.main-navigation ul li.focus > ul {
+		left: auto;
+	}
+
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul {
+		left: 100%;
+	}
+
+	.main-navigation .menu-item-has-children > a,
+	.main-navigation .page_item_has_children > a {
+		padding-right: 26px;
+	}
+
+	.main-navigation .menu-item-has-children > a:after,
+	.main-navigation .page_item_has_children > a:after {
+		-webkit-font-smoothing: antialiased;
+		content: "\f502";
+		display: inline-block;
+		font: normal 8px/1 Genericons;
+		position: absolute;
+		right: 12px;
+		top: 22px;
+		vertical-align: text-bottom;
+	}
+
+	.main-navigation li .menu-item-has-children > a,
+	.main-navigation li .page_item_has_children > a {
+		padding-right: 20px;
+		width: 168px;
+	}
+
+	.main-navigation .menu-item-has-children li.menu-item-has-children > a:after,
+	.main-navigation .menu-item-has-children li.page_item_has_children > a:after,
+	.main-navigation .page_item_has_children li.menu-item-has-children > a:after,
+	.main-navigation .page_item_has_children li.page_item_has_children > a:after {
+		content: "\f501";
+		right: 8px;
+		top: 20px;
+	}
+}

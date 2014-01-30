@@ -1,78 +1,43 @@
-<!DOCTYPE html>
+<?php
+/**
+ * The Header for our theme.
+ *
+ * Displays all of the <head> section and everything up till <div id="content">
+ *
+ * @package govfresh
+ */
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-
 <head>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><?php wp_title( '|', true, 'right' ); ?></title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="">
-
-	<title><?php bloginfo('name'); ?> - <?php bloginfo('description');?></title>
-
-    <!-- Bootstrap core CSS -->
-
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
-    <link href="<?php bloginfo('url'); ?>/wp-content/themes/govfreshwp/css/bootstrap.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="screen" />
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-	<?php wp_head(); ?>
-
+<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<div id="page" class="hfeed site">
 
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="container">
-	        <div class="navbar-header">
-	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-	                <span class="sr-only"><?php _e( 'Toggle navigation', 'govfreshwp' ); ?></span>
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-	            </button>
+	<?php do_action( 'before' ); ?>
 
-	        </div>
+	<nav id="site-navigation" class="main-navigation" role="navigation">
+		<div class="col-width">
+			<h1 class="menu-toggle"><?php _e( 'Menu', 'govfresh' ); ?></h1>
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'govfresh' ); ?></a>
 
-			<?php
-			    wp_nav_menu( array(
-			        'menu'              => 'primary',
-			        'theme_location'    => 'primary',
-			        'depth'             => 2,
-			        'container'         => 'div',
-			        'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
-			        'menu_class'        => 'nav navbar-nav',
-			        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-			        'walker'            => new wp_bootstrap_navwalker())
-			    );
-			?>
-
-	    </div>
-	</nav>
-
-	<div class="header">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<?php if ( get_header_image() ) : ?>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-						</a>
-					<?php endif; // End header image check. ?>
-				</div>
-			</div>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</div>
-	</div>
+	</nav><!-- #site-navigation -->
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding col-width">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		</div>
+	</header><!-- #masthead -->
+
+	<div class="col-width">
+		<div id="content" class="site-content">

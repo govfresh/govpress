@@ -1,35 +1,50 @@
 <?php
 /**
+ * Sample implementation of the Custom Header feature
+ * http://codex.wordpress.org/Custom_Headers
+ *
+ * You can add an optional custom header image to header.php like so ...
+
+	<?php if ( get_header_image() ) : ?>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+		<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+	</a>
+	<?php endif; // End header image check. ?>
+
+ *
+ * @package govfresh
+ */
+
+/**
  * Setup the WordPress core custom header feature.
  *
- * @uses govfreshwp_header_style()
- * @uses govfreshwp_admin_header_style()
- * @uses govfreshwp_admin_header_image()
+ * @uses govfresh_header_style()
+ * @uses govfresh_admin_header_style()
+ * @uses govfresh_admin_header_image()
  *
- * @package govfreshwp
+ * @package govfresh
  */
-function govfreshwp_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'govfreshwp_custom_header_args', array(
-		'default-image'          => get_template_directory_uri() . '/images/logo.png',
-		'default-color'			 => 'f8f8f8',
+function govfresh_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'govfresh_custom_header_args', array(
+		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 125,
-		'height'                 => 125,
+		'width'                  => 1000,
+		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'govfreshwp_header_style',
-		'admin-head-callback'    => 'govfreshwp_admin_header_style',
-		'admin-preview-callback' => 'govfreshwp_admin_header_image',
+		'wp-head-callback'       => 'govfresh_header_style',
+		'admin-head-callback'    => 'govfresh_admin_header_style',
+		'admin-preview-callback' => 'govfresh_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'govfreshwp_custom_header_setup' );
+add_action( 'after_setup_theme', 'govfresh_custom_header_setup' );
 
-if ( ! function_exists( 'govfreshwp_header_style' ) ) :
+if ( ! function_exists( 'govfresh_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see govfreshwp_custom_header_setup().
+ * @see govfresh_custom_header_setup().
  */
-function govfreshwp_header_style() {
+function govfresh_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -62,15 +77,15 @@ function govfreshwp_header_style() {
 	</style>
 	<?php
 }
-endif; // govfreshwp_header_style
+endif; // govfresh_header_style
 
-if ( ! function_exists( 'govfreshwp_admin_header_style' ) ) :
+if ( ! function_exists( 'govfresh_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see govfreshwp_custom_header_setup().
+ * @see govfresh_custom_header_setup().
  */
-function govfreshwp_admin_header_style() {
+function govfresh_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -90,15 +105,15 @@ function govfreshwp_admin_header_style() {
 	</style>
 <?php
 }
-endif; // govfreshwp_admin_header_style
+endif; // govfresh_admin_header_style
 
-if ( ! function_exists( 'govfreshwp_admin_header_image' ) ) :
+if ( ! function_exists( 'govfresh_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see govfreshwp_custom_header_setup().
+ * @see govfresh_custom_header_setup().
  */
-function govfreshwp_admin_header_image() {
+function govfresh_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -110,4 +125,4 @@ function govfreshwp_admin_header_image() {
 	</div>
 <?php
 }
-endif; // govfreshwp_admin_header_image
+endif; // govfresh_admin_header_image
