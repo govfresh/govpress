@@ -129,18 +129,16 @@ add_action( 'widgets_init', 'govfresh_widgets_init' );
  * Register Javascript
  */
 function govfreshwp_scripts() {
-	wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery');
-	wp_enqueue_script('jquery.bootstrap.min');
+	wp_enqueue_script( 'jquery.bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), null, true );
 }
-
 add_action( 'wp_enqueue_scripts', 'govfreshwp_scripts' );
 
 /**
  * Register Styles
  */
 function govfreshwp_css() {
-	wp_register_style( 'bootstrap.min', get_template_directory_uri() . '/css/bootstrap.min.css' );
-	wp_enqueue_style( 'bootstrap.min' );
+	wp_enqueue_style( 'bootstrap.min', get_template_directory_uri() . '/css/bootstrap.min.css', array(), null );
+
 }
 add_action( 'wp_enqueue_scripts', 'govfreshwp_css' );
 
