@@ -9,7 +9,7 @@ License: GNU General Public License
 License URI: license.txt
 Text Domain: govfresh
 Domain Path: /languages/
-Tags:
+Tags: responsive-layout, two-columns, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, full-width-template, microformats, sticky-post, theme-options, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -36,13 +36,14 @@ $background-alt: #0072BC;
 ----------------------------------------------- */
 
 body {
+	-webkit-font-smoothing: antialiased;
 	background: $background;
 }
 a {
   text-decoration: none;
-  -webkit-transition: color 0.2s ease-out;
-  -moz-transition: color 0.2s ease-out;
-  transition: color 0.2s ease-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 a:hover {
 	text-decoration: underline;
@@ -83,7 +84,6 @@ a:hover {
 #site-navigation {
 	background: $background-alt;
 	position: relative;
-	font-weight:300;
 }
 .main-navigation ul {
 	list-style: none;
@@ -101,21 +101,13 @@ a:hover {
 	display: block;
 }
 .main-navigation a:hover {
-	color: #555;
-}
-.main-navigation .current_page_item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current-menu-ancestor > a {
-	background: $background;
-	color: #555;
+	color:rgba(255,255,255,.8);
 }
 .main-navigation {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing:    border-box;
 	box-sizing:         border-box;
 	font-size: 14px;
-	padding-top: 24px;
 	min-height: 48px;
 }
 .main-navigation.toggled-on {
@@ -184,15 +176,22 @@ a:hover {
 	margin: 0 0 1.5em;
 }
 .entry-title {
-	font-size:36px;
-	font-size:3.6rem;
+	font-size:30px;
+	font-size:3.0rem;
 	border-bottom: 1px solid #f8f8f8;
 	padding:0 0 .5em;
 	margin:0 0 .5em;
 }
+.entry-title a:hover {
+	color:#111;
+	text-decoration: none;
+}
 .entry-meta {
 	color: #666;
 	font-size:14px;
+}
+.entry-meta a {
+	color: #666;
 }
 .entry-header .entry-meta {
 	border-bottom: 1px solid #f8f8f8;
@@ -318,6 +317,9 @@ object {
 .widget ul {
 	list-style: none;
 }
+.widget ul li {
+	margin-bottom:.2em;
+}
 /* Make sure select elements fit in widgets */
 .widget select {
 	max-width: 100%;
@@ -342,11 +344,14 @@ object {
 	margin-bottom:1em;
 }
 #secondary .widget ul {
-	margin:0 .75em;
+	margin:0 1em;
 }
 
 /* Footer Widgets */
 
+#footer-widgets {
+	margin-bottom:3em;
+}
 #footer-widgets a {
 	color:#666;
 	text-decoration: none;
@@ -356,6 +361,7 @@ object {
 	text-decoration: underline;
 }
 #footer-widgets .widget-title {
+	font-size: 18px;
 	margin-bottom:1em;
 }
 #footer-widgets .widget ul {
@@ -385,6 +391,7 @@ object {
 ----------------------------------------------- */
 
 #colophon {
+	font-size:14px;
 	background: $background-alt;
 	color:#fff;
 	padding:1.5em 0;
@@ -450,6 +457,22 @@ object {
 		white-space: nowrap;
 	}
 
+	.main-navigation .current_page_item > a,
+	.main-navigation .current_page_ancestor > a,
+	.main-navigation .current-menu-item > a,
+	.main-navigation .current-menu-ancestor > a {
+		background: $background;
+		color: #555;
+	}
+
+	.main-navigation ul > li.menu-item-has-children:hover > a,
+	.main-navigation ul > li.menu-item-has-children.focus > a,
+	.main-navigation ul > li.page_item_has_children:hover > a,
+	.main-navigation ul > li.page_item_has_children.focus > a {
+		color:#555;
+		background: $background;
+	}
+
 	.main-navigation ul ul {
 		background-color: $background;
 		border:1px solid #ccc;
@@ -460,13 +483,15 @@ object {
 		top: 48px;
 		left: -999em;
 		z-index: 99999;
+		opacity:0;
+		transition: opacity .3s ease-in-out;
 	}
 
 	.main-navigation li li {
 		border: 0;
 		display: block;
 		height: auto;
-		line-height: 1.0909090909;
+		line-height:1.2;
 	}
 
 	.main-navigation ul ul ul {
@@ -476,25 +501,30 @@ object {
 
 	.main-navigation ul ul a {
 		color:#555;
-		padding: 18px 12px;
+		padding: 16px 12px;
 		white-space: normal;
 		width: 190px;
 	}
 
-	.main-navigation li:hover > a,
-	.main-navigation li.focus > a {
-		background-color: $background;
-		color: #555;
+	.main-navigation ul ul a:hover,
+	.main-navigation ul ul li.focus > a,
+	.main-navigation ul ul li:hover {
+		color:#555;
+		background-color: #fefefe;
 	}
 
-	.main-navigation ul ul a:hover,
-	.main-navigation ul ul li.focus > a {
+	.main-navigation ul ul li.menu-item-has-children:hover > a,
+	.main-navigation ul ul li.menu-item-has-children.focus > a,
+	.main-navigation ul ul li.page_item_has_children:hover > a,
+	.main-navigation ul ul li.page_item_has_children.focus > a {
+		color:#555;
 		background-color: #fefefe;
 	}
 
 	.main-navigation ul li:hover > ul,
 	.main-navigation ul li.focus > ul {
 		left: auto;
+		opacity:1;
 	}
 
 	.main-navigation ul ul li:hover > ul,
