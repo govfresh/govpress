@@ -75,6 +75,15 @@ function govfresh_widgets_init() {
 	) );
 
 	register_sidebar( array(
+        'name'          => __( 'Home Page Hero', 'govfresh' ),
+        'id'            => 'home-page-hero',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+	register_sidebar( array(
 		'name'          => __( 'Footer Area One', 'govfresh' ),
 		'id'            => 'footer-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',

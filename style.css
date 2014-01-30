@@ -805,6 +805,32 @@ object {
   margin: 0 1em;
 }
 
+/* Header Widgets */
+#hero-widgets .widget {
+  font-size: 18px;
+  margin: 0 0 1em;
+}
+
+#hero-widgets .widget-title {
+  font-size: 30px;
+  font-size: 3.0rem;
+  margin-bottom: .5em;
+}
+
+#hero-widgets {
+  background: #0072bc;
+  color: #fff;
+  margin-bottom: 3em;
+  padding: 1.5em 0;
+  text-align: center;
+}
+
+#hero-widgets .section-wrap {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1.75em 1.5em;
+}
+
 /* Footer Widgets */
 #footer-widgets {
   margin-bottom: 3em;

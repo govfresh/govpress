@@ -44,5 +44,15 @@
 		</div>
 	</header><!-- #masthead -->
 
+	<?php if ( ( is_front_page() || is_home() ) && is_active_sidebar( 'home-page-hero' ) ) : ?>
+		<div id="hero-widgets" class="clear">
+			<div class="col-width">
+				<div class="section-wrap">
+					<?php dynamic_sidebar( 'home-page-hero' ); ?>
+				</div>
+			</div>
+		</div>
+	<?php endif; // End home page top widget module ?>
+
 	<div class="col-width">
 		<div id="content" class="site-content">

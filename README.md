@@ -12,4 +12,12 @@ Website: http://wp.govfresh.com
 @todos
 =========
 
-- Support full width header image?
+- Author box under post
+- Search bar in footer
+- Option to change footer text
+- Page templates
+- Breadcrumb support
+- Homepage widget module
+- Responsive styling
+- Browser testing
+- Support full bleed header image
