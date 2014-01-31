@@ -133,7 +133,7 @@ add_action( 'wp_enqueue_scripts', 'govfresh_scripts' );
  */
 function govfresh_fonts() {
 	// Add Genericons font, used in the main stylesheet.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons/genericons.css', array(), '1.0.0' );
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/fonts/font-awesome/font-awesome.css', array(), '4.0.3' );
 	wp_register_style( 'govfresh-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300', '', null, 'screen' );
 		wp_enqueue_style( 'govfresh-open-sans' );
 }

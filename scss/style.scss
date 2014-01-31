@@ -323,10 +323,6 @@ object {
 .widget select {
 	max-width: 100%;
 }
-/* Search widget */
-.widget_search .search-submit {
-	display: none;
-}
 
 /* Sidebar Widgets */
 
@@ -368,6 +364,18 @@ object {
 	border-radius: 10px;
 	background: rgba(255,255,255, 0.3);
 	padding: 1.75em 1.5em;
+}
+#hero-widgets .search-field {
+	height:39px;
+	color:#555;
+	padding: 3px 6px;
+}
+#hero-widgets .search-submit {
+	font-size:16px;
+	height:45px;
+}
+#hero-widgets .search-submit:hover {
+	background:#fff;
 }
 
 /* Footer Widgets */
@@ -563,12 +571,12 @@ object {
 	.main-navigation .menu-item-has-children > a:after,
 	.main-navigation .page_item_has_children > a:after {
 		-webkit-font-smoothing: antialiased;
-		content: "\f502";
+		content: "\f0d7";
 		display: inline-block;
-		font: normal 8px/1 Genericons;
+		font: normal 10px/1 FontAwesome;
 		position: absolute;
 		right: 12px;
-		top: 22px;
+		top: 20px;
 		vertical-align: text-bottom;
 	}
 
@@ -582,7 +590,7 @@ object {
 	.main-navigation .menu-item-has-children li.page_item_has_children > a:after,
 	.main-navigation .page_item_has_children li.menu-item-has-children > a:after,
 	.main-navigation .page_item_has_children li.page_item_has_children > a:after {
-		content: "\f501";
+		content: "\f0da";
 		right: 8px;
 		top: 20px;
 	}
