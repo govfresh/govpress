@@ -511,6 +511,10 @@ a:hover {
   margin: 0 30% 0 0;
 }
 
+.full-width .site-main {
+  margin: 0;
+}
+
 .site-content .widget-area {
   float: right;
   overflow: hidden;

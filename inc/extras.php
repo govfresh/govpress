@@ -31,6 +31,10 @@ function govfresh_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	// Body class for portfolio page template
+	if ( is_page_template( 'templates/full-page.php' ) )
+		$classes[] = 'full-width';
+
 	return $classes;
 }
 add_filter( 'body_class', 'govfresh_body_classes' );
