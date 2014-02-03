@@ -796,12 +796,16 @@ object {
 #secondary .widget-title {
   color: #fff;
   background: #0072bc;
-  padding: .5em .75em;
+  padding: .5em 1.25em;
   margin-bottom: 1em;
 }
 
 #secondary .widget ul {
-  margin: 0 1em;
+  margin: 0 1.25em;
+}
+
+#secondary .widget_search form {
+  margin: 0 1.25em;
 }
 
 /* Header Widgets */
@@ -895,14 +899,19 @@ object {
 
 /* =Footer
 ----------------------------------------------- */
-#colophon {
+.site-footer {
   font-size: 14px;
   background: #0072bc;
   color: #fff;
   padding: 1.5em 0;
+  text-align: center;
 }
 
-#colophon a {
+.site-footer.widgets {
+  padding: 1.5em 0 .5em;
+}
+
+.site-footer a {
   color: #fff;
 }
 

@@ -20,16 +20,23 @@
 			get_sidebar( 'footer' );
 	?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<?php
+	$fclass = 'site-footer no-widgets';
+	if ( is_active_sidebar( 'footer-text' ) ) {
+		$fclass = 'site-footer widgets';
+	} ?>
+
+	<footer class="<?php echo $fclass; ?>" role="contentinfo">
 		<div class="col-width">
-			<div class="site-info">
-				<?php do_action( 'govfresh_credits' ); ?>
-				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'govfresh' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'govfresh' ), 'govfresh', '<a href="http://govfresh.com/" rel="designer">GovFresh</a>' ); ?>
-			</div><!-- .site-info -->
+			<?php if ( is_active_sidebar( 'footer-text' ) ) { ?>
+				<div class="widget-area" role="complementary">
+					<?php dynamic_sidebar( 'footer-text' ); ?>
+				</div>
+			<?php } else { ?>
+				<?php printf( __( '%1$s the free %2$s theme for government.', 'govfresh' ), '<a href="http://govfresh.com/" rel="designer">GovFresh WP</a>', '<a href="http://wordpress.org/" rel="generator">WordPress</a>' ); ?>
+			<?php } ?>
 		</div><!-- .col-width -->
-	</footer><!-- #colophon -->
+	</footer><!-- .site-footer -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
