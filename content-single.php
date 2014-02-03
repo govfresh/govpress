@@ -23,6 +23,18 @@
 		?>
 	</div><!-- .entry-content -->
 
+	<?php if ( get_the_author_meta( 'description' ) ) : // If a user has filled out their description, show a bio on their entries ?>
+		<div class="author-meta clear">
+			<div class="author-avatar">
+				<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'govfresh_author_bio_avatar_size', 75 ) ); ?>
+			</div><!-- #author-avatar -->
+			<div class="author-description">
+				<h3><?php printf( esc_attr__( 'About %s', 'govfresh' ), get_the_author() ); ?></h3>
+				<?php the_author_meta( 'description' ); ?>
+			</div><!-- #author-description -->
+		</div><!-- #author-meta-->
+	<?php endif; ?>
+
 	<footer class="entry-meta">
 		<?php
 			/* translators: used between list items, there is a space after the comma */

@@ -128,7 +128,7 @@ button,
 input,
 select,
 textarea {
-  color: #111111;
+  color: #222222;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
@@ -641,6 +641,27 @@ a:hover {
   margin: 0 0 .5em;
 }
 
+.entry-content h1, .entry-content h2, .entry-content h3,
+.entry-content h4, .entry-content h5, .entry-content h6 {
+  font-weight: 600;
+  margin: 0 0 1em;
+}
+
+.entry-content h1 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+.entry-content h2 {
+  font-size: 20px;
+  font-size: 2.0rem;
+}
+
+.entry-content h3 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
 .entry-title a:hover {
   color: #111;
   text-decoration: none;
@@ -669,6 +690,37 @@ a:hover {
 .single .byline,
 .group-blog .byline {
   display: inline;
+}
+
+.author-meta {
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid #f8f8f8;
+  padding: 1.5em 0;
+  margin: 0 0 1.5em;
+  position: relative;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.author-avatar {
+  position: absolute;
+  left: 0;
+}
+
+.author-avatar img {
+  border-radius: 50%;
+}
+
+.author-description {
+  margin-left: 100px;
+  min-height: 75px;
+}
+
+.author-description h3 {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .page-content,
