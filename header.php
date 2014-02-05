@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package govfresh
+ * @package GovFreshWP
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -25,8 +25,8 @@
 
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<div class="col-width">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'govfresh' ); ?></h1>
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'govfresh' ); ?></a>
+			<h1 class="menu-toggle"><?php _e( 'Menu', 'govfreshwp' ); ?></h1>
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'govfreshwp' ); ?></a>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</div>

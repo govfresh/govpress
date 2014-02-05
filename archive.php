@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package govfresh
+ * @package GovFreshWP
  */
 
 get_header(); ?>
@@ -24,46 +24,46 @@ get_header(); ?>
 							single_tag_title();
 
 						elseif ( is_author() ) :
-							printf( __( 'Author: %s', 'govfresh' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Author: %s', 'govfreshwp' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
 						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'govfresh' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( 'Day: %s', 'govfreshwp' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'govfresh' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'govfresh' ) ) . '</span>' );
+							printf( __( 'Month: %s', 'govfreshwp' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'govfreshwp' ) ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'govfresh' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'govfresh' ) ) . '</span>' );
+							printf( __( 'Year: %s', 'govfreshwp' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'govfreshwp' ) ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'govfresh' );
+							_e( 'Asides', 'govfreshwp' );
 
 						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'govfresh');
+							_e( 'Galleries', 'govfreshwp');
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'govfresh');
+							_e( 'Images', 'govfreshwp');
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'govfresh' );
+							_e( 'Videos', 'govfreshwp' );
 
 						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'govfresh' );
+							_e( 'Quotes', 'govfreshwp' );
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'govfresh' );
+							_e( 'Links', 'govfreshwp' );
 
 						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'govfresh' );
+							_e( 'Statuses', 'govfreshwp' );
 
 						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'govfresh' );
+							_e( 'Audios', 'govfreshwp' );
 
 						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'govfresh' );
+							_e( 'Chats', 'govfreshwp' );
 
 						else :
-							_e( 'Archives', 'govfresh' );
+							_e( 'Archives', 'govfreshwp' );
 
 						endif;
 					?>
@@ -90,7 +90,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php govfresh_paging_nav(); ?>
+			<?php govfreshwp_paging_nav(); ?>
 
 		<?php else : ?>
 

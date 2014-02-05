@@ -3,7 +3,7 @@
  * Template Name: Full Page
  * Description: A template for displaying pages without a sidebar
  *
- * @package govfresh
+ * @package GovFreshWP
  */
 
 get_header(); ?>

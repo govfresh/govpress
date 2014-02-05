@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package govfresh
+ * @package GovFreshWP
  */
 ?>
 
@@ -15,10 +15,10 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'govfresh' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'govfreshwp' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', 'govfresh' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+	<?php edit_post_link( __( 'Edit', 'govfreshwp' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-## -->

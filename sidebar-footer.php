@@ -2,8 +2,7 @@
 /**
  * Footer widget areas
  *
- * @package GovFresh
- * @since 1.0
+ * @package GovFreshWP
  */
 ?>
 
@@ -22,7 +21,7 @@
 	// If we get this far, we have widgets. Let do this.
 ?>
 
-<div id="footer-widgets" class="col-width clear <?php govfresh_footer_widget_count(); ?>">
+<div id="footer-widgets" class="col-width clear <?php govfreshwp_footer_widget_count(); ?>">
 	<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
 	<div id="footer-widget-1" class="widget-area" role="complementary">
 		<?php dynamic_sidebar( 'footer-1' ); ?>

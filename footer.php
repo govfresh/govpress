@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package govfresh
+ * @package GovFreshWP
  */
 ?>
 
@@ -33,7 +33,7 @@
 					<?php dynamic_sidebar( 'footer-text' ); ?>
 				</div>
 			<?php } else { ?>
-				<?php printf( __( '%1$s the free %2$s theme for government.', 'govfresh' ), '<a href="http://govfresh.com/" rel="designer">GovFresh WP</a>', '<a href="http://wordpress.org/" rel="generator">WordPress</a>' ); ?>
+				<?php printf( __( '%1$s the free %2$s theme for government.', 'govfreshwp' ), '<a href="http://govfreshwp.com/" rel="designer">GovFresh WP</a>', '<a href="http://wordpress.org/" rel="generator">WordPress</a>' ); ?>
 			<?php } ?>
 		</div><!-- .col-width -->
 	</footer><!-- .site-footer -->
