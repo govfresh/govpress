@@ -32,32 +32,17 @@
 	<?php endif; ?>
 
 	<footer class="entry-meta">
+		<ul class="entry-meta-taxonomy">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'govfreshwp' ) );
-				if ( $categories_list && govfreshwp_categorized_blog() ) :
-			?>
-			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'govfreshwp' ), $categories_list ); ?>
-			</span>
-			<?php endif; // End if categories ?>
-
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'govfreshwp' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', 'govfreshwp' ), $tags_list ); ?>
-			</span>
-			<?php endif; // End if $tags_list ?>
+			<?php echo get_the_category_list('<li>','</li><li>','</li>'); ?>
+			<?php echo get_the_tag_list('<li>','</li><li>','</li>'); ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
 
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'govfreshwp' ), __( '1 Comment', 'govfreshwp' ), __( '% Comments', 'govfreshwp' ) ); ?></span>
-		<?php endif; ?>
+			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+			<li class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'govfreshwp' ), __( '1 Comment', 'govfreshwp' ), __( '% Comments', 'govfreshwp' ) ); ?></li>
+			<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', 'govfreshwp' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'govfreshwp' ), '<li class="edit-link">', '</li>' ); ?>
+		</ul>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->

@@ -641,6 +641,11 @@ a:hover {
   margin: 0 0 .5em;
 }
 
+.entry-content {
+  border-bottom: 1px solid #f8f8f8;
+  margin-bottom: 1.5em;
+}
+
 .entry-content h1, .entry-content h2, .entry-content h3,
 .entry-content h4, .entry-content h5, .entry-content h6 {
   font-weight: 600;
@@ -670,6 +675,7 @@ a:hover {
 .entry-meta {
   color: #666;
   font-size: 14px;
+  border-bottom: 1px solid #f8f8f8;
 }
 
 .entry-meta a {
@@ -677,7 +683,6 @@ a:hover {
 }
 
 .entry-header .entry-meta {
-  border-bottom: 1px solid #f8f8f8;
   padding: 0 0 1em;
   margin: 0 0 .5em;
 }
@@ -693,7 +698,6 @@ a:hover {
 }
 
 .author-meta {
-  border-top: 1px solid #f8f8f8;
   border-bottom: 1px solid #f8f8f8;
   padding: 1.5em 0;
   margin: 0 0 1.5em;
@@ -721,12 +725,29 @@ a:hover {
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: 600;
+  margin-bottom: .5em;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
+footer.entry-meta {
+  padding-bottom: 1em;
+  font-size: 13px;
+}
+
+footer.entry-meta ul {
+  list-style: none;
+  margin: 0;
+}
+
+footer.entry-meta li {
+  display: inline-block;
+  margin: 0 .5em .5em 0;
+}
+
+footer.entry-meta a {
+  background: #efefef;
+  border-radius: 5px;
+  color: #666;
+  padding: .5em .75em;
 }
 
 .page-links {
