@@ -595,11 +595,11 @@ a:hover {
 .menu-toggle:before {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
-  font: normal 16px/1 Genericons;
+  font: normal 18px/1 FontAwesome;
   text-decoration: inherit;
   vertical-align: text-bottom;
   color: #fff;
-  content: "\f419";
+  content: "\f0c9";
   margin: 0;
 }
 
@@ -1124,5 +1124,23 @@ object {
     content: "\f0da";
     right: 8px;
     top: 20px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .site-main {
+    margin: 0;
+  }
+
+  .site-content .widget-area {
+    clear: both;
+    float: none;
+    width: auto;
+  }
+}
+@media screen and (max-width: 680px) {
+  #footer-widgets.widgets-count-3 .widget-area {
+    float: none;
+    width: auto;
+    margin-right: 0;
   }
 }
