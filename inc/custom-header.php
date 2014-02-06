@@ -14,6 +14,7 @@ function govfreshwp_custom_header_setup() {
 		'default-text-color'     => '000000',
 		'width'                  => 1160,
 		'height'                 => 250,
+		'flex-width' 			 => true,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'govfreshwp_header_style',
 		'admin-head-callback'    => 'govfreshwp_admin_header_style',

@@ -408,6 +408,28 @@ object {
 	margin:0 1.25em;
 }
 
+/* Ridiculous workarounds for lack of widget-content wrapper */
+#secondary .tagcloud,
+#secondary .textwidget,
+#secondary select,
+#secondary .recentcommentsavatar,
+#secondary #subscribe-blog,
+#secondary .milestone-content,
+#secondary .widgets-multi-column-grid,
+#secondary .widgets-grid-layout,
+#secondary #pd_top_rated_holder,
+#secondary .widget_gravatar p,
+#secondary .widget_image img,
+#secondary .widget_goodreads embed,
+#secondary .widget_goodreads img,
+#secondary .widget-grofile .grofile-thumbnail,
+#secondary .widget-grofile h4,
+#secondary .widget-grofile p,
+#secondary .widget-grofile ul,
+#secondary .widget_facebook_likebox iframe {
+	margin:0 1.25em;
+}
+
 /* Header Widgets */
 
 #hero-widgets .widget {
