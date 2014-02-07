@@ -231,12 +231,13 @@ a:hover {
 }
 .author-meta {
 	border-bottom: 1px solid #f8f8f8;
-	padding:1.5em 0;
+	padding:0 0 1.5em;
 	margin:0 0 1.5em;
 	position: relative;
 	font-size:14px;
 	font-size:1.4rem;
 	color:#555;
+	min-height:100px;
 }
 .author-avatar {
 	position: absolute;
@@ -247,7 +248,6 @@ a:hover {
 }
 .author-description {
 	margin-left:100px;
-	min-height:75px;
 }
 .author-description h3 {
 	font-size:18px;
@@ -357,17 +357,77 @@ object {
 	text-align: right;
 	width: 50%;
 }
+.paging-navigation, .post-navigation {
+	font-size:15px;
+	fonts-size:1.5rem;
+}
 
 
 /* =Comments
 ----------------------------------------------- */
 
+.comments-title {
+	margin: 0 0 1.5em;
+}
+.comment-list {
+	list-style: none;
+	margin: 0 0 3em;
+}
+.comment-list .children {
+	list-style: none;
+	margin:1.5em 0 0 5em;
+}
+.comment {
+	margin-bottom:1em;
+	position: relative;
+}
+.comment-body {
+	padding:0 0 0 5em;
+}
+#comments .avatar {
+	left:0;
+	position: absolute;
+	border-radius: 50%;
+}
+.comment-content, .reply {
+	font-size:14px;
+	font-size:1.4rem;
+}
 .comment-content a {
 	word-wrap: break-word;
 }
-.bypostauthor {
+.comment-content p {
+	margin: 0 0 .5em;
 }
-
+.comment-meta {
+	margin:0 0 .5em;
+}
+.comment-metadata {
+	font-size:13px;
+	font-size:1.3rem;
+}
+.bypostauthor {
+	background: #f8f8f8;
+	padding:.5em;
+}
+.bypostauthor  .avatar {
+	left:.5em;
+}
+#reply-title {
+	margin:0 0 .5em;
+}
+#commentform label[for="author"],
+#commentform label[for="email"],
+#commentform label[for="url"] {
+  float: left;
+  padding: 5px 0;
+  width: 100px;
+}
+.form-allowed-tags, .form-allowed-tags code {
+	font-family: 'Open Sans';
+	font-size:13px;
+	font-size:1.3rem;
+}
 
 /* =Widgets
 ----------------------------------------------- */
@@ -703,5 +763,9 @@ object {
 		float:none;
 		width:auto;
 		margin-right:0;
+	}
+	.comment-list .children {
+		list-style: none;
+		margin:1.5em 0 0 0;
 	}
 }
