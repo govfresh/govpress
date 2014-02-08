@@ -1089,6 +1089,18 @@ object {
   color: #fff;
 }
 
+/* =Plugin Support
+----------------------------------------------- */
+.breadcrumb {
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 8px 15px;
+  margin-bottom: 1.5em;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
 /* =Infinite Scroll
 ----------------------------------------------- */
 /* Globally hidden elements when Infinite Scroll is supported and in use. */

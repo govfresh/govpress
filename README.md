@@ -12,7 +12,8 @@ Website: http://wp.govfresh.com
 @todos
 =========
 
-- Breadcrumb support
+- PageNavi support
 - Browser testing
+- Jetpack support
 - Support full bleed header image
 - Social links for author box (plugin territory?)
