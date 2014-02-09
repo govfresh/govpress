@@ -13,6 +13,7 @@ Website: http://wp.govfresh.com
 =========
 
 - PageNavi support
+- Icon menu
 - Browser testing
 - Jetpack support
 - Support full bleed header image
