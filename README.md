@@ -18,3 +18,5 @@ Website: http://wp.govfresh.com
 - Jetpack support
 - Support full bleed header image
 - Social links for author box (plugin territory?)
+- Color customization options
+- Show child menu items on left side of page template

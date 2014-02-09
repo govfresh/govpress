@@ -768,6 +768,24 @@ footer.entry-meta a {
   margin: 0 0 .5em;
 }
 
+/* =Search
+----------------------------------------------- */
+.search .page-header {
+  margin: 0 0 1.5em;
+}
+
+.search .entry-title {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+
+.search #main .search-form {
+  border-radius: 5px;
+  background: #f8f8f8;
+  padding: 1em;
+  margin: 0 0 1.5em;
+}
+
 /* =Asides
 ----------------------------------------------- */
 .blog .format-aside .entry-title,

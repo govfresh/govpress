@@ -45,4 +45,5 @@
 			<?php edit_post_link( __( 'Edit', 'govfreshwp' ), '<li class="edit-link">', '</li>' ); ?>
 		</ul>
 	</footer><!-- .entry-meta -->
+
 </article><!-- #post-## -->
