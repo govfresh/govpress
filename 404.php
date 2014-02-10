@@ -1,28 +1,56 @@
+<?php
+/**
+ * The template for displaying 404 pages (Not Found).
+ *
+ * @package GovFreshWP
+ */
 
-<?php get_header(); ?>
+get_header(); ?>
 
-	<div class="container content">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-		<div class="row">
+			<section class="error-404 not-found">
+				<header class="page-header">
+					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'govfreshwp' ); ?></h1>
+				</header><!-- .page-header -->
 
-			<div class="col-md-8">
+				<div class="page-content">
+					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'govfreshwp' ); ?></p>
 
-				<h1><?php _e( 'Whoops', 'govfreshwp' ); ?></h1>
-				<p><?php _e( 'The page you were looking for is no longer available.', 'govfreshwp' ); ?></p>
-				<p></p>
-
-				<div class="search-result">
-					<?php /* @DEBUG - Should not be hardcoded */ ?>
-					<p>Try searching or see our <a href="/sitemap">sitemap</a>:</p>
 					<?php get_search_form(); ?>
-				</div>
 
-			</div>
+					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-				<?php get_sidebar(); ?>
+					<?php if ( govfreshwp_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+					<div class="widget widget_categories">
+						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'govfreshwp' ); ?></h2>
+						<ul>
+						<?php
+							wp_list_categories( array(
+								'orderby'    => 'count',
+								'order'      => 'DESC',
+								'show_count' => 1,
+								'title_li'   => '',
+								'number'     => 10,
+							) );
+						?>
+						</ul>
+					</div><!-- .widget -->
+					<?php endif; ?>
 
-		</div>
+					<?php
+					/* translators: %1$s: smiley */
+					$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'govfreshwp' ), convert_smilies( ':)' ) ) . '</p>';
+					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+					?>
 
-	</div>
+					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+
+				</div><!-- .page-content -->
+			</section><!-- .error-404 -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
 <?php get_footer(); ?>

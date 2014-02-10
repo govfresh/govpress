@@ -1,13 +1,9 @@
 <?php
-/**
- * The template for displaying all pages.
+/*
+ * Template Name: Full Page
+ * Description: A template for displaying pages without a sidebar
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package govfreshwp
+ * @package GovFreshWP
  */
 
 get_header(); ?>
@@ -18,10 +14,6 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
-
-				<?php if ( function_exists('yoast_breadcrumb') ) {
-					yoast_breadcrumb('<div class="breadcrumb">','</div>');
-				} ?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
@@ -35,5 +27,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

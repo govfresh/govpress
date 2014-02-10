@@ -1,92 +1,105 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying Archive pages.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package GovFreshWP
+ */
 
-	<div class="container content">
+get_header(); ?>
 
-		<div class="row">
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-			<div class="col-md-12">
+		<?php if ( have_posts() ) : ?>
 
-				<?php if (have_posts()) : ?>
+			<header class="page-header">
+				<h1 class="page-title">
+					<?php
+						if ( is_category() ) :
+							single_cat_title();
 
-				<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
-				<?php /* If this is a category archive */ if (is_category()) { ?>
-				<h1><?php single_cat_title(); ?></h1>
-				<?php /* If this is a tag archive */ } elseif ( is_tag() ) { ?>
-				<h1><?php single_tag_title(); ?></h1>
-				<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-				<h1><?php the_time('F j, Y'); ?></h1>
-				<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-				<h1><?php the_time('F Y'); ?></h1>
-				<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-				<h1><?php the_time('Y'); ?></h1>
-				<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-				<h1><?php _e( 'Blog', 'govfreshwp' ); ?></h1>
-				<?php } ?>
+						elseif ( is_tag() ) :
+							single_tag_title();
 
-			</div>
+						elseif ( is_author() ) :
+							printf( __( 'Author: %s', 'govfreshwp' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
-		</div>
+						elseif ( is_day() ) :
+							printf( __( 'Day: %s', 'govfreshwp' ), '<span>' . get_the_date() . '</span>' );
 
-		<div class="row">
+						elseif ( is_month() ) :
+							printf( __( 'Month: %s', 'govfreshwp' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'govfreshwp' ) ) . '</span>' );
 
-			<div class="col-md-8">
+						elseif ( is_year() ) :
+							printf( __( 'Year: %s', 'govfreshwp' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'govfreshwp' ) ) . '</span>' );
+
+						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
+							_e( 'Asides', 'govfreshwp' );
+
+						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
+							_e( 'Galleries', 'govfreshwp');
+
+						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
+							_e( 'Images', 'govfreshwp');
+
+						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
+							_e( 'Videos', 'govfreshwp' );
+
+						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
+							_e( 'Quotes', 'govfreshwp' );
+
+						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
+							_e( 'Links', 'govfreshwp' );
+
+						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
+							_e( 'Statuses', 'govfreshwp' );
+
+						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
+							_e( 'Audios', 'govfreshwp' );
+
+						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
+							_e( 'Chats', 'govfreshwp' );
+
+						else :
+							_e( 'Archives', 'govfreshwp' );
+
+						endif;
+					?>
+				</h1>
+				<?php
+					// Show an optional term description.
+					$term_description = term_description();
+					if ( ! empty( $term_description ) ) :
+						printf( '<div class="taxonomy-description">%s</div>', $term_description );
+					endif;
+				?>
+			</header><!-- .page-header -->
+
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-			    $category_description = category_description();
-			    if (!empty( $category_description)) {
-			        echo '<div class="category-description">'
-			              . do_shortcode($category_description) .
-			             '</div>';
-			    }
-			    ?>
-
-				<?php while (have_posts()) : the_post(); ?>
-
-				<div class="row post">
-
-					<div class="col-md-12">
-
-						<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-						<p class="byline"><?php echo govfresh_publish_link(); ?> &middot; <?php the_time('g:i a') ?></p>
-
-					</div>
-
-				</div>
-
-				<?php endwhile; ?>
-
-				<?php if(function_exists('wp_pagenavi')) { ?>
-				<?php wp_pagenavi(); ?>
-				<?php } else { ?>
-				<div class="navigation"><p><?php posts_nav_link('&#8734;','&laquo;&laquo; Newer','Older &raquo;&raquo;'); ?></p></div>
-				<?php } ?>
-
-				<?php else : ?>
-
-				<?php
-
-				if ( is_category() ) { // If this is a category archive
-				printf("<h2>Sorry, but there aren&rsquo;t any posts in the %s category yet.</h2>", single_cat_title('',false));
-				} else if ( is_date() ) { // If this is a date archive
-				echo("<h2>Sorry, but there aren&rsquo;t any posts with this date.</h2>");
-				} else if ( is_author() ) { // If this is a category archive
-				$userdata = get_userdatabylogin(get_query_var('author_name'));
-				printf("<h2>Sorry, but there aren&rsquo;t any posts by %s yet.</h2>", $userdata->display_name);
-				} else {
-				echo("<h2>No posts found.</h2>");
-				}
-				get_search_form();
-
+					/* Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'content', get_post_format() );
 				?>
 
-				<?php endif; ?>
+			<?php endwhile; ?>
 
-			</div>
+			<?php govfreshwp_paging_nav(); ?>
 
-			<?php get_sidebar(); ?>
+		<?php else : ?>
 
-		</div>
+			<?php get_template_part( 'content', 'none' ); ?>
 
-	</div>
+		<?php endif; ?>
 
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

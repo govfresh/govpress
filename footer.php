@@ -1,45 +1,45 @@
-		<div class="footer">
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the #content div and all content after
+ *
+ * @package GovFreshWP
+ */
+?>
 
-			<div class="container">
+		</div><!-- #content -->
+	</div><!-- .col-width -->
 
-				<div class="row">
+	<?php
+		/*
+		 * A sidebar in the footer? Yep. You can can customize
+		 * your footer with three columns of widgets.
+		 */
+		if ( ! is_404() )
+			get_sidebar( 'footer' );
+	?>
 
-					<div class="col-md-4">
-						<?php if ( !dynamic_sidebar( 'footer-1' ) ) ?>
-					</div>
-					<div class="col-md-4">
-						<?php if ( !dynamic_sidebar( 'footer-2' ) ) ?>
-					</div>
-					<div class="col-md-4">
-						<?php if ( !dynamic_sidebar( 'footer-3') ) ?>
-					</div>
+	<?php
+	$fclass = 'site-footer no-widgets';
+	if ( is_active_sidebar( 'footer-text' ) ) {
+		$fclass = 'site-footer widgets';
+	} ?>
 
+	<footer class="<?php echo $fclass; ?>" role="contentinfo">
+		<div class="col-width">
+			<?php if ( is_active_sidebar( 'footer-text' ) ) { ?>
+				<div class="widget-area" role="complementary">
+					<?php dynamic_sidebar( 'footer-text' ); ?>
 				</div>
+			<?php } else { ?>
+				<?php printf( __( '%1$s the free %2$s theme for government.', 'govfreshwp' ), '<a href="http://govfreshwp.com/" rel="designer">GovFresh WP</a>', '<a href="http://wordpress.org/" rel="generator">WordPress</a>' ); ?>
+			<?php } ?>
+		</div><!-- .col-width -->
+	</footer><!-- .site-footer -->
+</div><!-- #page -->
 
-			</div>
-
-		</div>
-
-		<div class="copyright">
-			<div class="container">
-
-				<div class="row">
-					<div class="col-md-12">
-						<div class="copyright-search">
-							<?php get_search_form(); ?>
-						</div>
-						<?php // @DEBUG Remove hardcoded References // ?>
-						<p><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> &middot; <a href="/sitemap">Sitemap</a> &middot; <a href="http://wp.govfresh.com">GovFresh WP Theme</a></p>
-						<?php if ( !dynamic_sidebar( 'footer-text' ) ) ?>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-
-	<?php wp_footer(); ?>
+<?php wp_footer(); ?>
 
 </body>
-
 </html>
