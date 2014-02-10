@@ -28,7 +28,7 @@
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'govfreshwp' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'govfreshwp' ); ?></a>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			<?php wp_nav_menu( array('theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</div>
 	</nav><!-- #site-navigation -->
 
@@ -57,7 +57,18 @@
 	<?php if ( ( is_front_page() || is_home() ) && has_nav_menu( 'icon' ) ) : ?>
 		<div id="icon-menu" class="clear">
 			<div class="col-width">
-				<?php wp_nav_menu( array( 'theme_location' => 'icon', 'menu_class' => 'icon-menu' ) ); ?>
+				<?php
+				$menu = wp_nav_menu( array(
+					'theme_location' => 'icon',
+					'echo' => false,
+				) );
+				$count = substr_count( $menu, 'class="menu-item ');
+				wp_nav_menu( array(
+					'theme_location' => 'icon',
+					'menu_class' => 'icon-menu menu-items-' . ( $count + 1 ),
+					'depth' => '1',
+					'walker' => new govfreshwp_icon_menu_nav_walker()
+				) ); ?>
 			</div>
 		</div>
 	<?php endif; // Icon Menu ?>

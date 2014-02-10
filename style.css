@@ -612,7 +612,7 @@ a:hover {
 .menu-icon-container {
   background: #fff;
   border-radius: 5px;
-  padding: .75em;
+  padding: 1em;
 }
 
 .menu-icon-container ul {
@@ -625,8 +625,32 @@ a:hover {
   text-align: center;
 }
 
+.menu-icon-container .menu-items-2 li {
+  width: 50%;
+}
+
+.menu-icon-container .menu-items-3 li {
+  width: 33.3%;
+}
+
+.menu-icon-container .menu-items-4 li {
+  width: 25%;
+}
+
+.menu-icon-container .menu-items-5 li {
+  width: 19%;
+}
+
 .menu-icon-container li:before {
-  content: "\f05a";
+  content: none;
+}
+
+.menu-icon-container a:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-icon-container a:before {
   color: #0072bc;
   font-family: "FontAwesome";
   display: inline-block;
@@ -638,6 +662,12 @@ a:hover {
   font-size: 52px;
   font-size: 5.2rem;
   display: block;
+  margin: 0 0 5px;
+  text-decoration: none;
+}
+
+.menu-icon-container a:hover:before {
+  opacity: .8;
 }
 
 /* =Header
