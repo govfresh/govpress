@@ -54,5 +54,13 @@
 		</div>
 	<?php endif; // End home page top widget module ?>
 
+	<?php if ( ( is_front_page() || is_home() ) && has_nav_menu( 'icon' ) ) : ?>
+		<div id="icon-menu" class="clear">
+			<div class="col-width">
+				<?php wp_nav_menu( array( 'theme_location' => 'icon', 'menu_class' => 'icon-menu' ) ); ?>
+			</div>
+		</div>
+	<?php endif; // Icon Menu ?>
+
 	<div class="col-width">
 		<div id="content" class="site-content">

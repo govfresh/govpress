@@ -13,10 +13,12 @@ Website: http://wp.govfresh.com
 =========
 
 - PageNavi support
-- Icon menu
+- Icon menu (in progress)
 - Browser testing
 - Jetpack support
 - Support full bleed header image
 - Social links for author box (plugin territory?)
 - Color customization options
 - Show child menu items on left side of page template
+- Post template for press releases
+- Internet Explorer Testing
