@@ -84,6 +84,16 @@ function govfreshwp_widgets_init() {
         'after_title'   => '</h2>',
     ) );
 
+    register_sidebar( array(
+        'name'          => __( 'Home Page Featured', 'govfreshwp' ),
+        'id'            => 'home-page-featured',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+
 	register_sidebar( array(
 		'name'          => __( 'Footer Area One', 'govfreshwp' ),
 		'id'            => 'footer-1',
