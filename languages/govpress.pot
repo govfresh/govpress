@@ -2,8 +2,8 @@
 # This file is distributed under the GNU General Public License.
 msgid ""
 msgstr ""
-"Project-Id-Version: GovFreshWP 1.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/govfreshwp\n"
+"Project-Id-Version: GovPress 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/govpress\n"
 "POT-Creation-Date: 2014-02-10 20:50:21+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

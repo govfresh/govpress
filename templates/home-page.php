@@ -3,7 +3,7 @@
  * Template Name: Home Page
  * Description: A template with additional widget areas for the home page
  *
- * @package GovFreshWP
+ * @package GovPress
  */
 
 get_header(); ?>

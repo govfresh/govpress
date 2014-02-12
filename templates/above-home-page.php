@@ -3,7 +3,7 @@
  * Template part for displaying special home page sections above the page content.
  * This template is called from header.php.
  *
- * @package GovFreshWP
+ * @package GovPress
  */
 ?>
 
@@ -30,7 +30,7 @@
 				'theme_location' => 'icon',
 				'menu_class' => 'icon-menu menu-items-' . ( $count + 1 ),
 				'depth' => '1',
-				'walker' => new govfreshwp_icon_menu_nav_walker()
+				'walker' => new govpress_icon_menu_nav_walker()
 			) ); ?>
 		</div>
 	</div>

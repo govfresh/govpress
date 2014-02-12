@@ -1,12 +1,12 @@
 <?php
 /**
- * Class Name: govfreshwp_icon_menu_nav_walker
+ * Class Name: govpress_icon_menu_nav_walker
  * Description: A custom nav walker class for building out the icon menu
  *
- * @package GovFreshWP
+ * @package GovPress
  */
 
-class govfreshwp_icon_menu_nav_walker extends Walker_Nav_Menu {
+class govpress_icon_menu_nav_walker extends Walker_Nav_Menu {
 
 	/**
 	 * Start the element output.

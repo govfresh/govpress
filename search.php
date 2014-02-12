@@ -2,7 +2,7 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package GovFreshWP
+ * @package GovPress
  */
 
 get_header(); ?>
@@ -13,7 +13,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'govfreshwp' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'govpress' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<?php get_search_form(); ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php govfreshwp_paging_nav(); ?>
+			<?php govpress_paging_nav(); ?>
 
 		<?php else : ?>
 

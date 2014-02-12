@@ -1,6 +1,6 @@
 <?php
 /**
- * @package GovFreshWP
+ * @package GovPress
  */
 ?>
 
@@ -10,7 +10,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php govfreshwp_posted_on(); ?>
+			<?php govpress_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -21,10 +21,10 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'govfreshwp' ) ); ?>
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'govpress' ) ); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'govfreshwp' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'govpress' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -39,10 +39,10 @@
 		<?php endif; // End if 'post' == get_post_type() ?>
 
 			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-			<li class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'govfreshwp' ), __( '1 Comment', 'govfreshwp' ), __( '% Comments', 'govfreshwp' ) ); ?></li>
+			<li class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'govpress' ), __( '1 Comment', 'govpress' ), __( '% Comments', 'govpress' ) ); ?></li>
 			<?php endif; ?>
 
-			<?php edit_post_link( __( 'Edit', 'govfreshwp' ), '<li class="edit-link">', '</li>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'govpress' ), '<li class="edit-link">', '</li>' ); ?>
 		</ul>
 	</footer><!-- .entry-meta -->
 
