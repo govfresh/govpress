@@ -124,3 +124,14 @@ function govpress_footer_widget_count() {
 	if ( $class )
 		echo $class;
 }
+
+/**
+ * Checks if current page is a page parent.
+ * Conditional code lifted from /wp-includes/post-template.php.
+ *
+ * @returns boolean
+ */
+function govpress_is_page_parent( $id ) {
+	global $wpdb;
+	return ( $wpdb->get_var( $wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE post_parent = %d AND post_type = 'page' LIMIT 1", $id ) ) );
+}

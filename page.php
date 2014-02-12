@@ -19,8 +19,8 @@ get_header(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
 
-				<?php if ( function_exists('yoast_breadcrumb') ) {
-					yoast_breadcrumb('<div class="breadcrumb">','</div>');
+				<?php if ( function_exists( 'yoast_breadcrumb' ) ) {
+					yoast_breadcrumb( '<div class="breadcrumb">', '</div>' );
 				} ?>
 
 				<?php
@@ -35,5 +35,10 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php if ( govpress_is_page_parent( get_the_ID() ) ) {
+	get_sidebar( 'page-parent' );
+} else {
+	get_sidebar();
+}
+?>
 <?php get_footer(); ?>
