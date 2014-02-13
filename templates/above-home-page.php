@@ -21,16 +21,9 @@
 	<div id="icon-menu" class="clear">
 		<div class="col-width">
 			<?php
-			$menu = wp_nav_menu( array(
-				'theme_location' => 'icon',
-				'echo' => false,
-			) );
-			$count = substr_count( $menu, 'class="menu-item ');
 			wp_nav_menu( array(
 				'theme_location' => 'icon',
-				'menu_class' => 'icon-menu menu-items-' . ( $count + 1 ),
 				'depth' => '1',
-				'walker' => new govpress_icon_menu_nav_walker()
 			) ); ?>
 		</div>
 	</div>

@@ -187,4 +187,4 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Icon Menu Walker
  */
-require get_template_directory() . '/inc/icon-menu-nav-walker.php';
+require get_template_directory() . '/inc/icon-menu-extras.php';

@@ -10,6 +10,7 @@
 		<?php if ( ! dynamic_sidebar( 'primary' ) ) : ?>
 
 			<aside id="search" class="widget widget_search">
+				<h1 class="widget-title"><?php _e( 'Search', 'govpress' ); ?></h1>
 				<?php get_search_form(); ?>
 			</aside>
 

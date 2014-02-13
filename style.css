@@ -530,24 +530,13 @@ a:hover {
   padding: 1em; }
 
 .menu-icon-container ul {
+  text-align: center;
   list-style: none;
   margin: 0; }
 
 .menu-icon-container li {
   display: inline-block;
-  text-align: center; }
-
-.menu-icon-container .menu-items-2 li {
-  width: 50%; }
-
-.menu-icon-container .menu-items-3 li {
-  width: 33.3%; }
-
-.menu-icon-container .menu-items-4 li {
-  width: 25%; }
-
-.menu-icon-container .menu-items-5 li {
-  width: 19%; }
+  padding: 0 5%; }
 
 .menu-icon-container li:before {
   content: none; }
