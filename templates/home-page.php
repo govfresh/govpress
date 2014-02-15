@@ -13,7 +13,7 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php the_content(); ?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
@@ -23,6 +23,14 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; // end of the loop. ?>
+
+			<?php if ( is_active_sidebar( 'home-page-featured' ) ) : ?>
+				<div id="secondary" class="clear">
+					<div class="section-wrap">
+						<?php dynamic_sidebar( 'home-page-featured' ); ?>
+					</div>
+				</div>
+			<?php endif; // End home page top widget module ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
