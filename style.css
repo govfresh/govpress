@@ -536,7 +536,7 @@ a:hover {
 
 .menu-icon-container li {
   display: inline-block;
-  padding: 0 5%; }
+  padding: 0 5% 1em 5%; }
 
 .menu-icon-container li:before {
   content: none; }
@@ -567,7 +567,7 @@ a:hover {
 ----------------------------------------------- */
 .site-header {
   font-weight: 400;
-  padding: 3em 0;
+  padding: 2em 0;
   text-align: center; }
 
 .site-title {
