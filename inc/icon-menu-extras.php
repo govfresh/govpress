@@ -9,7 +9,7 @@
 function govpress_menu_css_class( $classes ) {
 
 	foreach( $classes as $key => $val ) {
-		if ( 'icon' == substr( $val, 0, 4 ) ) {
+		if ( 'icon-' == substr( $val, 0, 5 ) ) {
 			unset( $classes[$key] );
 		}
 	}
@@ -36,17 +36,24 @@ add_filter( 'nav_menu_css_class', 'govpress_menu_css_class' );
  */
 function govpress_nav_menu_link_attributes( $atts, $item, $args ) {
 
-	$class = 'icon-info-circle';
-	if ( $item->classes ) {
-		foreach( $item->classes as $key => $val ) {
-			if ( 'icon' == substr( $val, 0, 4 ) ) {
-				$class = $val;
+	if ( 'icon' == $args->theme_location ) {
+
+		// Default icon class
+		$class = 'icon-info-circle';
+
+		if ( $item->classes ) {
+			foreach( $item->classes as $key => $val ) {
+				if ( 'icon-' == substr( $val, 0, 5 ) ) {
+					$class = $val;
+				}
 			}
 		}
+		if ( $class ) {
+			$atts['class'] = $class;
+		}
+
 	}
-	if ( $class ) {
-		$atts['class'] = $class;
-	}
+
 	return $atts;
 
 }
