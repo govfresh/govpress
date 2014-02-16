@@ -24,6 +24,7 @@
 			wp_nav_menu( array(
 				'theme_location' => 'icon',
 				'depth' => '1',
+				'container_class' => 'icon-menu-container'
 			) ); ?>
 		</div>
 	</div>

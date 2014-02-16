@@ -524,28 +524,28 @@ a:hover {
 #icon-menu {
   margin: 0 0 1.5em; }
 
-.menu-icon-container {
+.icon-menu-container {
   background: #fff;
   border-radius: 5px;
   padding: 1em; }
 
-.menu-icon-container ul {
+.icon-menu-container ul {
   text-align: center;
   list-style: none;
   margin: 0; }
 
-.menu-icon-container li {
+.icon-menu-container li {
   display: inline-block;
   padding: 1em 5%; }
 
-.menu-icon-container li:before {
+.icon-menu-container li:before {
   content: none; }
 
-.menu-icon-container a:hover {
+.icon-menu-container a:hover {
   text-decoration: none;
   color: #333; }
 
-.menu-icon-container a:before {
+.icon-menu-container a:before {
   color: #0072bc;
   font-family: "FontAwesome";
   display: inline-block;
@@ -560,7 +560,7 @@ a:hover {
   margin: 0 0 5px;
   text-decoration: none; }
 
-.menu-icon-container a:hover:before {
+.icon-menu-container a:hover:before {
   opacity: .8; }
 
 /* =Header
