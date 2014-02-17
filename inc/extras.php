@@ -26,6 +26,7 @@ add_filter( 'wp_page_menu_args', 'govpress_page_menu_args' );
  * @return array
  */
 function govpress_body_classes( $classes ) {
+
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -34,6 +35,12 @@ function govpress_body_classes( $classes ) {
 	// Body class for portfolio page template
 	if ( is_page_template( 'templates/full-page.php' ) )
 		$classes[] = 'full-width';
+
+	// Pages with children have a left sidebar layout applied
+	if ( govpress_is_page_parent( get_the_ID() ) ) {
+		if ( !is_page_template( 'templates/full-page.php' ) )
+			$classes[] = 'layout-sidebar-left';
+	}
 
 	return $classes;
 }
