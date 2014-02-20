@@ -717,13 +717,6 @@ object {
 }
 .wp-pagenavi a {
 	color: $link-color;
-	border: none;
-	border-top: 1px solid #f8f8f8;
-}
-.wp-pagenavi a:hover,
-.wp-pagenavi a:active,
-.wp-pagenavi span.current {
-	border: none;
 	border-top: 1px solid #f8f8f8;
 }
 
