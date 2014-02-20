@@ -11,6 +11,9 @@ if ( ! function_exists( 'govpress_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
+ * If the wp_pagenavi plugin is installed, it's pagination will be used.
+ * See: http://wordpress.org/plugins/wp-pagenavi/
+ *
  * @return void
  */
 function govpress_paging_nav() {
@@ -23,13 +26,21 @@ function govpress_paging_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'govpress' ); ?></h1>
 		<div class="nav-links">
 
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'govpress' ) ); ?></div>
-			<?php endif; ?>
+			<?php if ( function_exists( 'wp_pagenavi' ) ) {
 
-			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'govpress' ) ); ?></div>
-			<?php endif; ?>
+				wp_pagenavi();
+
+			} else { ?>
+
+				<?php if ( get_next_posts_link() ) : ?>
+				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'govpress' ) ); ?></div>
+				<?php endif; ?>
+
+				<?php if ( get_previous_posts_link() ) : ?>
+				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'govpress' ) ); ?></div>
+				<?php endif; ?>
+
+			<?php } ?>
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -129,3 +140,12 @@ function govpress_category_transient_flusher() {
 }
 add_action( 'edit_category', 'govpress_category_transient_flusher' );
 add_action( 'save_post',     'govpress_category_transient_flusher' );
+
+/**
+ * Removes wp-pagenavi styling since it is handled by theme
+ */
+
+function govfresh_deregister_styles() {
+	wp_deregister_style( 'wp-pagenavi' );
+}
+add_action( 'wp_print_styles', 'govfresh_deregister_styles', 100 );

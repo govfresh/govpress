@@ -1012,6 +1012,45 @@ object {
   background-color: #f5f5f5;
   border-radius: 4px; }
 
+/* Plugin : WP PageNavi */
+.wp-pagenavi {
+  font-weight: 600; }
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+  color: #999;
+  font-size: 15px;
+  font-size: 1.5rem;
+  padding: 7px 8px;
+  display: inline;
+  margin: 0 2px; }
+
+.wp-pagenavi span.pages {
+  display: block;
+  color: #999;
+  margin-bottom: 1em; }
+
+.wp-pagenavi span.pages:before {
+  content: "\f15c";
+  font-family: FontAwesome;
+  margin-right: 10px; }
+
+.wp-pagenavi a:hover,
+.wp-pagenavi a:active,
+.wp-pagenavi span.current {
+  color: #333; }
+
+.wp-pagenavi a {
+  color: #428bca;
+  border: none;
+  border-top: 1px solid #f8f8f8; }
+
+.wp-pagenavi a:hover,
+.wp-pagenavi a:active,
+.wp-pagenavi span.current {
+  border: none;
+  border-top: 1px solid #f8f8f8; }
+
 /* =Infinite Scroll
 ----------------------------------------------- */
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
