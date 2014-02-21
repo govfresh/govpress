@@ -33,7 +33,7 @@
 					<?php dynamic_sidebar( 'footer-text' ); ?>
 				</div>
 			<?php } else { ?>
-				<?php printf( __( '%1$s, the %2$s theme for government.', 'govpress' ), 'Powered by <a href="http://govpress.govfresh.com/" rel="designer">GovPress</a>', '<a href="http://wordpress.org/" rel="generator">WordPress</a>' ); ?>
+				<?php printf( __( '%1$s, the %2$s theme for government.', 'govpress' ), 'Powered by <a href="http://govpress.co/" rel="designer">GovPress</a>', '<a href="http://wordpress.org/" rel="generator">WordPress</a>' ); ?>
 			<?php } ?>
 		</div><!-- .col-width -->
 	</footer><!-- .site-footer -->
