@@ -232,7 +232,7 @@ a:hover {
 }
 .entry-content {
 	border-bottom: 1px solid #f8f8f8;
-	margin-bottom:1.5em;
+	margin-bottom:1em;
 }
 .entry-content h1, .entry-content h2, .entry-content h3,
 .entry-content h4, .entry-content h5, .entry-content h6 {
@@ -265,7 +265,7 @@ a:hover {
 }
 .entry-header .entry-meta {
 	padding:0 0 1em;
-	margin:0 0 .5em;
+	margin:0 0 1.5em;
 }
 .byline,
 .updated {
@@ -302,8 +302,9 @@ a:hover {
 	margin-bottom:.5em;
 }
 footer.entry-meta {
-	padding-bottom:1em;
-	font-size:13px;
+	padding-bottom:.75em;
+	font-size:12px;
+	font-size:1.2rem;
 }
 footer.entry-meta ul {
 	list-style: none;
@@ -314,6 +315,7 @@ footer.entry-meta li {
 	margin: 0 .5em .5em 0;
 }
 footer.entry-meta a {
+	display: block;
 	background: #efefef;
 	border-radius: 5px;
 	color: #666;
