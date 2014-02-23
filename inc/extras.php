@@ -27,6 +27,10 @@ add_filter( 'wp_page_menu_args', 'govpress_page_menu_args' );
  */
 function govpress_body_classes( $classes ) {
 
+	if ( is_404() || is_search() ) {
+		return $classes;
+	}
+
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
