@@ -71,7 +71,7 @@ a:hover {
 .full-width .site-main {
 	margin: 0;
 }
-.site-content .widget-area {
+#secondary {
 	float: right;
 	overflow: hidden;
 	width: 25%;
@@ -332,7 +332,7 @@ footer.entry-meta a {
 .layout-sidebar-left .site-main {
 	margin: 0 0 0 30%;
 }
-.layout-sidebar-left .site-content .widget-area {
+.layout-sidebar-left #secondary {
 	float: left;
 }
 .layout-sidebar-left .content-area {
@@ -536,47 +536,67 @@ object {
 	max-width: 100%;
 }
 
-/* Sidebar Widgets */
+/* Sidebar Widgets & Home Page Featured Widgets */
 
-#secondary .widget {
-	background:$background;
-	padding:0 0 1.5em;
-	overflow: hidden;
-	border-radius:5px;
-}
-#secondary .widget-title {
-	color:#fff;
-	background:$background-alt;
-	padding:.5em 1.25em;
-	margin-bottom:1em;
-}
-#secondary .widget ul {
-	margin:0 1.25em;
-}
-#secondary .widget_search form {
-	margin:0 1.25em;
+#secondary, #home-page-featured {
+	.widget {
+		background:$background;
+		padding:0 0 1.5em;
+		overflow: hidden;
+		border-radius:5px;
+	}
+	.widget-title{
+		color:#fff;
+		background:$background-alt;
+		padding:.5em 1.25em;
+		margin-bottom:1em;
+	}
+	.widget-title a {
+		color:#fff;
+	}
+	.widget ul {
+		margin:0 1.25em;
+	}
 }
 
 /* Ridiculous workarounds for lack of widget-content wrapper */
-#secondary .tagcloud,
-#secondary .textwidget,
-#secondary select,
-#secondary .recentcommentsavatar,
-#secondary #subscribe-blog,
-#secondary .milestone-content,
-#secondary .widgets-multi-column-grid,
-#secondary .widgets-grid-layout,
-#secondary #pd_top_rated_holder,
-#secondary .widget_gravatar p,
-#secondary .widget_image img,
-#secondary .widget_goodreads embed,
-#secondary .widget_goodreads img,
-#secondary .widget-grofile .grofile-thumbnail,
-#secondary .widget-grofile h4,
-#secondary .widget-grofile p,
-#secondary .widget-grofile ul,
-#secondary .widget_facebook_likebox iframe {
-	margin:0 1.25em;
+
+#secondary, #home-page-featured {
+	.tagcloud,
+	.textwidget,
+	select,
+	.recentcommentsavatar,
+	#subscribe-blog,
+	.milestone-content,
+	.widgets-multi-column-grid,
+	.widgets-grid-layout,
+	#pd_top_rated_holder,
+	.widget_gravatar p,
+	.widget_image img,
+	.widget_goodreads embed,
+	.widget_goodreads img,
+	.widget-grofile .grofile-thumbnail,
+	.widget-grofile h4,
+	.widget-grofile p,
+	.widget-grofile ul,
+	.widget_facebook_likebox iframe {
+		margin:0 1.25em;
+	}
+}
+
+/* Specific Widget Styling */
+
+#secondary, #home-page-featured {
+	.widget-title .rsswidget img {
+		display: none;
+	}
+	.widget_search form {
+		margin:0 1.25em;
+		padding-top:1.25em;
+	}
+	.widget_search .widget-title {
+		margin-bottom:0;
+	}
 }
 
 /* Header Widgets */
@@ -584,6 +604,10 @@ object {
 #hero-widgets .widget {
 	font-size:18px;
 	margin: 0 0 1em;
+}
+#hero-widgets .widget a {
+	color:#fff;
+	text-decoration: underline;
 }
 #hero-widgets .widget-title {
 	font-size: 30px;

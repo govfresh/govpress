@@ -25,7 +25,7 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 			<?php if ( is_active_sidebar( 'home-page-featured' ) ) : ?>
-				<div id="secondary" class="clear">
+				<div id="home-page-featured" class="widget-area clear">
 					<div class="section-wrap">
 						<?php dynamic_sidebar( 'home-page-featured' ); ?>
 					</div>

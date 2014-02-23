@@ -446,7 +446,7 @@ a:hover {
 .full-width .site-main {
   margin: 0; }
 
-.site-content .widget-area {
+#secondary {
   float: right;
   overflow: hidden;
   width: 25%; }
@@ -695,7 +695,7 @@ footer.entry-meta a {
 .layout-sidebar-left .site-main {
   margin: 0 0 0 30%; }
 
-.layout-sidebar-left .site-content .widget-area {
+.layout-sidebar-left #secondary {
   float: left; }
 
 .layout-sidebar-left .content-area {
@@ -873,23 +873,20 @@ object {
 .widget select {
   max-width: 100%; }
 
-/* Sidebar Widgets */
-#secondary .widget {
+/* Sidebar Widgets & Home Page Featured Widgets */
+#secondary .widget, #home-page-featured .widget {
   background: #f8f8f8;
   padding: 0 0 1.5em;
   overflow: hidden;
   border-radius: 5px; }
-
-#secondary .widget-title {
+#secondary .widget-title, #home-page-featured .widget-title {
   color: #fff;
   background: #0072bc;
   padding: .5em 1.25em;
   margin-bottom: 1em; }
-
-#secondary .widget ul {
-  margin: 0 1.25em; }
-
-#secondary .widget_search form {
+#secondary .widget-title a, #home-page-featured .widget-title a {
+  color: #fff; }
+#secondary .widget ul, #home-page-featured .widget ul {
   margin: 0 1.25em; }
 
 /* Ridiculous workarounds for lack of widget-content wrapper */
@@ -910,13 +907,43 @@ object {
 #secondary .widget-grofile h4,
 #secondary .widget-grofile p,
 #secondary .widget-grofile ul,
-#secondary .widget_facebook_likebox iframe {
+#secondary .widget_facebook_likebox iframe, #home-page-featured .tagcloud,
+#home-page-featured .textwidget,
+#home-page-featured select,
+#home-page-featured .recentcommentsavatar,
+#home-page-featured #subscribe-blog,
+#home-page-featured .milestone-content,
+#home-page-featured .widgets-multi-column-grid,
+#home-page-featured .widgets-grid-layout,
+#home-page-featured #pd_top_rated_holder,
+#home-page-featured .widget_gravatar p,
+#home-page-featured .widget_image img,
+#home-page-featured .widget_goodreads embed,
+#home-page-featured .widget_goodreads img,
+#home-page-featured .widget-grofile .grofile-thumbnail,
+#home-page-featured .widget-grofile h4,
+#home-page-featured .widget-grofile p,
+#home-page-featured .widget-grofile ul,
+#home-page-featured .widget_facebook_likebox iframe {
   margin: 0 1.25em; }
+
+/* Specific Widget Styling */
+#secondary .widget-title .rsswidget img, #home-page-featured .widget-title .rsswidget img {
+  display: none; }
+#secondary .widget_search form, #home-page-featured .widget_search form {
+  margin: 0 1.25em;
+  padding-top: 1.25em; }
+#secondary .widget_search .widget-title, #home-page-featured .widget_search .widget-title {
+  margin-bottom: 0; }
 
 /* Header Widgets */
 #hero-widgets .widget {
   font-size: 18px;
   margin: 0 0 1em; }
+
+#hero-widgets .widget a {
+  color: #fff;
+  text-decoration: underline; }
 
 #hero-widgets .widget-title {
   font-size: 30px;
