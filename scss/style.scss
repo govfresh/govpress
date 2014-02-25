@@ -61,12 +61,10 @@ a:hover {
 	max-width: 1160px;
 	padding:0 20px;
 	margin:0 auto;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing:    border-box;
-	box-sizing:         border-box;
 }
 .site-main {
 	margin: 0 30% 0 0;
+	min-height:100%;
 }
 .full-width .site-main {
 	margin: 0;
@@ -107,9 +105,6 @@ a:hover {
 	color:rgba(255,255,255,.8);
 }
 .main-navigation {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing:    border-box;
-	box-sizing:         border-box;
 	font-size: 14px;
 	min-height: 48px;
 }

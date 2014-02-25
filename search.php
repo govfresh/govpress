@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<div id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -33,7 +33,7 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->
+		</div><!-- #main -->
 	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>

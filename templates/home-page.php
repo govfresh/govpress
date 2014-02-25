@@ -9,7 +9,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<div id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -32,7 +32,7 @@ get_header(); ?>
 				</div>
 			<?php endif; // End home page top widget module ?>
 
-		</main><!-- #main -->
+		</div><!-- #main -->
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
