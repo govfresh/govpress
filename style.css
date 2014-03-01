@@ -837,6 +837,10 @@ footer.entry-meta a {
   margin: 0 0 1.5em;
 }
 
+.search-submit {
+  min-height: 28px;
+}
+
 /* =404
 ----------------------------------------------- */
 .error404 #main .search-form {
@@ -1138,7 +1142,7 @@ object {
 
 #hero-widgets .search-submit {
   font-size: 16px;
-  height: 45px;
+  min-height: 47px;
 }
 
 #hero-widgets .search-submit:hover {

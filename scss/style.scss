@@ -351,6 +351,9 @@ footer.entry-meta a {
 	padding:1em;
 	margin:0 0 1.5em;
 }
+.search-submit {
+	min-height:28px;
+}
 
 /* =404
 ----------------------------------------------- */
@@ -628,7 +631,7 @@ object {
 }
 #hero-widgets .search-submit {
 	font-size:16px;
-	height:45px;
+	min-height:47px;
 }
 #hero-widgets .search-submit:hover {
 	background:#fff;
