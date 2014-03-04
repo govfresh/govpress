@@ -1429,7 +1429,7 @@ object {
     margin: 0;
   }
 
-  .site-content .widget-area {
+  #secondary {
     clear: both;
     float: none;
     width: auto;
@@ -1445,5 +1445,18 @@ object {
   .comment-list .children {
     list-style: none;
     margin: 1.5em 0 0 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .col-width {
+    padding: 0;
+  }
+
+  .main-navigation.toggled-on {
+    padding: 42px 0 0px;
+  }
+
+  .main-navigation a {
+    padding: 7px 20px;
   }
 }
