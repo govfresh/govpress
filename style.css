@@ -696,6 +696,7 @@ a:hover {
 .entry-content h4, .entry-content h5, .entry-content h6 {
   font-weight: 600;
   margin: 0 0 1em;
+  clear: none;
 }
 
 .entry-content h1 {
