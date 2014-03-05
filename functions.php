@@ -1,6 +1,6 @@
 <?php
 /**
- * govpress functions and definitions
+ * GovPress functions and definitions
  *
  * @package GovPress
  */
