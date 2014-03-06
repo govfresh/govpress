@@ -17,3 +17,13 @@ GovPress is a free WordPress theme designed to meet the needs of government.
 ### Contribute
 
 We'd love to have as many eyes on this project as possible.  If you find a bug or something that can be improved please open an issue and/or submit a pull request.
+
+### Changelog
+
+###### Version 1.0.1
+
+* Fix Google font path to avoid issues with SSL sites
+
+###### Version 1.0.0
+
+* First official release
