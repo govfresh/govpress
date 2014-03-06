@@ -154,7 +154,7 @@ add_action( 'wp_enqueue_scripts', 'govpress_scripts' );
 function govpress_fonts() {
 	// Add Genericons font, used in the main stylesheet.
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/fonts/font-awesome/font-awesome.css', array(), '4.0.3' );
-	wp_register_style( 'govpress-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300', '', null, 'screen' );
+	wp_register_style( 'govpress-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300', '', null, 'screen' );
 		wp_enqueue_style( 'govpress-open-sans' );
 }
 add_action( 'wp_enqueue_scripts', 'govpress_fonts' );
