@@ -4,7 +4,7 @@ GovPress is a free WordPress theme designed to meet the needs of government.
 
 ### Demo
 
-[GovPress Demo](govpress.co)
+[GovPress Demo](http://www.govpress.co)
 
 ### Features
 
