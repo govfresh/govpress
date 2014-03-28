@@ -20,6 +20,10 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 ### Changelog
 
+###### Version 1.1
+
+* Customizer options (primary color)
+
 ###### Version 1.0.1
 
 * Fix Google font path to avoid issues with SSL sites
