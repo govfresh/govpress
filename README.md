@@ -22,7 +22,7 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 ###### Version 1.1
 
-* Customizer options (primary color)
+* Color customization options
 
 ###### Version 1.0.1
 

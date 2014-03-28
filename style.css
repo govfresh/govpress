@@ -388,10 +388,6 @@ a {
   color: #428bca;
 }
 
-a:visited {
-  color: #0072bc;
-}
-
 a:hover,
 a:focus,
 a:active {
@@ -630,7 +626,6 @@ a:hover {
 }
 
 .icon-menu-container a:before {
-  color: #0072bc;
   font-family: "FontAwesome";
   display: inline-block;
   font-style: normal;
