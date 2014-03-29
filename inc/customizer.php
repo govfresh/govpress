@@ -17,11 +17,13 @@ function govpress_customize_register( $wp_customize ) {
 		'type' => 'option'
 	) );
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_tagline_color', array(
-		'label' => __( 'Header Tagline Color', 'govpress' ),
-		'section' => 'colors',
-		'settings' => 'govpress[header_taglinecolor]'
-	) ) );
+	if ( get_theme_mod( 'header_textcolor') !== 'blank' ) {
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_tagline_color', array(
+			'label' => __( 'Header Tagline Color', 'govpress' ),
+			'section' => 'colors',
+			'settings' => 'govpress[header_taglinecolor]'
+		) ) );
+	}
 
 	$wp_customize->add_setting( 'govpress[primary_color]', array(
 		'default' => '#0072BC',
@@ -70,7 +72,7 @@ add_action( 'customize_register', 'govpress_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function govpress_customize_preview_js() {
-	wp_enqueue_script( 'govpress_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+	wp_enqueue_script( 'govpress_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20140329', true );
 }
 add_action( 'customize_preview_init', 'govpress_customize_preview_js' );
 
