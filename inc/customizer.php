@@ -90,20 +90,20 @@ function govpress_inline_styles() {
 	$output = '';
 
 	if ( isset( $options['header_taglinecolor'] ) ) {
-		$output .= ".site-description { color:" . $options['header_taglinecolor'] . " }\n";
+		$output .= ".site-description { color:" . sanitize_hex_color( $options['header_taglinecolor'] ) . " }\n";
 	}
 
 	if ( isset( $options['primary_color'] ) ) {
-		$output .= "#site-navigation, #hero-widgets, #secondary .widget-title, #home-page-featured .widget-title, .site-footer { background:" . $options['primary_color'] . " }\n";
+		$output .= "#site-navigation, #hero-widgets, #secondary .widget-title, #home-page-featured .widget-title, .site-footer { background:" . sanitize_hex_color( $options['primary_color'] ) . " }\n";
 	}
 
 	if ( isset( $options['primary_link_color'] ) ) {
 		$output .= "a { color:" . $options['primary_link_color'] . " }\n";
-		$output .= ".icon-menu-container a:before { color:" . $options['primary_link_color'] . " }\n";
+		$output .= ".icon-menu-container a:before { color:" . sanitize_hex_color( $options['primary_link_color'] ) . " }\n";
 	}
 
 	if ( isset( $options['primary_link_hover'] ) ) {
-		$output .= "a:hover, a:focus, a:active { color:" . $options['primary_link_hover'] . " }\n";
+		$output .= "a:hover, a:focus, a:active { color:" . sanitize_hex_color( $options['primary_link_hover'] ) . " }\n";
 	}
 
 	// Output styles
@@ -114,3 +114,31 @@ function govpress_inline_styles() {
 }
 
 add_action( 'wp_head', 'govpress_inline_styles', 100 );
+
+/**
+ * The core sanitize_hex_color function is only available
+ * when the theme customizer is loaded.
+ */
+if ( !function_exists( 'sanitize_hex_color' ) ) {
+	/**
+	 * Sanitizes a hex color.
+	 *
+	 * Returns either '', a 3 or 6 digit hex color (with #), or null.
+	 * For sanitizing values without a #, see sanitize_hex_color_no_hash().
+	 *
+	 * @since 3.4.0
+	 *
+	 * @param string $color
+	 * @return string|null
+	 */
+	function sanitize_hex_color( $color ) {
+		if ( '' === $color )
+			return '';
+
+		// 3 or 6 hex digits, or the empty string.
+		if ( preg_match('|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) )
+			return $color;
+
+		return null;
+	}
+}
