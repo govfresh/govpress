@@ -98,12 +98,13 @@ function govpress_inline_styles() {
 	}
 
 	if ( isset( $options['primary_link_color'] ) ) {
-		$output .= "a { color:" . $options['primary_link_color'] . " }\n";
-		$output .= ".icon-menu-container a:before { color:" . sanitize_hex_color( $options['primary_link_color'] ) . " }\n";
+		$output .= "#content a { color:" . $options['primary_link_color'] . " }\n";
+		$output .= "#icon-menu a, .icon-menu-container a:before { color:" . sanitize_hex_color( $options['primary_link_color'] ) . " }\n";
 	}
 
 	if ( isset( $options['primary_link_hover'] ) ) {
-		$output .= "a:hover, a:focus, a:active { color:" . sanitize_hex_color( $options['primary_link_hover'] ) . " }\n";
+		$output .= "#content a:hover, #content a:focus, #content a:active { color:" . sanitize_hex_color( $options['primary_link_hover'] ) . " }\n";
+		$output .= "#icon-menu a:hover, #icon-menu a:focus, #icon-menu a:active { color:" . sanitize_hex_color( $options['primary_link_hover'] ) . " }\n";
 	}
 
 	// Output styles
