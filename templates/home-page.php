@@ -13,7 +13,27 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+					</header><!-- .entry-header -->
+
+					<?php if ( trim( get_the_content() ) !== '' ): ?>
+						<div class="entry-content">
+							<?php the_content(); ?>
+							<?php
+								wp_link_pages( array(
+									'before' => '<div class="page-links">' . __( 'Pages:', 'govpress' ),
+									'after'  => '</div>',
+								) );
+							?>
+						</div><!-- .entry-content -->
+					<?php endif ?>
+
+					<?php edit_post_link( __( 'Edit', 'govpress' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+
+
+				</article><!-- #post-## -->
 
 			<?php endwhile; // end of the loop. ?>
 
