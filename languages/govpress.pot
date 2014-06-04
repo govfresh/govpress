@@ -272,10 +272,6 @@ msgstr ""
 msgid "GovFresh"
 msgstr ""
 
-#. Author URI of the plugin/theme
-msgid "http://govfresh.com/"
-msgstr ""
-
 #. Template Name of the plugin/theme
 msgid "Full Page"
 msgstr ""
