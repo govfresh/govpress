@@ -20,6 +20,11 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 ### Changelog
 
+###### Version 1.2
+
+* Czech translations (props @honyczek)
+* Update to FontAwesome 4.1.0
+
 ###### Version 1.1
 
 * Color customization options
