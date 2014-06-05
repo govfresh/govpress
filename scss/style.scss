@@ -756,6 +756,22 @@ object {
 	display: block;
 }
 
+/* =Plugin support
+----------------------------------------------- */
+
+.wsp-category-title {
+	font-weight:600;
+}
+.wsp-pages-list,
+.wsp-posts-list {
+	list-style: none;
+	margin-left: 0;
+}
+.wsp-pages-list ul,
+.wsp-posts-list ul {
+	margin-left: 3em;
+}
+
 /* =Responsive
 ----------------------------------------------- */
 
