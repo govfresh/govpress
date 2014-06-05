@@ -2,11 +2,11 @@
 # This file is distributed under the GNU General Public License.
 msgid ""
 msgstr ""
-"Project-Id-Version: GovPress 1.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/govpress\n"
-"POT-Creation-Date: 2014-02-10 20:50:21+00:00\n"
+"Project-Id-Version: GovPress 1.1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2014-06-05 15:46:39+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -17,17 +17,9 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #: 404.php:19
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
-msgstr ""
-
-#: 404.php:27
-msgid "Most Used Categories"
-msgstr ""
-
-#. translators: %1$s: smiley
-
-#: 404.php:44
-msgid "Try looking in the monthly archives. %1$s"
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the "
+"links below or a search?"
 msgstr ""
 
 #: archive.php:27
@@ -42,18 +34,8 @@ msgstr ""
 msgid "Month: %s"
 msgstr ""
 
-#: archive.php:33
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
 #: archive.php:36
 msgid "Year: %s"
-msgstr ""
-
-#: archive.php:36
-msgctxt "yearly archives date format"
-msgid "Y"
 msgstr ""
 
 #: archive.php:39
@@ -92,16 +74,9 @@ msgstr ""
 msgid "Chats"
 msgstr ""
 
-#: archive.php:66 sidebar.php:17
+#: archive.php:66 sidebar.php:18
 msgid "Archives"
 msgstr ""
-
-#: comments.php:30
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
 
 #: comments.php:37 comments.php:56
 msgid "Comment navigation"
@@ -128,18 +103,24 @@ msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: content-none.php:23
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
 
 #: content-none.php:28
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
 #: content-page.php:18 content-single.php:20 content.php:27
+#: templates/home-page.php:26
 msgid "Pages:"
 msgstr ""
 
 #: content-page.php:23 content-single.php:48 content.php:45
+#: templates/home-page.php:33
 msgid "Edit"
 msgstr ""
 
@@ -164,88 +145,100 @@ msgid "% Comments"
 msgstr ""
 
 #: footer.php:36
-msgid "%1$s the free %2$s theme for government."
+msgid "%1$s, the %2$s theme for government."
 msgstr ""
 
-#: functions.php:45
+#: functions.php:50
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:46
+#: functions.php:51
 msgid "Icon Menu"
 msgstr ""
 
-#: functions.php:70
+#: functions.php:75
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:79
+#: functions.php:84
 msgid "Home Page Hero"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:93
+msgid "Home Page Featured"
+msgstr ""
+
+#: functions.php:102
 msgid "Footer Area One"
 msgstr ""
 
-#: functions.php:97
+#: functions.php:111
 msgid "Footer Area Two"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:120
 msgid "Footer Area Three"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:129
 msgid "Footer Text"
 msgstr ""
 
-#: header.php:28
+#: header.php:30
 msgid "Menu"
 msgstr ""
 
-#: header.php:29
+#: header.php:31
 msgid "Skip to content"
 msgstr ""
 
-#: inc/extras.php:67
+#: inc/customizer.php:22
+msgid "Header Tagline Color"
+msgstr ""
+
+#: inc/customizer.php:34
+msgid "Primary Color"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Primary Link Color"
+msgstr ""
+
+#: inc/customizer.php:56
+msgid "Primary Link Hover"
+msgstr ""
+
+#: inc/extras.php:78
 msgid "Page %s"
 msgstr ""
 
-#: inc/template-tags.php:23
+#: inc/template-tags.php:26
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:27
+#: inc/template-tags.php:36
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/template-tags.php:31
+#: inc/template-tags.php:40
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/template-tags.php:56
+#: inc/template-tags.php:67
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:59
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span> %title"
-msgstr ""
-
-#: inc/template-tags.php:60
-msgctxt "Next post link"
-msgid "%title <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: inc/template-tags.php:85
-msgid "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+#: inc/template-tags.php:96
+msgid ""
+"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
+"%2$s</span>"
 msgstr ""
 
 #: search.php:16
 msgid "Search Results for: %s"
 msgstr ""
 
-#: searchform.php:4
+#: searchform.php:4 sidebar.php:13
 msgid "Search"
 msgstr ""
 
@@ -253,25 +246,70 @@ msgstr ""
 msgid "Search for:"
 msgstr ""
 
-#: sidebar.php:24
+#: sidebar-page-parent.php:11
+msgid "Pages"
+msgstr ""
+
+#: sidebar.php:25
 msgid "Meta"
 msgstr ""
+
 #. Theme Name of the plugin/theme
-msgid "GovFreshWP"
+msgid "GovPress"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://govfresh.com/"
+msgid "http://govpress.co/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "An open-source theme for government websites."
+msgid ""
+"A free WordPress theme designed for government use.   Features include "
+"color customizations options, custom headers, multiple widget areas, and an "
+"optional icon navigation menu.  Extensive documentation and recommended "
+"plugins can be found at govpress.co.  All code is peer reviewed and patches "
+"are welcome via GitHub."
 msgstr ""
 
 #. Author of the plugin/theme
 msgid "GovFresh"
 msgstr ""
 
+#. Author URI of the plugin/theme
+msgid "http://govfresh.com/"
+msgstr ""
+
 #. Template Name of the plugin/theme
 msgid "Full Page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Home Page"
+msgstr ""
+
+#: archive.php:33
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:36
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: comments.php:30
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/template-tags.php:70
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr ""
+
+#: inc/template-tags.php:71
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""

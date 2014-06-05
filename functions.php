@@ -12,6 +12,11 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
+/**
+ * Set constant for version
+ */
+define( 'GOVPRESS_VERSION', '1.1.0' );
+
 if ( ! function_exists( 'govpress_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -93,7 +98,6 @@ function govpress_widgets_init() {
         'after_title'   => '</h2>',
     ) );
 
-
 	register_sidebar( array(
 		'name'          => __( 'Footer Area One', 'govpress' ),
 		'id'            => 'footer-1',
@@ -136,11 +140,22 @@ add_action( 'widgets_init', 'govpress_widgets_init' );
  * Enqueue scripts and styles.
  */
 function govpress_scripts() {
-	wp_enqueue_style( 'govpress-style', get_stylesheet_uri(), '1.2.0' );
 
-	wp_enqueue_script( 'govpress-theme', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), '20120206', true );
+	wp_enqueue_style( 'govpress-style', get_stylesheet_uri(), GOVPRESS_VERSION );
 
-	wp_enqueue_script( 'govpress-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	if ( SCRIPT_DEBUG || WP_DEBUG ) :
+
+		wp_enqueue_script( 'govpress-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), GOVPRESS_VERSION, true );
+
+		wp_enqueue_script( 'govpress-fit-vids', get_template_directory_uri() . '/js/jquery.fitvids.js', array(), GOVPRESS_VERSION, true );
+
+		wp_enqueue_script( 'govpress-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), GOVPRESS_VERSION, true );
+
+	else :
+
+		wp_enqueue_script( 'govpress-theme', get_template_directory_uri() . '/js/combined-min.js', array( 'jquery' ), GOVPRESS_VERSION, true );
+
+	endif;
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

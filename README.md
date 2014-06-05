@@ -24,6 +24,10 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 * Czech translations (props @honyczek)
 * Update to FontAwesome 4.1.0
+* Use FitVids for responsive video
+* Update to Grunt workflow
+* Minify scripts by default
+* Use CSS comb to normalize style rules
 
 ###### Version 1.1
 

@@ -3,8 +3,8 @@ Theme Name: GovPress
 Theme URI: http://govpress.co/
 Author: GovFresh
 Author URI: http://govfresh.com/
-Description: GovPress is a free WordPress theme designed for government use.   Features include color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu.  Extensive documentation and recommended plugins can be found at govpress.co.  All code is peer reviewed and patches are welcome via GitHub.
-Version: 1.1
+Description: A free WordPress theme designed for government use.   Features include color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu.  Extensive documentation and recommended plugins can be found at govpress.co.  All code is peer reviewed and patches are welcome via GitHub.
+Version: 1.1.0
 License: GNU General Public License
 License URI: license.txt
 Text Domain: govpress
@@ -287,6 +287,7 @@ input[type="submit"] {
   border-color: #ccc #ccc #bbb #ccc;
   border-radius: 3px;
   background: #e6e6e6;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -304,6 +305,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa #bbb;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
 
@@ -316,6 +318,7 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
   border-color: #aaa #bbb #bbb #bbb;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -424,6 +427,7 @@ a:active {
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   color: #21759b;
@@ -477,7 +481,6 @@ body {
 a {
   text-decoration: none;
   -webkit-transition: color 0.2s ease-in-out;
-  -moz-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
 
@@ -1347,6 +1350,7 @@ object {
     left: -999em;
     z-index: 99999;
     opacity: 0;
+    -webkit-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
   }
 
