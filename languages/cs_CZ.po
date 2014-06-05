@@ -1,0 +1,302 @@
+# Copyright (C) 2014 GovFresh
+# This file is distributed under the GNU General Public License.
+# Jan Papez (honyczek) <honyczek@centrum.cz>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: GovPress 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/govpress\n"
+"POT-Creation-Date: 2014-02-10 20:50:21+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-06-04 11:03+0200\n"
+"Last-Translator: Jan Papez (honyczek) <honyczek@centrum.cz>\n"
+"Language-Team: Czech <govpress@googlegroups.com>\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ouha! Tato stránka nebyla nalezena."
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Vypadá to, že v tomto umístění nebylo nic nalezeno. Co zkusit jeden z odkazů "
+"níže nebo vyzkoušet vyhledávání?"
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr "Nejpoužívanější kategorie"
+
+#. translators: %1$s: smiley
+#: 404.php:44
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Zkuste se podívat do měsíčních archivů: %1$s"
+
+#: archive.php:27
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: archive.php:30
+msgid "Day: %s"
+msgstr "Den: %s"
+
+#: archive.php:33
+msgid "Month: %s"
+msgstr "Měsíc: %s"
+
+#: archive.php:33
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:36
+msgid "Year: %s"
+msgstr "Rok: %s"
+
+#: archive.php:36
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:39
+#, fuzzy
+msgid "Asides"
+msgstr "Poznámky stranou"
+
+#: archive.php:42
+msgid "Galleries"
+msgstr "Galerie"
+
+#: archive.php:45
+msgid "Images"
+msgstr "Obrázky"
+
+#: archive.php:48
+msgid "Videos"
+msgstr "Videa"
+
+#: archive.php:51
+msgid "Quotes"
+msgstr "Citace"
+
+#: archive.php:54
+msgid "Links"
+msgstr "Odkazy"
+
+#: archive.php:57
+msgid "Statuses"
+msgstr "Stavy"
+
+#: archive.php:60
+msgid "Audios"
+msgstr "Zvuky"
+
+#: archive.php:63
+msgid "Chats"
+msgstr "Chaty"
+
+#: archive.php:66 sidebar.php:17
+msgid "Archives"
+msgstr "Archivy"
+
+#: comments.php:30
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Jedna myšlenka k &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s myšlenky k &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s myšlenek k &ldquo;%2$s&rdquo;"
+
+#: comments.php:37 comments.php:56
+msgid "Comment navigation"
+msgstr "Navigace komentářů"
+
+#: comments.php:38 comments.php:57
+msgid "&larr; Older Comments"
+msgstr "&larr; Starší komentáře"
+
+#: comments.php:39 comments.php:58
+msgid "Newer Comments &rarr;"
+msgstr "Novější komentáře &rarr;"
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr "Komentáře jsou uzavřeny."
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Nic nenalezeno"
+
+#: content-none.php:19
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Jste připraveni publikovat první příspěvek? <a href=\"%1$s\">Začněte zde</a>."
+
+#: content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Omlouváme se, ale nic neodpovídá vašemu vyhledávání. Zkuste to znovu s trochu "
+"jinými klíčovými slovy."
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
+msgstr ""
+"Zdá se, že nemůžeme najít to, co hledáte. Možná vám pomůže vyhledávání."
+
+#: content-page.php:18 content-single.php:20 content.php:27
+msgid "Pages:"
+msgstr "Stránky:"
+
+#: content-page.php:23 content-single.php:48 content.php:45
+msgid "Edit"
+msgstr "Upravit"
+
+#: content-single.php:32
+msgid "About %s"
+msgstr "O %s"
+
+#: content.php:24
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Číst dále <span class=\"meta-nav\">&rarr;</span>"
+
+#: content.php:42
+msgid "Leave a comment"
+msgstr "Zanechat komentář"
+
+#: content.php:42
+msgid "1 Comment"
+msgstr "1 komentář"
+
+#: content.php:42
+msgid "% Comments"
+msgstr "% komentářů"
+
+#: footer.php:36
+msgid "%1$s the free %2$s theme for government."
+msgstr "%1$s svobodná šablona %2$s pro vládu."
+
+#: functions.php:45
+msgid "Primary Menu"
+msgstr "Hlavní menu"
+
+#: functions.php:46
+msgid "Icon Menu"
+msgstr "Obrázkové menu"
+
+#: functions.php:70
+msgid "Sidebar"
+msgstr "Postranní panel"
+
+#: functions.php:79
+msgid "Home Page Hero"
+msgstr "Hrdina domovské stránky"
+
+#: functions.php:88
+msgid "Footer Area One"
+msgstr "Oblast zápatí Jedna"
+
+#: functions.php:97
+msgid "Footer Area Two"
+msgstr "Oblast zápatí Dvě"
+
+#: functions.php:106
+msgid "Footer Area Three"
+msgstr "Oblast zápatí Tři"
+
+#: functions.php:115
+msgid "Footer Text"
+msgstr "Text zápatí"
+
+#: header.php:28
+msgid "Menu"
+msgstr "Menu"
+
+#: header.php:29
+msgid "Skip to content"
+msgstr "Přeskočit na obsah"
+
+#: inc/extras.php:67
+msgid "Page %s"
+msgstr "Stránka %s"
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Navigace příspěvků"
+
+#: inc/template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Starší příspěvky"
+
+#: inc/template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Novější příspěvky <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:56
+msgid "Post navigation"
+msgstr "Navigace příspěvku"
+
+#: inc/template-tags.php:59
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr "<span class=\"meta-nav\">&larr;</span> %title"
+
+#: inc/template-tags.php:60
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:85
+msgid ""
+"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %"
+"2$s</span>"
+msgstr ""
+"<span class=\"posted-on\">Vyšlo %1$s</span><span class=\"byline\"> napsal %"
+"2$s</span>"
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Výsledky vyhledávání pro: %s"
+
+#: searchform.php:4
+msgid "Search"
+msgstr "Vyhledat"
+
+#: searchform.php:9 searchform.php:10
+msgid "Search for:"
+msgstr "Vyhledat:"
+
+#: sidebar.php:24
+msgid "Meta"
+msgstr "Meta"
+
+#. Theme Name of the plugin/theme
+msgid "GovFreshWP"
+msgstr "GovFreshWP"
+
+#. Theme URI of the plugin/theme
+msgid "http://govfresh.com/"
+msgstr "http://govfresh.com/"
+
+#. Description of the plugin/theme
+msgid "An open-source theme for government websites."
+msgstr "Open-source téma pro vládní webové stránky."
+
+#. Author of the plugin/theme
+msgid "GovFresh"
+msgstr "GovFresh"
+
+#. Template Name of the plugin/theme
+msgid "Full Page"
+msgstr "Celá stránka"
+
+
