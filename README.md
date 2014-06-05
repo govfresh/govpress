@@ -28,6 +28,7 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 * Update to Grunt workflow
 * Minify scripts by default
 * Use CSS comb to normalize style rules
+* Add html classes for IE7 and IE8
 
 ###### Version 1.1
 
