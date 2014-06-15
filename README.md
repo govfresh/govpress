@@ -29,6 +29,7 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 * Minify scripts by default
 * Use CSS comb to normalize style rules
 * Add html classes for IE7 and IE8
+* Change icon menu class from "icon-menu" to "menu-icon" (props @ethanteague)
 
 ###### Version 1.1
 
