@@ -18,13 +18,13 @@
 <?php endif; // End home page top widget module ?>
 
 <?php if ( has_nav_menu( 'icon' ) ) : ?>
-	<div id="icon-menu" class="clear">
+	<div id="menu-icon" class="clear">
 		<div class="col-width">
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'icon',
 				'depth' => '1',
-				'container_class' => 'icon-menu-container'
+				'container_class' => 'menu-icon-container'
 			) ); ?>
 		</div>
 	</div>
