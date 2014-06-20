@@ -14,7 +14,8 @@ function govpress_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'govpress[header_taglinecolor]', array(
 		'default' => '#222222',
-		'type' => 'option'
+		'type' => 'option',
+		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
 	if ( get_theme_mod( 'header_textcolor') !== 'blank' ) {
@@ -27,7 +28,8 @@ function govpress_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'govpress[primary_color]', array(
 		'default' => '#0072BC',
-		'type' => 'option'
+		'type' => 'option',
+		'sanitize_callback' => 'sanitize_hex_color'
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
@@ -38,7 +40,8 @@ function govpress_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'govpress[primary_link_color]', array(
 		'default' => '#428BCA',
-		'type' => 'option'
+		'type' => 'option',
+		'sanitize_callback' => 'sanitize_hex_color'
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_link_color', array(
@@ -49,7 +52,8 @@ function govpress_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'govpress[primary_link_hover]', array(
 		'default' => '#0072BC',
-		'type' => 'option'
+		'type' => 'option',
+		'sanitize_callback' => 'sanitize_hex_color'
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_link_hover', array(

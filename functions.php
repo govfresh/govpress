@@ -15,7 +15,7 @@ if ( ! isset( $content_width ) ) {
 /**
  * Set constant for version
  */
-define( 'GOVPRESS_VERSION', '1.2.0' );
+define( 'GOVPRESS_VERSION', '1.2.1' );
 
 if ( ! function_exists( 'govpress_setup' ) ) :
 /**
