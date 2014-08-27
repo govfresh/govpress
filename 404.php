@@ -21,10 +21,11 @@ get_header(); ?>
 					<?php get_search_form(); ?>
 
 					<?php
-					$search = new WP_Query(
-						's=' . $wp_query->query_vars['name'],
+					$search = new WP_Query( array(
+						's' => $wp_query->query_vars['name'],
 						'cache_results' => false,
 						'no_found_rows' => true
+						)
 					);
 				 	if ( $search->have_posts() ) : ?>
 				 		<div class="widget search_results_404">
