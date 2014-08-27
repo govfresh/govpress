@@ -852,6 +852,12 @@ footer.entry-meta a {
   margin: 0 0 1.5em;
 }
 
+.error404 .page-content .widgettitle {
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin: 0 0 .5em;
+}
+
 /* =Asides
 ----------------------------------------------- */
 .blog .format-aside .entry-title,

@@ -20,6 +20,10 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 ### Changelog
 
+###### Development
+
+* 404 page improvements
+
 ###### Version 1.2.1
 
 * Add sanitization for colors in the customizer
