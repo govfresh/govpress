@@ -953,6 +953,10 @@ object {
 	.col-width {
 		padding: 0;
 	}
+	#footer-widgets.col-width,
+	.site-footer .col-width {
+		padding: 0 1.5em;
+	}
 	.main-navigation.toggled-on {
 		padding: 42px 0 0px;
 	}
