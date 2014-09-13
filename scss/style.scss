@@ -357,8 +357,19 @@ footer.entry-meta a {
 	padding:1em;
 	margin:0 0 1.5em;
 }
-.search-submit {
-	min-height:28px;
+.search-form label {
+	width:100%;
+	padding-right:59px;
+	float:left;
+}
+.search-form input, .search-form button {
+	margin: 0;
+}
+.search-form .search-submit {
+	width: 54px;
+	margin-left:-54px;
+	float:left;
+	height:38px;
 }
 
 /* =404
@@ -609,6 +620,9 @@ object {
 	.widget_search .widget-title {
 		margin-bottom:0;
 	}
+	.widget_search .search-field {
+		background: #fff;
+	}
 }
 
 /* Header Widgets */
@@ -616,6 +630,7 @@ object {
 #hero-widgets .widget {
 	font-size:18px;
 	margin: 0 0 1em;
+	clear:both;
 }
 #hero-widgets .widget a {
 	color:#fff;
@@ -638,17 +653,15 @@ object {
 	background: rgba(255,255,255, 0.3);
 	padding: 1.75em 1.5em;
 }
-#hero-widgets .search-field {
-	height:39px;
-	color:#555;
-	padding: 3px 6px;
+#hero-widgets .search-form {
+	max-width:300px;
+	display: block;
+	margin: 0px auto;
 }
-#hero-widgets .search-submit {
-	font-size:16px;
-	min-height:47px;
-}
-#hero-widgets .search-submit:hover {
-	background:#fff;
+#hero-widgets .search-form:after {
+	content:'';
+	display: block;
+	clear:both;
 }
 
 /* Footer Widgets */
@@ -690,6 +703,9 @@ object {
 #footer-widgets.widgets-count-3 #footer-widget-3 {
 	margin-right:0;
 }
+#footer-widgets .widget_search .search-field {
+	background: #fff;
+}
 
 /* =Footer
 ----------------------------------------------- */
@@ -707,6 +723,7 @@ object {
 .site-footer a {
 	color:#fff;
 }
+
 
 /* =Plugin Support
 ----------------------------------------------- */

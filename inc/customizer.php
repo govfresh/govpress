@@ -102,8 +102,10 @@ function govpress_inline_styles() {
 	}
 
 	if ( isset( $options['primary_link_color'] ) ) {
-		$output .= "#content a { color:" . $options['primary_link_color'] . " }\n";
-		$output .= "#menu-icon a, .menu-icon-container a:before { color:" . sanitize_hex_color( $options['primary_link_color'] ) . " }\n";
+		$color = sanitize_hex_color( $options['primary_link_color'] );
+		$output .= "#content a { color:" . $color . " }\n";
+		$output .= "#menu-icon a, .menu-icon-container a:before { color:" . $color . " }\n";
+		$output .= 'button, .button, input[type="button"], input[type="reset"], input[type="submit"] { background: ' . $color . ' }\n';
 	}
 
 	if ( isset( $options['primary_link_hover'] ) ) {
