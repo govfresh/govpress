@@ -821,7 +821,7 @@ footer.entry-meta a {
   margin: 0 0 0 -25%;
 }
 
-/* =Search
+/* =Search and 404 page
 ----------------------------------------------- */
 .search .entry-header {
   margin: 0 0 1.5em;
@@ -832,11 +832,10 @@ footer.entry-meta a {
   font-size: 2.6rem;
 }
 
-.search #main .search-form {
-  border-radius: 5px;
-  background: #f8f8f8;
-  padding: 1em;
-  margin: 0 0 1.5em;
+.search-form:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .search-form label {
@@ -856,13 +855,17 @@ footer.entry-meta a {
   height: 38px;
 }
 
-/* =404
------------------------------------------------ */
+.search #main .search-form,
 .error404 #main .search-form {
   border-radius: 5px;
   background: #f8f8f8;
   padding: 1em;
   margin: 0 0 1.5em;
+}
+
+.search #main .search-form .search-field,
+.error404 #main .search-form .search-field {
+  background: #fff;
 }
 
 .error404 .page-content .widgettitle {
@@ -1172,12 +1175,6 @@ object {
   max-width: 300px;
   display: block;
   margin: 0px auto;
-}
-
-#hero-widgets .search-form:after {
-  content: '';
-  display: block;
-  clear: both;
 }
 
 /* Footer Widgets */
