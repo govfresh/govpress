@@ -1064,7 +1064,7 @@ object {
   margin: 0 1.25em;
 }
 
-/* Ridiculous workarounds for lack of widget-content wrapper */
+/* Workarounds for lack of widget-content wrapper */
 #secondary .tagcloud,
 #secondary .textwidget,
 #secondary select,
@@ -1082,7 +1082,8 @@ object {
 #secondary .widget-grofile h4,
 #secondary .widget-grofile p,
 #secondary .widget-grofile ul,
-#secondary .widget_facebook_likebox iframe, #home-page-featured .tagcloud,
+#secondary .widget_facebook_likebox iframe,
+#home-page-featured .tagcloud,
 #home-page-featured .textwidget,
 #home-page-featured select,
 #home-page-featured .recentcommentsavatar,
@@ -1104,14 +1105,17 @@ object {
 }
 
 /* Specific Widget Styling */
-#secondary .widget-title .rsswidget img, #home-page-featured .widget-title .rsswidget img {
+#secondary .widget-title .rsswidget img,
+#home-page-featured .widget-title .rsswidget img {
   display: none;
 }
-#secondary .widget_search form, #home-page-featured .widget_search form {
+#secondary .widget_search form,
+#home-page-featured .widget_search form {
   margin: 0 1.25em;
   padding-top: 1.25em;
 }
-#secondary .widget_search .widget-title, #home-page-featured .widget_search .widget-title {
+#secondary .widget_search .widget-title,
+#home-page-featured .widget_search .widget-title {
   margin-bottom: 0;
 }
 

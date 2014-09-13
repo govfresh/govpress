@@ -569,9 +569,10 @@ object {
 	}
 }
 
-/* Ridiculous workarounds for lack of widget-content wrapper */
+/* Workarounds for lack of widget-content wrapper */
 
-#secondary, #home-page-featured {
+#secondary,
+#home-page-featured {
 	.tagcloud,
 	.textwidget,
 	select,
@@ -596,7 +597,8 @@ object {
 
 /* Specific Widget Styling */
 
-#secondary, #home-page-featured {
+#secondary,
+#home-page-featured {
 	.widget-title .rsswidget img {
 		display: none;
 	}

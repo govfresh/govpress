@@ -170,7 +170,7 @@ add_action( 'wp_enqueue_scripts', 'govpress_scripts' );
  * Enqueue fonts
  */
 function govpress_fonts() {
-	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/fonts/font-awesome/font-awesome.css', array(), '4.1.0' );
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/fonts/font-awesome/font-awesome.css', array(), '4.2.0' );
 	wp_enqueue_style( 'govpress-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300', '', null, 'screen' );
 }
 add_action( 'wp_enqueue_scripts', 'govpress_fonts' );
