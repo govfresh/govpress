@@ -143,6 +143,9 @@ function govpress_scripts() {
 
 	wp_enqueue_style( 'govpress-style', get_stylesheet_uri(), GOVPRESS_VERSION );
 
+	// Use style-rtl.css for RTL layouts
+	wp_style_add_data( 'govpress-style', 'rtl', 'replace' );
+
 	if ( SCRIPT_DEBUG || WP_DEBUG ) :
 
 		wp_enqueue_script( 'govpress-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), GOVPRESS_VERSION, true );
@@ -167,7 +170,6 @@ add_action( 'wp_enqueue_scripts', 'govpress_scripts' );
  * Enqueue fonts
  */
 function govpress_fonts() {
-	// Add Genericons font, used in the main stylesheet.
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/fonts/font-awesome/font-awesome.css', array(), '4.1.0' );
 	wp_enqueue_style( 'govpress-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300', '', null, 'screen' );
 }

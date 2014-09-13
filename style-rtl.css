@@ -95,7 +95,7 @@ table {
 
 caption, th, td {
   font-weight: normal;
-  text-align: left;
+  text-align: right;
 }
 
 blockquote:before, blockquote:after,
@@ -152,7 +152,7 @@ p {
 }
 
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 3em 1.5em 0;
 }
 
 ul {
@@ -166,7 +166,7 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em;
+  margin-right: 1.5em;
 }
 
 dt {
@@ -375,7 +375,7 @@ input[type="search"] {
 textarea {
   overflow: auto;
   /* Removes default vertical scrollbar in IE6/7/8/9 */
-  padding-left: 3px;
+  padding-right: 3px;
   vertical-align: top;
   /* Improves readability and alignment in all browsers */
   width: 98%;
@@ -395,14 +395,14 @@ a:active {
 /* Alignment */
 .alignleft {
   display: inline;
-  float: left;
-  margin-right: 1.5em;
+  float: right;
+  margin-left: 1.5em;
 }
 
 .alignright {
   display: inline;
-  float: right;
-  margin-left: 1.5em;
+  float: left;
+  margin-right: 1.5em;
 }
 
 .aligncenter {
@@ -429,7 +429,7 @@ a:active {
   font-size: 14px;
   font-weight: bold;
   height: auto;
-  left: 5px;
+  right: 5px;
   line-height: normal;
   padding: 15px 23px 14px;
   text-decoration: none;
@@ -491,8 +491,8 @@ a:hover {
 /* =Layout
 ----------------------------------------------- */
 .content-area {
-  float: left;
-  margin: 0 -25% 0 0;
+  float: right;
+  margin: 0 0 0 -25%;
   width: 100%;
 }
 
@@ -503,7 +503,7 @@ a:hover {
 }
 
 .site-main {
-  margin: 0 30% 0 0;
+  margin: 0 0 0 30%;
   min-height: 100%;
 }
 
@@ -512,7 +512,7 @@ a:hover {
 }
 
 #secondary {
-  float: right;
+  float: left;
   overflow: hidden;
   width: 25%;
 }
@@ -539,7 +539,7 @@ a:hover {
 }
 
 .main-navigation ul ul {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .main-navigation a {
@@ -581,7 +581,7 @@ a:hover {
   overflow: hidden;
   position: absolute;
   top: 12px;
-  right: 10px;
+  left: 10px;
   text-align: center;
 }
 
@@ -759,7 +759,7 @@ a:hover {
 
 .author-avatar {
   position: absolute;
-  left: 0;
+  right: 0;
 }
 
 .author-avatar img {
@@ -767,7 +767,7 @@ a:hover {
 }
 
 .author-description {
-  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .author-description h3 {
@@ -790,7 +790,7 @@ footer.entry-meta ul {
 
 footer.entry-meta li {
   display: inline-block;
-  margin: 0 .5em .5em 0;
+  margin: 0 0 .5em .5em;
 }
 
 footer.entry-meta a {
@@ -809,16 +809,16 @@ footer.entry-meta a {
 /* =Layouts
 ----------------------------------------------- */
 .layout-sidebar-left .site-main {
-  margin: 0 0 0 30%;
+  margin: 0 30% 0 0;
 }
 
 .layout-sidebar-left #secondary {
-  float: left;
+  float: right;
 }
 
 .layout-sidebar-left .content-area {
-  float: right;
-  margin: 0 0 0 -25%;
+  float: left;
+  margin: 0 -25% 0 0;
 }
 
 /* =Search
@@ -929,13 +929,13 @@ object {
 }
 
 [class*="navigation"] .nav-previous {
-  float: left;
+  float: right;
   width: 50%;
 }
 
 [class*="navigation"] .nav-next {
-  float: right;
-  text-align: right;
+  float: left;
+  text-align: left;
   width: 50%;
 }
 
@@ -957,7 +957,7 @@ object {
 
 .comment-list .children {
   list-style: none;
-  margin: 1.5em 0 0 5em;
+  margin: 1.5em 5em 0 0;
 }
 
 .comment {
@@ -966,11 +966,11 @@ object {
 }
 
 .comment-body {
-  padding: 0 0 0 5em;
+  padding: 0 5em 0 0;
 }
 
 #comments .avatar {
-  left: 0;
+  right: 0;
   position: absolute;
   border-radius: 50%;
 }
@@ -1003,7 +1003,7 @@ object {
 }
 
 .bypostauthor .avatar {
-  left: .5em;
+  right: .5em;
 }
 
 #reply-title {
@@ -1013,7 +1013,7 @@ object {
 #commentform label[for="author"],
 #commentform label[for="email"],
 #commentform label[for="url"] {
-  float: left;
+  float: right;
   padding: 5px 0;
   width: 100px;
 }
@@ -1186,27 +1186,27 @@ object {
 }
 
 #footer-widgets .widget ul ul {
-  margin: 0 0 0 1.5em;
+  margin: 0 1.5em 0 0;
 }
 
 #footer-widgets.widgets-count-2 .widget-area {
-  float: left;
+  float: right;
   width: 47.5%;
-  margin-right: 5%;
+  margin-left: 5%;
 }
 
 #footer-widgets.widgets-count-2 #footer-widget-2 {
-  margin-right: 0;
+  margin-left: 0;
 }
 
 #footer-widgets.widgets-count-3 .widget-area {
-  float: left;
+  float: right;
   width: 30%;
-  margin-right: 5%;
+  margin-left: 5%;
 }
 
 #footer-widgets.widgets-count-3 #footer-widget-3 {
-  margin-right: 0;
+  margin-left: 0;
 }
 
 /* =Footer
@@ -1263,7 +1263,7 @@ object {
 .wp-pagenavi span.pages:before {
   content: "\f15c";
   font-family: FontAwesome;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .wp-pagenavi a:hover,
@@ -1300,12 +1300,12 @@ object {
 .wsp-pages-list,
 .wsp-posts-list {
   list-style: none;
-  margin-left: 0;
+  margin-right: 0;
 }
 
 .wsp-pages-list ul,
 .wsp-posts-list ul {
-  margin-left: 3em;
+  margin-right: 3em;
 }
 
 /* =Responsive
@@ -1366,11 +1366,11 @@ object {
     background-color: #f8f8f8;
     border: 1px solid #ccc;
     border-top: none;
-    float: left;
-    margin: 0 0 0 -1px;
+    float: right;
+    margin: 0 -1px 0 0;
     position: absolute;
     top: 48px;
-    left: -999em;
+    right: -999em;
     z-index: 99999;
     opacity: 0;
     -webkit-transition: opacity .3s ease-in-out;
@@ -1385,7 +1385,7 @@ object {
   }
 
   .main-navigation ul ul ul {
-    left: -999em;
+    right: -999em;
     top: 0;
   }
 
@@ -1413,18 +1413,18 @@ object {
 
   .main-navigation ul li:hover > ul,
   .main-navigation ul li.focus > ul {
-    left: auto;
+    right: auto;
     opacity: 1;
   }
 
   .main-navigation ul ul li:hover > ul,
   .main-navigation ul ul li.focus > ul {
-    left: 100%;
+    right: 100%;
   }
 
   .main-navigation .menu-item-has-children > a,
   .main-navigation .page_item_has_children > a {
-    padding-right: 26px;
+    padding-left: 26px;
   }
 
   .main-navigation .menu-item-has-children > a:after,
@@ -1434,14 +1434,14 @@ object {
     display: inline-block;
     font: normal 10px/1 FontAwesome;
     position: absolute;
-    right: 12px;
+    left: 12px;
     top: 20px;
     vertical-align: text-bottom;
   }
 
   .main-navigation li .menu-item-has-children > a,
   .main-navigation li .page_item_has_children > a {
-    padding-right: 20px;
+    padding-left: 20px;
     width: 168px;
   }
 
@@ -1450,7 +1450,7 @@ object {
   .main-navigation .page_item_has_children li.menu-item-has-children > a:after,
   .main-navigation .page_item_has_children li.page_item_has_children > a:after {
     content: "\f0da";
-    right: 8px;
+    left: 8px;
     top: 20px;
   }
 }
@@ -1469,7 +1469,7 @@ object {
   #footer-widgets.widgets-count-3 .widget-area {
     float: none;
     width: auto;
-    margin-right: 0;
+    margin-left: 0;
   }
 
   .comment-list .children {

@@ -23,6 +23,7 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 ###### Development
 
 * 404 page improvements
+* RTL Support
 
 ###### Version 1.2.1
 
