@@ -20,10 +20,11 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 ### Changelog
 
-###### Development
+###### Version 1.3.0
 
 * 404 page improvements
 * RTL Support
+* Styling updates for forms and inputs
 
 ###### Version 1.2.1
 
