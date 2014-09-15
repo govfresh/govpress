@@ -654,7 +654,7 @@ object {
 	padding: 1.75em 1.5em;
 }
 #hero-widgets .search-form {
-	max-width:300px;
+	max-width:360px;
 	display: block;
 	margin: 0px auto;
 }
@@ -700,6 +700,11 @@ object {
 }
 #footer-widgets .widget_search .search-field {
 	background: #fff;
+}
+#footer-widgets .search-form {
+	max-width:360px;
+	display: block;
+	margin: 0px auto;
 }
 
 /* =Footer
