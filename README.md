@@ -20,17 +20,25 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 ### Changelog
 
-###### Version 1.3.0
+Development
+----
+
+* Fix isset notice in customizer
+
+1.3.0
+----
 
 * 404 page improvements
 * RTL Support
 * Styling updates for forms and inputs
 
-###### Version 1.2.1
+1.2.1
+----
 
 * Add sanitization for colors in the customizer
 
-###### Version 1.2
+1.2
+----
 
 * Czech translations (props @honyczek)
 * Update to FontAwesome 4.1.0
@@ -41,15 +49,18 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 * Add html classes for IE7 and IE8
 * Change icon menu class from "icon-menu" to "menu-icon" (props @ethanteague)
 
-###### Version 1.1
+1.1
+----
 
 * Color customization options
 * Hide content section on home page if the_content() is blank
 
-###### Version 1.0.1
+1.0.1
+----
 
 * Fix Google font path to avoid issues with SSL sites
 
-###### Version 1.0.0
+1.0.0
+----
 
 * First official release
