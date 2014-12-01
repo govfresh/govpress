@@ -84,6 +84,13 @@ a:hover {
 	width: 100%;
 }
 
+/* =Header
+----------------------------------------------- */
+
+.site-description {
+	font-weight: 400;
+}
+
 /* =Menu
 ----------------------------------------------- */
 
@@ -236,7 +243,6 @@ a:hover {
 }
 .entry-content h1, .entry-content h2, .entry-content h3,
 .entry-content h4, .entry-content h5, .entry-content h6 {
-	font-weight:600;
 	margin:0 0 1em;
 	clear:none;
 }
@@ -299,7 +305,6 @@ a:hover {
 .author-description h3 {
 	font-size:18px;
 	font-size:1.8rem;
-	font-weight:600;
 	margin-bottom:.5em;
 }
 footer.entry-meta {
