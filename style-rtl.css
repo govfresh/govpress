@@ -61,7 +61,6 @@ html {
 *:after {
   /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
   /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
-  -moz-box-sizing: border-box;
   /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
   box-sizing: border-box;
 }
@@ -1099,6 +1098,7 @@ object {
 #secondary .widget-grofile p,
 #secondary .widget-grofile ul,
 #secondary .widget_facebook_likebox iframe,
+#secondary .jetpack_subscription_widget form,
 #home-page-featured .tagcloud,
 #home-page-featured .textwidget,
 #home-page-featured select,
@@ -1116,7 +1116,8 @@ object {
 #home-page-featured .widget-grofile h4,
 #home-page-featured .widget-grofile p,
 #home-page-featured .widget-grofile ul,
-#home-page-featured .widget_facebook_likebox iframe {
+#home-page-featured .widget_facebook_likebox iframe,
+#home-page-featured .jetpack_subscription_widget form {
   margin: 0 1.25em;
 }
 
