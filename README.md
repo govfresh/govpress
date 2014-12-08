@@ -23,42 +23,43 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 Development
 ----
 
-* Fix isset notice in customizer
+* Fix: isset notice in customizer
+* Update: Bold headers (h1,h2,h3,etc)
 
 1.3.0
 ----
 
-* 404 page improvements
-* RTL Support
-* Styling updates for forms and inputs
+* Enhancement: 404 page improvements
+* Enhancement: RTL Support
+* Enhancement: Styling updates for forms and inputs
 
 1.2.1
 ----
 
-* Add sanitization for colors in the customizer
+* Fix: Add sanitization for colors in the customizer
 
 1.2
 ----
 
-* Czech translations (props @honyczek)
-* Update to FontAwesome 4.1.0
-* Use FitVids for responsive video
-* Update to Grunt workflow
-* Minify scripts by default
-* Use CSS comb to normalize style rules
-* Add html classes for IE7 and IE8
-* Change icon menu class from "icon-menu" to "menu-icon" (props @ethanteague)
+* Enhancement: Czech translations (props @honyczek)
+* Update: FontAwesome 4.1.0
+* Enhancement: Use FitVids for responsive video
+* Update: Grunt workflow
+* Update: Minify scripts by default
+* Update: Use CSS comb to normalize style rules
+* Update: Add html classes for IE7 and IE8
+* Update: Change icon menu class from "icon-menu" to "menu-icon" (props @ethanteague)
 
 1.1
 ----
 
-* Color customization options
-* Hide content section on home page if the_content() is blank
+* Enhancement: Color customization options
+* Update: Hide content section on home page if the_content() is blank
 
 1.0.1
 ----
 
-* Fix Google font path to avoid issues with SSL sites
+* Fix: Google font path to avoid issues with SSL sites
 
 1.0.0
 ----
