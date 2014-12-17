@@ -37,13 +37,8 @@ function govpress_body_classes( $classes ) {
 	}
 
 	// Body class for portfolio page template
-	if ( is_page_template( 'templates/full-page.php' ) )
+	if ( is_page_template( 'templates/full-page.php' ) ) {
 		$classes[] = 'full-width';
-
-	// Pages with children have a left sidebar layout applied
-	if ( govpress_is_page_parent( get_the_ID() ) ) {
-		if ( !is_page_template( 'templates/full-page.php' ) )
-			$classes[] = 'layout-sidebar-left';
 	}
 
 	return $classes;
@@ -132,17 +127,7 @@ function govpress_footer_widget_count() {
 			break;
 	}
 
-	if ( $class )
+	if ( $class ) {
 		echo $class;
-}
-
-/**
- * Checks if current page is a page parent.
- * Conditional code lifted from /wp-includes/post-template.php.
- *
- * @returns boolean
- */
-function govpress_is_page_parent( $id ) {
-	global $wpdb;
-	return ( $wpdb->get_var( $wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE post_parent = %d AND post_type = 'page' LIMIT 1", $id ) ) );
+	}
 }

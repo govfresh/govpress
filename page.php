@@ -35,10 +35,5 @@ get_header(); ?>
 		</div><!-- #main -->
 	</div><!-- #primary -->
 
-<?php if ( govpress_is_page_parent( get_the_ID() ) ) {
-	get_sidebar( 'page-parent' );
-} else {
-	get_sidebar();
-}
-?>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
