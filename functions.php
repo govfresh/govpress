@@ -62,6 +62,18 @@ function govpress_setup() {
 
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array( 'comment-list', 'search-form', 'comment-form', ) );
+
+	// Theme layouts
+	add_theme_support(
+		'theme-layouts',
+		array(
+			'single-column' => __( '1 Column', 'cascade' ),
+			'sidebar-right' => __( '2 Columns: Content / Sidebar', 'cascade' ),
+			'sidebar-left' => __( '2 Columns: Sidebar / Content', 'cascade' )
+		),
+		array( 'default' => 'sidebar-right' )
+	);
+
 }
 endif; // govpress_setup
 add_action( 'after_setup_theme', 'govpress_setup' );
@@ -204,3 +216,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Icon Menu Walker
  */
 require get_template_directory() . '/inc/icon-menu-extras.php';
+
+/**
+ * Layout options
+ */
+require get_template_directory() . '/inc/theme-layouts.php';

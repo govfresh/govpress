@@ -71,7 +71,8 @@ a:hover {
 	margin: 0 30% 0 0;
 	min-height:100%;
 }
-.full-width .site-main {
+.full-width .site-main,
+.layout-single-column .site-main {
 	margin: 0;
 }
 #secondary {
@@ -602,13 +603,16 @@ object {
 	.widget_image img,
 	.widget_goodreads embed,
 	.widget_goodreads img,
-	.widget-grofile .grofile-thumbnail,
+	.widget_facebook_likebox iframe,
 	.widget-grofile h4,
 	.widget-grofile p,
-	.widget-grofile ul,
-	.widget_facebook_likebox iframe,
+	.widget-grofile ul
 	.jetpack_subscription_widget form {
 		margin:0 1.25em;
+	}
+
+	.widget-grofile .grofile-thumbnail {
+		padding: 0 1.25em;
 	}
 }
 

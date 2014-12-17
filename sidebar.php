@@ -5,6 +5,9 @@
  * @package GovPress
  */
 ?>
+
+<?php if ( get_theme_mod( 'theme_layout', 'sidebar-right' ) != 'single-column' ) : ?>
+
 	<div id="secondary" class="widget-area" role="complementary">
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'primary' ) ) : ?>
@@ -32,3 +35,5 @@
 
 		<?php endif; // end sidebar widget area ?>
 	</div><!-- #secondary -->
+
+<?php endif; ?>

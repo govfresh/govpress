@@ -65,9 +65,6 @@ function govpress_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	if ( get_theme_mod( 'header_textcolor') !== 'blank' ) {
-		$wp_customize->get_setting( 'header_taglinecolor' )->transport = 'postMessage';
-	}
 	$wp_customize->get_setting( 'govpress[primary_color]' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'govpress[primary_link_color]' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'govpress[primary_link_hover]' )->transport = 'postMessage';
