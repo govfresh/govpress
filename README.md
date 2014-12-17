@@ -25,6 +25,7 @@ Development
 
 * Fix: isset notice in customizer
 * Update: Bold headers (h1,h2,h3,etc)
+* Enhancement: Layout options
 
 1.3.0
 ----
