@@ -4,7 +4,7 @@ Theme URI: http://govpress.co/
 Author: GovFresh
 Author URI: http://govfresh.com/
 Description: A free WordPress theme designed for government use.   Features include color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu.  Extensive documentation and recommended plugins can be found at govpress.co.  All code is peer reviewed and patches are welcome via GitHub.
-Version: 1.3.0
+Version: 1.4.0
 License: GNU General Public License
 License URI: license.txt
 Text Domain: govpress
@@ -507,7 +507,8 @@ a:hover {
   min-height: 100%;
 }
 
-.full-width .site-main {
+.full-width .site-main,
+.layout-single-column .site-main {
   margin: 0;
 }
 
@@ -1098,12 +1099,11 @@ object {
 #secondary .widget_image img,
 #secondary .widget_goodreads embed,
 #secondary .widget_goodreads img,
-#secondary .widget-grofile .grofile-thumbnail,
+#secondary .widget_facebook_likebox iframe,
 #secondary .widget-grofile h4,
 #secondary .widget-grofile p,
-#secondary .widget-grofile ul,
-#secondary .widget_facebook_likebox iframe,
-#secondary .jetpack_subscription_widget form,
+#secondary .widget-grofile ul
+.jetpack_subscription_widget form,
 #home-page-featured .tagcloud,
 #home-page-featured .textwidget,
 #home-page-featured select,
@@ -1117,13 +1117,16 @@ object {
 #home-page-featured .widget_image img,
 #home-page-featured .widget_goodreads embed,
 #home-page-featured .widget_goodreads img,
-#home-page-featured .widget-grofile .grofile-thumbnail,
+#home-page-featured .widget_facebook_likebox iframe,
 #home-page-featured .widget-grofile h4,
 #home-page-featured .widget-grofile p,
-#home-page-featured .widget-grofile ul,
-#home-page-featured .widget_facebook_likebox iframe,
-#home-page-featured .jetpack_subscription_widget form {
+#home-page-featured .widget-grofile ul
+.jetpack_subscription_widget form {
   margin: 0 1.25em;
+}
+#secondary .widget-grofile .grofile-thumbnail,
+#home-page-featured .widget-grofile .grofile-thumbnail {
+  padding: 0 1.25em;
 }
 
 /* Specific Widget Styling */
@@ -1487,7 +1490,9 @@ object {
   }
 }
 @media screen and (max-width: 840px) {
-  .site-main {
+  .site-main,
+  .layout-sidebar-left .site-main,
+  .layout-sidebar-right .site-main {
     margin: 0;
   }
 
