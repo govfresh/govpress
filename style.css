@@ -1490,7 +1490,9 @@ object {
   }
 }
 @media screen and (max-width: 840px) {
-  .site-main {
+  .site-main,
+  .layout-sidebar-left .site-main,
+  .layout-sidebar-right .site-main {
     margin: 0;
   }
 
