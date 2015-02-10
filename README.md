@@ -25,7 +25,8 @@ Development
 
 * Update: Theme description
 * Update: New screenshot
-* Update: Add support for post thumbnails
+* Update: Support for post thumbnails
+* Update: Support for editor styles
 
 1.4.0
 ----

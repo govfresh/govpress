@@ -66,6 +66,9 @@ function govpress_setup() {
 	// Enable support for post thumbnails.
 	add_theme_support( 'post-thumbnails' );
 
+	// Post editor styles
+	add_editor_style( 'editor-style.css' );
+
 	// Theme layouts
 	add_theme_support(
 		'theme-layouts',
