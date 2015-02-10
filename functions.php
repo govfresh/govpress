@@ -63,6 +63,9 @@ function govpress_setup() {
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array( 'comment-list', 'search-form', 'comment-form', ) );
 
+	// Enable support for post thumbnails.
+	add_theme_support( 'post-thumbnails' );
+
 	// Theme layouts
 	add_theme_support(
 		'theme-layouts',
