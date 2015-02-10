@@ -24,6 +24,7 @@ Development
 ---
 
 * Update: Theme description
+* Update: New screenshot
 
 1.4.0
 ----
