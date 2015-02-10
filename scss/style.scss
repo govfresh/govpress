@@ -733,7 +733,11 @@ object {
 .site-footer a {
 	color:#fff;
 }
-
+.site-footer .search-form {
+	max-width:360px;
+	display: block;
+	margin: 0px auto;
+}
 
 /* =Plugin Support
 ----------------------------------------------- */
