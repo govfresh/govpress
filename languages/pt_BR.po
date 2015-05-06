@@ -1,0 +1,329 @@
+# Copyright (C) 2015 GovFresh
+# This file is distributed under the GNU General Public License.
+msgid ""
+msgstr ""
+"Project-Id-Version: GovPress 1.4.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2015-02-10 06:48:33+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-05-06 07:13-0300\n"
+"X-Generator: Poedit 1.7.6\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
+
+#: 404.php:15
+msgid "That page can&rsquo;t be found."
+msgstr "Essa página não pode ser encontrada."
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Parece que nada foi encontrado aqui. Tente talvez um dos links abaixo ou um busca."
+
+#: 404.php:33 search.php:16
+msgid "Search Results for: %s"
+msgstr "Resultados de pesquisa para: %s"
+
+#: 404.php:47
+msgid "Most Used Categories"
+msgstr "Categorias Mais Usadas"
+
+#: archive.php:27
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: archive.php:30
+msgid "Day: %s"
+msgstr "Dia: %s"
+
+#: archive.php:33
+msgid "Month: %s"
+msgstr "Mês: %s"
+
+#: archive.php:36
+msgid "Year: %s"
+msgstr "Ano: %s"
+
+#: archive.php:39
+msgid "Asides"
+msgstr "Lados"
+
+#: archive.php:42
+msgid "Galleries"
+msgstr "Galerias"
+
+#: archive.php:45
+msgid "Images"
+msgstr "Imagens"
+
+#: archive.php:48
+msgid "Videos"
+msgstr "Vídeos"
+
+#: archive.php:51
+msgid "Quotes"
+msgstr "Citações"
+
+#: archive.php:54
+msgid "Links"
+msgstr "Links"
+
+#: archive.php:57
+msgid "Statuses"
+msgstr "Estados"
+
+#: archive.php:60
+msgid "Audios"
+msgstr "Áudios"
+
+#: archive.php:63
+msgid "Chats"
+msgstr "Bate-papos"
+
+#: archive.php:66 sidebar.php:21
+msgid "Archives"
+msgstr "Arquivos"
+
+#: comments.php:37 comments.php:56
+msgid "Comment navigation"
+msgstr "Navegação de comentários"
+
+#: comments.php:38 comments.php:57
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentários Antigos"
+
+#: comments.php:39 comments.php:58
+msgid "Newer Comments &rarr;"
+msgstr "Novos Comentários &rarr;"
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr "Comentário estão desativados."
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Nada Encontrado"
+
+#: content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Pronto para publicar sua primeira postagem? <a href=\"%1$s\">Começe aqui</a>."
+
+#: content-none.php:23
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Desculpe, mas nada foi encontrado com esses termos. Por favor, tente novamente com palavras-chave diferentes."
+
+#: content-none.php:28
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Parece que não pode ser encontrado o que você procura. Talvez a busca possa ajudar."
+
+#: content-page.php:18 content-single.php:20 content.php:27 templates/home-page.php:26
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: content-page.php:23 content-single.php:48 content.php:45 templates/home-page.php:33
+msgid "Edit"
+msgstr "Editar"
+
+#: content-single.php:32
+msgid "About %s"
+msgstr "Sobre %s"
+
+#: content.php:24
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continue lendo <span class=\"meta-nav\">&rarr;</span>"
+
+#: content.php:42
+msgid "Leave a comment"
+msgstr "Deixe um comentário"
+
+#: content.php:42
+msgid "1 Comment"
+msgstr "1 Comentário"
+
+#: content.php:42
+msgid "% Comments"
+msgstr "% Comentários"
+
+#: footer.php:36
+msgid "%1$s, the %2$s theme for government."
+msgstr "%1$s, o tema %2$s para governos."
+
+#: functions.php:50
+msgid "Primary Menu"
+msgstr "Menu Primário"
+
+#: functions.php:51
+msgid "Icon Menu"
+msgstr "Menu de Ícone"
+
+#: functions.php:70
+msgid "1 Column"
+msgstr "1 Coluna"
+
+#: functions.php:71
+msgid "2 Columns: Content / Sidebar"
+msgstr "2 Colunas: Conteúdo / Barra lateral"
+
+#: functions.php:72
+msgid "2 Columns: Sidebar / Content"
+msgstr "2 Colunas: Barra lateral / Conteúdo"
+
+#: functions.php:87
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: functions.php:96
+msgid "Home Page Hero"
+msgstr "Página Inicial Hero"
+
+#: functions.php:105
+msgid "Home Page Featured"
+msgstr "Página Inicial Destaque"
+
+#: functions.php:114
+msgid "Footer Area One"
+msgstr "Área de Rodapé Um"
+
+#: functions.php:123
+msgid "Footer Area Two"
+msgstr "Área de Rodapé Dois"
+
+#: functions.php:132
+msgid "Footer Area Three"
+msgstr "Área de Rodapé Três"
+
+#: functions.php:141
+msgid "Footer Text"
+msgstr "Texto de Rodapé"
+
+#: header.php:38
+msgid "Menu"
+msgstr "Menu"
+
+#: header.php:39
+msgid "Skip to content"
+msgstr "Pular para conteúdo"
+
+#: inc/customizer.php:23
+msgid "Header Tagline Color"
+msgstr "Cor do Slogan de Cabeçalho"
+
+#: inc/customizer.php:36
+msgid "Primary Color"
+msgstr "Cor Primária"
+
+#: inc/customizer.php:48
+msgid "Primary Link Color"
+msgstr "Cor Primária de Link"
+
+#: inc/customizer.php:60
+msgid "Primary Link Hover"
+msgstr "Link Primário de Pairar"
+
+#: inc/extras.php:73
+msgid "Page %s"
+msgstr "Página %s"
+
+#: inc/template-tags.php:26
+msgid "Posts navigation"
+msgstr "Navegação de postagens"
+
+#: inc/template-tags.php:36
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Postagens Antigas"
+
+#: inc/template-tags.php:40
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Novas Postagens <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:67
+msgid "Post navigation"
+msgstr "Navegação de postagem"
+
+#: inc/template-tags.php:96
+msgid "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr "<span class=\"posted-on\">Postado em %1$s</span><span class=\"byline\"> por %2$s</span>"
+
+#: inc/theme-layouts.php:458 inc/theme-layouts.php:565 inc/theme-layouts.php:650
+msgid "Layout"
+msgstr "Layout"
+
+#: inc/theme-layouts.php:683
+msgid "Global Layout"
+msgstr "Layout Global"
+
+#: searchform.php:4 sidebar.php:16
+msgid "Search"
+msgstr "Busca"
+
+#: searchform.php:9 searchform.php:10
+msgid "Search for:"
+msgstr "Busca por:"
+
+#: sidebar.php:28
+msgid "Meta"
+msgstr "Meta"
+
+#. Theme Name of the plugin/theme
+msgid "GovPress"
+msgstr "GovPress"
+
+#. Theme URI of the plugin/theme
+msgid "http://govpress.co/"
+msgstr "http://govpress.co/"
+
+#. Description of the plugin/theme
+msgid "GovPress (govpress.co) is a free WordPress theme designed for government use. Features include customized homepage, color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu. Extensive documentation and recommended plugins can be found at govpress.co. All code is peer reviewed and patches are welcome via GitHub."
+msgstr "GovPress (govpress.co) é um tema gratuito para is WordPress desenvolvido para uso governamental. Suas funcionalidades incluem homepage customizada, opções customizadas de cores, cabeçalhos customizados, áreas de múltiplos widget e um menu de navegação com ícone opcional. Documentação extensiva e plugins recomendados podem ser encontrados em govpress.co. Todo o código é revisado e correções são bem-vindos via GitHub."
+
+#. Author of the plugin/theme
+msgid "GovFresh"
+msgstr "GovFresh"
+
+#. Author URI of the plugin/theme
+msgid "http://govfresh.com/"
+msgstr "http://govfresh.com/"
+
+#. Template Name of the plugin/theme
+msgid "Full Page"
+msgstr "Página CompletaFull Page"
+
+#. Template Name of the plugin/theme
+msgid "Home Page"
+msgstr "Página Inicial"
+
+#: archive.php:33
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:36
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: comments.php:30
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Um pensamento em &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s pensamentos em &ldquo;%2$s&rdquo;"
+
+#: inc/template-tags.php:70
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr "<span class=\"meta-nav\">&larr;</span> %title"
+
+#: inc/template-tags.php:71
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
+
+#. Translators: Default theme layout option.
+#: inc/theme-layouts.php:363
+msgctxt "theme layout"
+msgid "Default"
+msgstr "Padrão"
