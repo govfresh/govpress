@@ -188,8 +188,42 @@ add_action( 'wp_enqueue_scripts', 'govpress_scripts' );
  * Enqueue fonts
  */
 function govpress_fonts() {
-	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/fonts/font-awesome/font-awesome.css', array(), '4.2.0' );
-	wp_enqueue_style( 'govpress-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300', '', null, 'screen' );
+
+	wp_enqueue_style(
+		'fontawesome',
+		get_template_directory_uri() . '/fonts/font-awesome/font-awesome.css',
+		array(),
+		'4.5.0'
+	);
+
+   /* Translators: If there are characters in your language that are not
+    * supported by Open Sans, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $font = _x( 'active', 'Open Sans font: active or inactive', 'govpress' );
+
+    if ( 'inactive' !== $font ) :
+
+        $font_families = array();
+        $font_families[] = 'Open Sans:300italic,400italic,600italic,700italic,400,600,700,300';
+
+        $query_args = array(
+            'family' => urlencode( implode( '|', $font_families ) ),
+            'subset' => urlencode( 'latin,latin-ext' ),
+        );
+
+        $font_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+
+		wp_enqueue_style(
+	    	'govpress-open-sans',
+	    	$font_url,
+	    	array(),
+	    	null,
+	    	'screen'
+		);
+
+    endif;
+
 }
 add_action( 'wp_enqueue_scripts', 'govpress_fonts' );
 

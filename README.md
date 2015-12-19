@@ -27,6 +27,8 @@ Development
 * Update: New screenshot
 * Update: Support for post thumbnails
 * Update: Support for editor styles
+* Update: Font Awesome 4.5.0
+* Update: Allow translations to disable Open Sans font
 
 1.4.0
 ----
