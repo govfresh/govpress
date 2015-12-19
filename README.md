@@ -29,6 +29,7 @@ Development
 * Update: Support for editor styles
 * Update: Font Awesome 4.5.0
 * Update: Allow translations to disable Open Sans font
+* Update: Support title-tag
 
 1.4.0
 ----
