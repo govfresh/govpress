@@ -1,6 +1,6 @@
 {
 	"name": "govpress",
-	"version": "1.3.0",
+	"version": "1.5.0",
 	"devDependencies": {
 		"grunt": "~0.4.5",
 		"grunt-cli": "~0.1.13",

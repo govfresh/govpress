@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License.
 msgid ""
 msgstr ""
-"Project-Id-Version: GovPress 1.4.0\n"
+"Project-Id-Version: GovPress 1.5.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-02-10 06:48:33+00:00\n"
+"POT-Creation-Date: 2015-12-27 19:44:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -157,51 +157,51 @@ msgstr ""
 msgid "%1$s, the %2$s theme for government."
 msgstr ""
 
-#: functions.php:50
+#: functions.php:58
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:51
+#: functions.php:59
 msgid "Icon Menu"
 msgstr ""
 
-#: functions.php:70
+#: functions.php:84
 msgid "1 Column"
 msgstr ""
 
-#: functions.php:71
+#: functions.php:85
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:72
+#: functions.php:86
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:87
+#: functions.php:101
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:96
+#: functions.php:110
 msgid "Home Page Hero"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:119
 msgid "Home Page Featured"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:128
 msgid "Footer Area One"
 msgstr ""
 
-#: functions.php:123
+#: functions.php:137
 msgid "Footer Area Two"
 msgstr ""
 
-#: functions.php:132
+#: functions.php:146
 msgid "Footer Area Three"
 msgstr ""
 
-#: functions.php:141
+#: functions.php:155
 msgid "Footer Text"
 msgstr ""
 
@@ -227,10 +227,6 @@ msgstr ""
 
 #: inc/customizer.php:60
 msgid "Primary Link Hover"
-msgstr ""
-
-#: inc/extras.php:73
-msgid "Page %s"
 msgstr ""
 
 #: inc/template-tags.php:26
@@ -325,6 +321,14 @@ msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
+
+#: functions.php:211
+#. Translators: If there are characters in your language that are not
+#. * supported by Open Sans, translate this to 'off'. Do not translate
+#. * into your own language.
+msgctxt "Open Sans font: active or inactive"
+msgid "active"
+msgstr ""
 
 #: inc/template-tags.php:70
 msgctxt "Previous post link"
