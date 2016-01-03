@@ -360,7 +360,7 @@ function theme_layouts_strings() {
 	/* Set up the default layout strings. */
 	$strings = array(
 		/* Translators: Default theme layout option. */
-		'default' => _x( 'Default', 'theme layout', 'theme-layouts' )
+		'default' => _x( 'Default', 'theme layout', 'govpress' )
 	);
 
 	/* Get theme-supported layouts. */

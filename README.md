@@ -20,6 +20,11 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 ### Changelog
 
+Development
+---
+
+* Fix: Updated incorrect textdomains on strings related to theme layouts
+
 1.5.0
 ---
 

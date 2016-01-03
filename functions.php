@@ -81,9 +81,9 @@ function govpress_setup() {
 	add_theme_support(
 		'theme-layouts',
 		array(
-			'single-column' => __( '1 Column', 'cascade' ),
-			'sidebar-right' => __( '2 Columns: Content / Sidebar', 'cascade' ),
-			'sidebar-left' => __( '2 Columns: Sidebar / Content', 'cascade' )
+			'single-column' => __( '1 Column', 'govpress' ),
+			'sidebar-right' => __( '2 Columns: Content / Sidebar', 'govpress' ),
+			'sidebar-left' => __( '2 Columns: Sidebar / Content', 'govpress' )
 		),
 		array( 'default' => 'sidebar-right' )
 	);
