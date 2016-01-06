@@ -14,16 +14,21 @@
 * Easy to update content management system (WordPress).
 * No vendor lock-in so you can easily move your data at any time.
 
+### Credits
+
+* Font Awesome by Dave Gandy - http://fontawesome.io. License: SIL OFL 1.1.
+
 ### Contribute
 
 We'd love to have as many eyes on this project as possible.  If you find a bug or something that can be improved please open an issue and/or submit a pull request.
 
 ### Changelog
 
-Development
+1.5.1
 ---
 
 * Fix: Updated incorrect textdomains on strings related to theme layouts
+* Update: Added credit for Font Awesome
 
 1.5.0
 ---
