@@ -336,6 +336,9 @@ input[type="date"],
 input[type="email"],
 input[type="search"],
 input[type="url"],
+input[type="tel"],
+input[type="email"],
+select,
 textarea {
   -webkit-appearance: none;
   background-color: #fafafa;
@@ -357,6 +360,9 @@ input[type="date"]:focus,
 input[type="email"]:focus,
 input[type="search"]:focus,
 input[type="url"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+select:focus,
 textarea:focus {
   background-color: #fff;
   outline: none;
