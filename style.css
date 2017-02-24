@@ -741,8 +741,7 @@ a:hover {
   margin: 0 0 1.5em;
 }
 
-.byline,
-.updated {
+.byline {
   display: none;
 }
 
