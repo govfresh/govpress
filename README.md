@@ -24,6 +24,12 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 ### Changelog
 
+Development
+---
+
+* Update: Remove body classes for IE.
+* Update: Update Grunt packages for build.
+
 1.5.1
 ---
 
