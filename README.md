@@ -29,6 +29,7 @@ Development
 
 * Update: Remove body classes for IE.
 * Update: Update Grunt packages for build.
+* Update: Update link colors to match U.S. Web Design System defaults.
 
 1.5.1
 ---
