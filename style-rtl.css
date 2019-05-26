@@ -3,10 +3,10 @@ Theme Name: GovPress
 Theme URI: https://govpress.govfresh.com
 Author: GovFresh
 Author URI: http://govfresh.com/
-Description: GovPress (govpress.co) is a free WordPress theme designed for government use. Features include customized homepage, color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu. Extensive documentation and recommended plugins can be found at govpress.co. All code is peer reviewed and patches are welcome via GitHub.
+Description: GovPress is a free WordPress theme designed for government use. Features include customized homepage, color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu. Extensive documentation and recommended plugins can be found at govpress.org. All code is peer reviewed and patches are welcome via GitHub.
 Version: 1.5.0
-License: GNU General Public License
-License URI: license.txt
+License: GNU General Public License v2 or later
+License URI: LICENSE
 Text Domain: govpress
 Domain Path: /languages/
 Tags: responsive-layout, two-columns, custom-header, custom-menu, featured-image-header, full-width-template, translation-ready
@@ -257,7 +257,7 @@ input[type="submit"] {
   border-radius: 3px;
   display: inline-block;
   padding: 7px 20px 9px;
-  background-color: #428BCA;
+  background-color: #0071bc;
   -webkit-box-shadow: inset 0 -2px rgba(0, 0, 0, 0.2);
           box-shadow: inset 0 -2px rgba(0, 0, 0, 0.2);
   color: #fff;
@@ -293,6 +293,8 @@ input[type="date"],
 input[type="email"],
 input[type="search"],
 input[type="url"],
+input[type="tel"],
+input[type="email"],
 textarea {
   -webkit-appearance: none;
   background-color: #fafafa;
@@ -337,12 +339,12 @@ textarea {
 
 /* Links */
 a {
-  color: #428BCA; }
+  color: #0071bc; }
 
 a:hover,
 a:focus,
 a:active {
-  color: #0072BC; }
+  color: #1a4480; }
 
 /* Alignment */
 .alignleft {
@@ -1122,7 +1124,7 @@ object {
   color: #333; }
 
 .wp-pagenavi a {
-  color: #428BCA;
+  color: #0071bc;
   border-top: 1px solid #f8f8f8; }
 
 /* =Infinite Scroll

@@ -30,6 +30,7 @@ Development
 * Update: Remove body classes for IE.
 * Update: Update Grunt packages for build.
 * Update: Update link colors to match U.S. Web Design System defaults.
+* Update: Add styling for [tel] and [email] inputs. Props @Kleindberg.
 
 1.5.1
 ---

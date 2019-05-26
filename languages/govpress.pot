@@ -1,10 +1,10 @@
 # <!=Copyright (C) 2019 GovFresh
-# This file is distributed under the GNU General Public License.=!>
+# This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
 "Project-Id-Version: GovPress 1.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/govpress\n"
-"POT-Creation-Date: 2019-05-07 02:15:30+00:00\n"
+"POT-Creation-Date: 2019-05-26 17:14:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -282,11 +282,11 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"GovPress (govpress.co) is a free WordPress theme designed for government "
-"use. Features include customized homepage, color customizations options, "
-"custom headers, multiple widget areas, and an optional icon navigation "
-"menu. Extensive documentation and recommended plugins can be found at "
-"govpress.co. All code is peer reviewed and patches are welcome via GitHub."
+"GovPress is a free WordPress theme designed for government use. Features "
+"include customized homepage, color customizations options, custom headers, "
+"multiple widget areas, and an optional icon navigation menu. Extensive "
+"documentation and recommended plugins can be found at govpress.org. All "
+"code is peer reviewed and patches are welcome via GitHub."
 msgstr ""
 
 #. Author of the plugin/theme
