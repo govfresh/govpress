@@ -14,7 +14,7 @@ function govpress_custom_header_setup() {
 		'default-text-color'     => '0072BC',
 		'width'                  => 1160,
 		'height'                 => 250,
-		'flex-width' 			 => true,
+		'flex-width'             => true,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'govpress_header_style',
 		'admin-head-callback'    => 'govpress_admin_header_style',
@@ -32,9 +32,8 @@ if ( ! function_exists( 'govpress_header_style' ) ) :
 function govpress_header_style() {
 	$header_text_color = get_header_textcolor();
 
-	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-	if ( HEADER_TEXTCOLOR == $header_text_color ) {
+	// If default option is set for text, let's bail.
+	if ( '0072BC' === $header_text_color ) {
 		return;
 	}
 
@@ -43,7 +42,7 @@ function govpress_header_style() {
 	<style type="text/css">
 	<?php
 		// Has the text been hidden?
-		if ( 'blank' == $header_text_color ) :
+		if ( 'blank' === $header_text_color ) :
 	?>
 		.site-title,
 		.site-description {
@@ -55,7 +54,7 @@ function govpress_header_style() {
 		else :
 	?>
 		.site-title a {
-			color: #<?php echo $header_text_color; ?>;
+			color: #<?php echo sanitize_hex_color_no_hash( $header_text_color ); ?>;
 		}
 	<?php endif; ?>
 	</style>
@@ -74,17 +73,6 @@ function govpress_admin_header_style() {
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
 			border: none;
-		}
-		#headimg h1,
-		#desc {
-		}
-		#headimg h1 {
-		}
-		#headimg h1 a {
-		}
-		#desc {
-		}
-		#headimg img {
 		}
 	</style>
 <?php

@@ -107,22 +107,22 @@ function govpress_widgets_init() {
 	) );
 
 	register_sidebar( array(
-        'name'          => __( 'Home Page Hero', 'govpress' ),
-        'id'            => 'home-page-hero',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</aside>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
-    ) );
+				'name'          => __( 'Home Page Hero', 'govpress' ),
+				'id'            => 'home-page-hero',
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+		) );
 
-    register_sidebar( array(
-        'name'          => __( 'Home Page Featured', 'govpress' ),
-        'id'            => 'home-page-featured',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</aside>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
-    ) );
+		register_sidebar( array(
+				'name'          => __( 'Home Page Featured', 'govpress' ),
+				'id'            => 'home-page-featured',
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+		) );
 
 	register_sidebar( array(
 		'name'          => __( 'Footer Area One', 'govpress' ),
@@ -172,19 +172,13 @@ function govpress_scripts() {
 	// Use style-rtl.css for RTL layouts
 	wp_style_add_data( 'govpress-style', 'rtl', 'replace' );
 
-	if ( SCRIPT_DEBUG || WP_DEBUG ) :
-
-		wp_enqueue_script( 'govpress-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), GOVPRESS_VERSION, true );
-
-		wp_enqueue_script( 'govpress-fit-vids', get_template_directory_uri() . '/js/jquery.fitvids.js', array(), GOVPRESS_VERSION, true );
-
-		wp_enqueue_script( 'govpress-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), GOVPRESS_VERSION, true );
-
-	else :
-
-		wp_enqueue_script( 'govpress-theme', get_template_directory_uri() . '/js/combined-min.js', array( 'jquery' ), GOVPRESS_VERSION, true );
-
-	endif;
+	wp_enqueue_script(
+		'govpress-theme',
+		get_template_directory_uri() . '/js/combined-min.js',
+		array( 'jquery' ),
+		GOVPRESS_VERSION,
+		true
+	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -204,33 +198,33 @@ function govpress_fonts() {
 		'4.5.0'
 	);
 
-   /* Translators: If there are characters in your language that are not
-    * supported by Open Sans, translate this to 'off'. Do not translate
-    * into your own language.
-    */
-    $font = _x( 'active', 'Open Sans font: active or inactive', 'govpress' );
+	 /* Translators: If there are characters in your language that are not
+		* supported by Open Sans, translate this to 'off'. Do not translate
+		* into your own language.
+		*/
+		$font = _x( 'active', 'Open Sans font: active or inactive', 'govpress' );
 
-    if ( 'inactive' !== $font ) :
+		if ( 'inactive' !== $font ) :
 
-        $font_families = array();
-        $font_families[] = 'Open Sans:300italic,400italic,600italic,700italic,400,600,700,300';
+				$font_families = array();
+				$font_families[] = 'Open Sans:300italic,400italic,600italic,700italic,400,600,700,300';
 
-        $query_args = array(
-            'family' => urlencode( implode( '|', $font_families ) ),
-            'subset' => urlencode( 'latin,latin-ext' ),
-        );
+				$query_args = array(
+						'family' => urlencode( implode( '|', $font_families ) ),
+						'subset' => urlencode( 'latin,latin-ext' ),
+				);
 
-        $font_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+				$font_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 
 		wp_enqueue_style(
-	    	'govpress-open-sans',
-	    	$font_url,
-	    	array(),
-	    	null,
-	    	'screen'
+				'govpress-open-sans',
+				$font_url,
+				array(),
+				null,
+				'screen'
 		);
 
-    endif;
+		endif;
 
 }
 add_action( 'wp_enqueue_scripts', 'govpress_fonts' );

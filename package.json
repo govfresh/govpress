@@ -1,6 +1,6 @@
 {
   "name": "govpress",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "devDependencies": {
     "autoprefixer": "^9.6.0",
     "fibers": "^4.0.0",
