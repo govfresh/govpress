@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: GovPress 1.5.0\n"
+"Project-Id-Version: GovPress 1.5.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/govpress\n"
-"POT-Creation-Date: 2019-05-27 21:16:45+00:00\n"
+"POT-Creation-Date: 2019-06-17 01:57:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -276,8 +276,8 @@ msgstr ""
 msgid "GovPress"
 msgstr ""
 
-#. Theme URI of the plugin/theme
-msgid "https://govpress.govfresh.com"
+#. Author URI of the plugin/theme
+msgid "http://govpress.org"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -291,10 +291,6 @@ msgstr ""
 
 #. Author of the plugin/theme
 msgid "GovFresh"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://govfresh.com/"
 msgstr ""
 
 #. Template Name of the plugin/theme

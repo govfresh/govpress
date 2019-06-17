@@ -1,10 +1,10 @@
 # GovPress
 
-[GovPress](https://govpress.govfresh.com) is a free WordPress theme designed for government use. Features include customized homepage, color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu. Extensive documentation and recommended plugins can be found at [GovPress](https://govpress.govfresh.com). All code is peer reviewed and patches are welcome via [GitHub](https://github.com/govfresh/govpress).
+[GovPress](http://govpress.org) is a free WordPress theme designed for government use. Features include customized homepage, color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu. Extensive documentation and recommended plugins can be found at [GovPress](http://govpress.org). All code is peer reviewed and patches are welcome via [GitHub](http://govpress.org).
 
 ### Demo
 
-[GovPress Demo](https://govpress.govfresh.com)
+[GovPress Demo](http://govpress.org)
 
 ### Features
 
@@ -24,7 +24,7 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 ### Changelog
 
-Development
+1.5.2
 ---
 
 * Update: Remove body classes for IE.
