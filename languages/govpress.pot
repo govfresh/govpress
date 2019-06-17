@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GovPress 1.5.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/govpress\n"
-"POT-Creation-Date: 2019-06-17 01:57:02+00:00\n"
+"POT-Creation-Date: 2019-06-17 01:58:44+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -318,7 +318,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:211
+#: functions.php:205
 #. Translators: If there are characters in your language that are not supported
 #. by Open Sans, translate this to 'off'. Do not translate into your own
 #. language.
