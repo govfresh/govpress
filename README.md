@@ -1,10 +1,10 @@
 # GovPress
 
-[GovPress](http://govpress.org) is a free WordPress theme designed for government use. Features include customized homepage, color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu. Extensive documentation and recommended plugins can be found at [GovPress](http://govpress.org). All code is peer reviewed and patches are welcome via [GitHub](http://govpress.org).
+[GovPress]([http://govpress.org](https://wordpress.org/themes/govpress/)) is a free WordPress theme designed for government use. Features include customized homepage, color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu.
 
 ### Demo
 
-[GovPress Demo](http://govpress.org)
+[GovPress Demo]([http://govpress.org](https://wordpress.org/themes/govpress/))
 
 ### Features
 
