@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: GovPress 1.5.3\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/govpress-theme-dev\n"
-"POT-Creation-Date: 2026-08-03 20:48:35+00:00\n"
+"POT-Creation-Date: 2026-08-03 21:06:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -345,14 +345,6 @@ msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
-
-#: functions.php:219
-#. Translators: If there are characters in your language that are not supported
-#. by Open Sans, translate this to 'off'. Do not translate into your own
-#. language.
-msgctxt "Open Sans font: active or inactive"
-msgid "active"
-msgstr ""
 
 #: inc/template-tags.php:70
 msgctxt "Previous post link"

@@ -1,4 +1,5 @@
-/* Public Sans */
+/* =Public Sans
+----------------------------------------------- */
 @font-face {
 	font-family: 'Public Sans';
 	src: url('fonts/public-sans/PublicSans-Light.woff2') format('woff2');
@@ -54,24 +55,4 @@
 	font-weight: 700;
 	font-style: italic;
 	font-display: swap;
-}
-
-/* Body Styles */
-
-body {
-	color: #222222;
-	font-family: "Public Sans", sans-serif;
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
-	font-weight: 700;
-}
-
-/* Block Styles */
-.wp-block-quote.is-style-govpress {
-	border-left: 4px solid #0071bc;
-	font-style: italic;
-	padding-left: 1.5em;
 }

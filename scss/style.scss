@@ -24,12 +24,14 @@ GovPress is based on Underscores http://underscores.me/, (C) 2012-2014 Automatti
 /* =Global Variables
 ----------------------------------------------- */
 
-$font-stack: 'Open Sans', sans-serif;
+$font-stack: 'Public Sans', sans-serif;
 $text-color: #222;
 $link-color: #0071bc;
 $link-hover: #1a4480;
 $background: #f8f8f8;
 $background-alt: #0072BC;
+
+@import "fonts";
 
 @import "reset";
 
@@ -550,7 +552,7 @@ object {
   width: 100px;
 }
 .form-allowed-tags, .form-allowed-tags code {
-	font-family: 'Open Sans';
+	font-family: 'Public Sans';
 	font-size:13px;
 	font-size:1.3rem;
 }
