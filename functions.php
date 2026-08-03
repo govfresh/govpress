@@ -181,7 +181,7 @@ add_action( 'widgets_init', 'govpress_widgets_init' );
  */
 function govpress_scripts() {
 
-	wp_enqueue_style( 'govpress-style', get_stylesheet_uri(), GOVPRESS_VERSION );
+	wp_enqueue_style( 'govpress-style', get_stylesheet_uri(), array(), GOVPRESS_VERSION );
 
 	// Use style-rtl.css for RTL layouts
 	wp_style_add_data( 'govpress-style', 'rtl', 'replace' );
