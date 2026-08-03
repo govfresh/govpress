@@ -1,14 +1,14 @@
 'use strict';
 
 // Packages
-const fiberLibrary = require('fibers');
-const sassLibrary = require('node-sass');
+const sassLibrary = require('sass');
 
 module.exports = function(grunt) {
 
   // load all tasks
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
-  
+  grunt.loadNpmTasks('@lodder/grunt-postcss');
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     watch: {
@@ -22,7 +22,6 @@ module.exports = function(grunt) {
       default: {
         options : {
           implementation: sassLibrary,
-          fiber: fiberLibrary,
           style : 'expanded',
           sourceMap: true
         },
@@ -35,7 +34,7 @@ module.exports = function(grunt) {
       options: {
         map: true,
         processors: [
-          require('autoprefixer')({browsers: 'last 2 versions, > 2%'}),
+          require('autoprefixer')(),
         ]
       },
       dist: {
