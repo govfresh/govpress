@@ -15,7 +15,7 @@ if ( ! isset( $content_width ) ) {
 /**
  * Set constant for version
  */
-define( 'GOVPRESS_VERSION', '1.5.0' );
+define( 'GOVPRESS_VERSION', wp_get_theme()->get( 'Version' ) );
 
 if ( ! function_exists( 'govpress_setup' ) ) :
 /**
@@ -71,11 +71,25 @@ function govpress_setup() {
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array( 'comment-list', 'search-form', 'comment-form', ) );
 
-	// Enable support for post thumbnails.
-	add_theme_support( 'post-thumbnails' );
-
 	// Post editor styles
 	add_editor_style( 'editor-style.css' );
+
+	// Enable support for custom logos in the Customizer.
+	add_theme_support( 'custom-logo', array(
+		'height'      => 100,
+		'width'       => 400,
+		'flex-height' => true,
+		'flex-width'  => true,
+	) );
+
+	// Enable support for wide and full-width block alignment.
+	add_theme_support( 'align-wide' );
+
+	// Enable support for core block styling.
+	add_theme_support( 'wp-block-styles' );
+
+	// Enable support for responsive embedded content (oEmbeds).
+	add_theme_support( 'responsive-embeds' );
 
 	// Theme layouts
 	add_theme_support(
@@ -263,3 +277,8 @@ require get_template_directory() . '/inc/icon-menu-extras.php';
  * Layout options
  */
 require get_template_directory() . '/inc/theme-layouts.php';
+
+/**
+ * Block styles and patterns
+ */
+require get_template_directory() . '/inc/block-patterns.php';

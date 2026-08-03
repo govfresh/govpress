@@ -15,6 +15,12 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
+	<?php if ( has_post_thumbnail() && ! is_search() ) : ?>
+	<div class="entry-thumbnail">
+		<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'large' ); ?></a>
+	</div><!-- .entry-thumbnail -->
+	<?php endif; ?>
+
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
