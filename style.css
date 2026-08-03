@@ -22,6 +22,50 @@ GovPress is based on Underscores http://underscores.me/, (C) 2012-2014 Automatti
 */
 /* =Global Variables
 ----------------------------------------------- */
+/* =Public Sans
+----------------------------------------------- */
+@font-face {
+  font-family: "Public Sans";
+  src: url("fonts/public-sans/PublicSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("fonts/public-sans/PublicSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("fonts/public-sans/PublicSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("fonts/public-sans/PublicSans-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("fonts/public-sans/PublicSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("fonts/public-sans/PublicSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
 /*
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
@@ -124,7 +168,7 @@ input,
 select,
 textarea {
   color: #222;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -167,7 +211,7 @@ li > ol {
 }
 
 dt {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 dd {
@@ -175,7 +219,7 @@ dd {
 }
 
 b, strong {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 dfn, cite, em, i {
@@ -251,7 +295,7 @@ table {
 }
 
 th {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 img {
@@ -434,7 +478,7 @@ a:focus {
   color: #21759b;
   display: block;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   height: auto;
   left: 5px;
   line-height: normal;
@@ -683,6 +727,7 @@ a:hover {
 .site-title {
   font-size: 36px;
   font-size: 3.6rem;
+  font-weight: 700;
 }
 
 .site-title a {
@@ -1058,7 +1103,7 @@ object {
 }
 
 .form-allowed-tags, .form-allowed-tags code {
-  font-family: "Open Sans";
+  font-family: "Public Sans";
   font-size: 13px;
   font-size: 1.3rem;
 }

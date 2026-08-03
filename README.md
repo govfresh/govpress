@@ -17,6 +17,7 @@
 ### Credits
 
 * Font Awesome by Dave Gandy - http://fontawesome.io. License: SIL OFL 1.1.
+* Public Sans by USWDS - https://public-sans.digital.gov. License: SIL OFL 1.1.
 
 ### Contribute
 
