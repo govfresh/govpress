@@ -1,12 +1,10 @@
 # GovPress
 
-**This repository has been archived by the owner. It is now read-only.**
-
-[GovPress]([http://govpress.org](https://wordpress.org/themes/govpress/)) is a free WordPress theme designed for government use. Features include customized homepage, color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu.
+[GovPress](https://github.com/govfresh/govpress) is a free WordPress theme designed for government use. Features include customized homepage, color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu.
 
 ### Demo
 
-[GovPress Demo]([http://govpress.org](https://wordpress.org/themes/govpress/))
+[GovPress on WordPress.org](https://wordpress.org/themes/govpress/)
 
 ### Features
 
@@ -25,6 +23,13 @@
 We'd love to have as many eyes on this project as possible.  If you find a bug or something that can be improved please open an issue and/or submit a pull request.
 
 ### Changelog
+
+1.5.3
+---
+
+* Update: Replace node-sass and fibers with dart-sass; drop the abandoned grunt-postcss dependency for a maintained fork. Resolves 26 open security alerts across lodash, tar, postcss, js-yaml, qs, minimatch, brace-expansion, websocket-driver, and tmp.
+* Enhancement: WCAG 2.2 accessibility pass. Keyboard-operable mobile menu button, visible focus indicators on buttons/inputs/links, accessible name for the icon-only search button, larger mobile menu touch target, corrected heading hierarchy, and labeled navigation landmarks.
+* Update: Footer text simplified to "Powered by GovPress." linking to the GitHub repo.
 
 1.5.2
 ---
