@@ -26,20 +26,6 @@ GovPress is based on Underscores http://underscores.me/, (C) 2012-2014 Automatti
 ----------------------------------------------- */
 @font-face {
   font-family: "Public Sans";
-  src: url("fonts/public-sans/PublicSans-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Public Sans";
-  src: url("fonts/public-sans/PublicSans-LightItalic.woff2") format("woff2");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Public Sans";
   src: url("fonts/public-sans/PublicSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -225,7 +211,7 @@ li > ol {
 }
 
 dt {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 dd {
@@ -233,7 +219,7 @@ dd {
 }
 
 b, strong {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 dfn, cite, em, i {
@@ -309,7 +295,7 @@ table {
 }
 
 th {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 img {
@@ -492,7 +478,7 @@ a:focus {
   color: #21759b;
   display: block;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   height: auto;
   right: 5px;
   line-height: normal;
@@ -741,6 +727,7 @@ a:hover {
 .site-title {
   font-size: 36px;
   font-size: 3.6rem;
+  font-weight: 700;
 }
 
 .site-title a {

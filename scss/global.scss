@@ -44,13 +44,13 @@ li > ol {
 	margin-left: 1.5em;
 }
 dt {
-	font-weight: bold;
+	font-weight: 600;
 }
 dd {
 	margin: 0 1.5em 1.5em;
 }
 b, strong {
-	font-weight: bold;
+	font-weight: 600;
 }
 dfn, cite, em, i {
 	font-style: italic;
@@ -111,7 +111,7 @@ table {
 	width: 100%;
 }
 th {
-	font-weight: bold;
+	font-weight: 600;
 }
 img {
 	height: auto; /* Make sure images are scaled correctly. */
@@ -278,7 +278,7 @@ a:focus {
 	color: #21759b;
 	display: block;
 	font-size: 14px;
-	font-weight: bold;
+	font-weight: 700;
 	height: auto;
 	left: 5px;
 	line-height: normal;
