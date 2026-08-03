@@ -29,7 +29,7 @@
 				<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'govpress_author_bio_avatar_size', 75 ) ); ?>
 			</div><!-- #author-avatar -->
 			<div class="author-description">
-				<h3><?php printf( esc_attr__( 'About %s', 'govpress' ), get_the_author() ); ?></h3>
+				<h2><?php printf( esc_attr__( 'About %s', 'govpress' ), get_the_author() ); ?></h2>
 				<?php the_author_meta( 'description' ); ?>
 			</div><!-- #author-description -->
 		</div><!-- #author-meta-->

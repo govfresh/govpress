@@ -9,5 +9,5 @@
 		<span class="screen-reader-text"><?php _e( 'Search for:', 'govpress' ); ?></span>
 		<input type="search" class="search-field" placeholder="<?php echo $squery; ?>" value="" name="s" title="<?php _e( 'Search for:', 'govpress' ); ?>" />
 	</label>
-	<input type="submit" class="fa search-submit" value="&#xf002;" />
+	<input type="submit" class="fa search-submit" value="&#xf002;" aria-label="<?php esc_attr_e( 'Search', 'govpress' ); ?>" />
 </form>
