@@ -21,12 +21,12 @@
 
 	<?php do_action( 'before' ); ?>
 
-	<nav id="site-navigation" class="main-navigation" role="navigation">
+	<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Primary', 'govpress' ); ?>">
 		<div class="col-width">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'govpress' ); ?></h1>
+			<button type="button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Menu', 'govpress' ); ?></button>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'govpress' ); ?></a>
 
-			<?php wp_nav_menu( array('theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			<?php wp_nav_menu( array('theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
 		</div>
 	</nav><!-- #site-navigation -->
 
@@ -37,7 +37,11 @@
 					<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
 				</a>
 			<?php endif; // End header image check. ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php if ( is_front_page() && is_home() ) : ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php endif; ?>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
 	</header><!-- #masthead -->

@@ -33,8 +33,8 @@ if ( post_password_required() ) {
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'govpress' ); ?></h1>
+		<nav id="comment-nav-above" class="comment-navigation" aria-labelledby="comment-nav-above-heading">
+			<h2 id="comment-nav-above-heading" class="screen-reader-text"><?php _e( 'Comment navigation', 'govpress' ); ?></h2>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'govpress' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'govpress' ) ); ?></div>
 		</nav><!-- #comment-nav-above -->
@@ -52,8 +52,8 @@ if ( post_password_required() ) {
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'govpress' ); ?></h1>
+		<nav id="comment-nav-below" class="comment-navigation" aria-labelledby="comment-nav-below-heading">
+			<h2 id="comment-nav-below-heading" class="screen-reader-text"><?php _e( 'Comment navigation', 'govpress' ); ?></h2>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'govpress' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'govpress' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->

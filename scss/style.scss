@@ -135,14 +135,20 @@ a:hover {
 	padding: 7px 0;
 }
 .menu-toggle {
+	align-items: center;
+	background: transparent;
+	border: 0;
 	cursor: pointer;
+	display: flex;
 	font-size: 0;
+	justify-content: center;
 	margin: 0;
+	min-width: 44px;
+	min-height: 44px;
 	overflow: hidden;
 	position: absolute;
 	top: 12px;
 	right: 10px;
-	text-align: center;
 }
 .menu-toggle:before {
 	-webkit-font-smoothing: antialiased;

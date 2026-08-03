@@ -22,8 +22,8 @@ function govpress_paging_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'govpress' ); ?></h1>
+	<nav class="navigation paging-navigation" aria-labelledby="paging-navigation-heading">
+		<h2 id="paging-navigation-heading" class="screen-reader-text"><?php _e( 'Posts navigation', 'govpress' ); ?></h2>
 		<div class="nav-links">
 
 			<?php if ( function_exists( 'wp_pagenavi' ) ) {
@@ -63,8 +63,8 @@ function govpress_post_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'govpress' ); ?></h1>
+	<nav class="navigation post-navigation" aria-labelledby="post-navigation-heading">
+		<h2 id="post-navigation-heading" class="screen-reader-text"><?php _e( 'Post navigation', 'govpress' ); ?></h2>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'govpress' ) );

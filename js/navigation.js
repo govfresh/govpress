@@ -27,6 +27,7 @@
 
 		$( '.menu-toggle' ).on( 'click', function() {
 			nav.toggleClass( 'toggled-on' );
+			button.attr( 'aria-expanded', nav.hasClass( 'toggled-on' ) );
 		} );
 	} )();
 
