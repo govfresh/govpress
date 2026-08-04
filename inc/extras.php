@@ -99,3 +99,19 @@ function govpress_footer_widget_count() {
 		echo $class;
 	}
 }
+
+/**
+ * Default the core Search block's button to "Go" instead of "Search",
+ * matching the theme's own searchform.php, unless a site has already
+ * set its own custom button text for a specific block instance.
+ *
+ * @param array $parsed_block The parsed block, before rendering.
+ * @return array
+ */
+function govpress_search_block_button_text( $parsed_block ) {
+	if ( 'core/search' === $parsed_block['blockName'] && empty( $parsed_block['attrs']['buttonText'] ) ) {
+		$parsed_block['attrs']['buttonText'] = __( 'Go', 'govpress' );
+	}
+	return $parsed_block;
+}
+add_filter( 'render_block_data', 'govpress_search_block_button_text' );

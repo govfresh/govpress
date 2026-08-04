@@ -8,7 +8,6 @@ select,
 textarea {
 	color: $text-color;
 	font-family: $font-stack;
-	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
 }
@@ -64,7 +63,6 @@ address {
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
 	font-size: 1.5rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
@@ -139,18 +137,18 @@ input[type="submit"] {
 	border-style: solid;
 	border-width: 0px;
 	cursor: pointer;
-	margin: 0 0 10px;
+	margin: 0 0 1rem;
 	position: relative;
 	text-decoration: none;
 	text-align: center;
 	-webkit-appearance: none;
 	border-radius:3px;
 	display: inline-block;
-	padding: 7px 20px 9px;
+	padding: 0.7rem 2rem 0.9rem;
 	background-color: $link-color;
 	box-shadow: inset 0 -2px rgba(0,0,0,.2);
 	color: #fff;
-	font-size:15px;
+	font-size:1.5rem;
 }
 button:hover,
 .button:hover,
@@ -163,14 +161,14 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	box-shadow: inset 0 2px rgba(0,0,0,.15);
-	padding: 8px 20px;
+	padding: 0.8rem 2rem;
 }
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
 	box-shadow: inset 0 2px rgba(0,0,0,.15);
-	padding: 8px 20px;
+	padding: 0.8rem 2rem;
 	outline: 3px solid $link-color;
 	outline-offset: 2px;
 }
@@ -199,9 +197,9 @@ textarea {
 	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.025), inset 0 1px 1px rgba(0, 0, 0, 0.2);
 	color: rgba(0, 0, 0, 0.75);
 	display: block;
-	font-size: 15px;
+	font-size: 1.5rem;
 	margin: 0 0 1em 0;
-	padding: 8px;
+	padding: 0.8rem;
 	width: 100%;
 	border-radius: 3px;
 }
@@ -228,7 +226,7 @@ textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	height: auto;
-	min-height: 50px;
+	min-height: 5rem;
 }
 
 /* Links */
@@ -277,14 +275,14 @@ a:focus {
 	clip: auto !important;
 	color: #21759b;
 	display: block;
-	font-size: 14px;
+	font-size: 1.4rem;
 	font-weight: 700;
 	height: auto;
-	left: 5px;
+	left: 0.5rem;
 	line-height: normal;
-	padding: 15px 23px 14px;
+	padding: 1.5rem 2.3rem 1.4rem;
 	text-decoration: none;
-	top: 5px;
+	top: 0.5rem;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar */
 }

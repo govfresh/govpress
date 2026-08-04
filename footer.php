@@ -12,30 +12,32 @@
 	</div><!-- .col-width -->
 
 	<?php
-		/*
-		 * A sidebar in the footer? Yep. You can can customize
-		 * your footer with three columns of widgets.
-		 */
-		if ( ! is_404() )
-			get_sidebar( 'footer' );
-	?>
-
-	<?php
-	$fclass = 'site-footer no-widgets';
+	$fclass = 'site-footer-credit no-widgets';
 	if ( is_active_sidebar( 'footer-text' ) ) {
-		$fclass = 'site-footer widgets';
+		$fclass = 'site-footer-credit widgets';
 	} ?>
 
-	<footer class="<?php echo $fclass; ?>" role="contentinfo">
-		<div class="col-width">
-			<?php if ( is_active_sidebar( 'footer-text' ) ) { ?>
-				<div class="widget-area" role="complementary">
-					<?php dynamic_sidebar( 'footer-text' ); ?>
-				</div>
-			<?php } else { ?>
-				<?php printf( __( 'Powered by %s.', 'govpress' ), '<a href="https://github.com/govfresh/govpress">GovPress</a>' ); ?>
-			<?php } ?>
-		</div><!-- .col-width -->
+	<footer class="site-footer" role="contentinfo">
+		<?php
+			/*
+			 * A sidebar in the footer? Yep. You can can customize
+			 * your footer with three columns of widgets.
+			 */
+			if ( ! is_404() )
+				get_sidebar( 'footer' );
+		?>
+
+		<div class="<?php echo $fclass; ?>">
+			<div class="col-width">
+				<?php if ( is_active_sidebar( 'footer-text' ) ) { ?>
+					<div class="widget-area" role="complementary">
+						<?php dynamic_sidebar( 'footer-text' ); ?>
+					</div>
+				<?php } else { ?>
+					<?php printf( __( 'Powered by %s', 'govpress' ), '<a href="https://github.com/govfresh/govpress">GovPress</a>' ); ?>
+				<?php } ?>
+			</div><!-- .col-width -->
+		</div><!-- .site-footer-credit -->
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
 

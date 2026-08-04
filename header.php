@@ -50,7 +50,9 @@
 			<?php else : ?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php endif; ?>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<?php if ( $govpress_description = get_bloginfo( 'description' ) ) : ?>
+				<h2 class="site-description"><?php echo esc_html( $govpress_description ); ?></h2>
+			<?php endif; ?>
 		</div>
 	</header><!-- #masthead -->
 
