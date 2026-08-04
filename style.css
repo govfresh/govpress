@@ -1436,15 +1436,15 @@ object {
   .main-navigation .current_page_ancestor > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current-menu-ancestor > a {
-    background: #f8f8f8;
-    color: #555;
+    background: var(--color-page-bg);
+    color: var(--color-text-muted);
   }
   .main-navigation ul > li.menu-item-has-children:hover > a,
   .main-navigation ul > li.menu-item-has-children.focus > a,
   .main-navigation ul > li.page_item_has_children:hover > a,
   .main-navigation ul > li.page_item_has_children.focus > a {
-    color: #555;
-    background: #f8f8f8;
+    color: var(--color-text-muted);
+    background: var(--color-page-bg);
   }
   .main-navigation ul ul {
     background-color: #f8f8f8;

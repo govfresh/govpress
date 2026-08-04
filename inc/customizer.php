@@ -104,14 +104,18 @@ function govpress_inline_styles() {
 
 		if ( isset( $options['primary_link_color'] ) ) {
 			$color = sanitize_hex_color( $options['primary_link_color'] );
-			$output .= "#content a { color:" . $color . " }\n";
-			$output .= "#menu-icon a, .menu-icon-container a:before { color:" . $color . " }\n";
-			$output .= 'button, .button, input[type="button"], input[type="reset"], input[type="submit"] { background: ' . $color . ' }\n';
+			// Text color on an adaptive background: only safe to force in light
+			// mode. Dark mode falls back to the theme's own --color-link token,
+			// since a light-mode link color isn't guaranteed to stay AA-compliant
+			// against a dark background.
+			$output .= "@media (prefers-color-scheme: light) { #content a { color:" . $color . " } #menu-icon a, .menu-icon-container a:before { color:" . $color . " } }\n";
+			// Background fill with white text: safe in both modes.
+			$output .= "button, .button, input[type=\"button\"], input[type=\"reset\"], input[type=\"submit\"] { background: " . $color . " }\n";
 		}
 
 		if ( isset( $options['primary_link_hover'] ) ) {
-			$output .= "#content a:hover, #content a:focus, #content a:active { color:" . sanitize_hex_color( $options['primary_link_hover'] ) . " }\n";
-			$output .= "#menu-icon a:hover, #menu-icon a:focus, #menu-icon a:active { color:" . sanitize_hex_color( $options['primary_link_hover'] ) . " }\n";
+			$hover = sanitize_hex_color( $options['primary_link_hover'] );
+			$output .= "@media (prefers-color-scheme: light) { #content a:hover, #content a:focus, #content a:active { color:" . $hover . " } #menu-icon a:hover, #menu-icon a:focus, #menu-icon a:active { color:" . $hover . " } }\n";
 		}
 	}
 
