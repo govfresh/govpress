@@ -38,7 +38,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding col-width">
 			<?php if ( has_custom_logo() ) : ?>
-				<?php the_custom_logo(); ?>
+				<?php govpress_custom_logo(); ?>
 			<?php endif; ?>
 			<?php if ( get_header_image() ) : ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

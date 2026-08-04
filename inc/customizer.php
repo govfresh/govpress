@@ -12,6 +12,18 @@
  */
 function govpress_customize_register( $wp_customize ) {
 
+	$wp_customize->add_setting( 'govpress_dark_logo', array(
+		'type' => 'theme_mod',
+		'sanitize_callback' => 'absint',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'govpress_dark_logo', array(
+		'label' => __( 'Dark Mode Logo', 'govpress' ),
+		'description' => __( "Optional. Shown instead of the main logo when a visitor's device is set to dark mode. If left blank, the main logo is used in both modes.", 'govpress' ),
+		'section' => 'title_tagline',
+		'settings' => 'govpress_dark_logo',
+	) ) );
+
 	$wp_customize->add_setting( 'govpress[header_taglinecolor]', array(
 		'default' => '#1c1d1f',
 		'type' => 'option',
@@ -78,6 +90,48 @@ function govpress_customize_preview_js() {
 	wp_enqueue_script( 'govpress_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20140329', true );
 }
 add_action( 'customize_preview_init', 'govpress_customize_preview_js' );
+
+/**
+ * Output the site logo, swapping in the Dark Mode Logo (if one is set) for
+ * visitors whose device is set to dark mode. Falls back to a plain light
+ * logo when no dark logo has been uploaded.
+ */
+function govpress_custom_logo() {
+	$logo_id = get_theme_mod( 'custom_logo' );
+
+	if ( ! $logo_id ) {
+		return;
+	}
+
+	$light_image = wp_get_attachment_image_src( $logo_id, 'full' );
+
+	if ( ! $light_image ) {
+		return;
+	}
+
+	$alt = get_post_meta( $logo_id, '_wp_attachment_image_alt', true );
+
+	$img = sprintf(
+		'<img src="%1$s" width="%2$d" height="%3$d" class="custom-logo" alt="%4$s">',
+		esc_url( $light_image[0] ),
+		absint( $light_image[1] ),
+		absint( $light_image[2] ),
+		esc_attr( $alt )
+	);
+
+	$dark_logo_id = get_theme_mod( 'govpress_dark_logo' );
+	$dark_image   = $dark_logo_id ? wp_get_attachment_image_src( $dark_logo_id, 'full' ) : false;
+
+	echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="custom-logo-link" rel="home">';
+
+	if ( $dark_image ) {
+		echo '<picture><source srcset="' . esc_url( $dark_image[0] ) . '" media="(prefers-color-scheme: dark)">' . $img . '</picture>';
+	} else {
+		echo $img;
+	}
+
+	echo '</a>';
+}
 
 /**
  * Output styles in the header
