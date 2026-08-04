@@ -238,7 +238,7 @@ a:hover {
 }
 .menu-icon-container a:hover {
 	text-decoration: none;
-	color:#333;
+	color: var(--color-text);
 }
 /* Icon Menu items relied on Font Awesome classes (fa-*) assigned via
    inc/icon-menu-extras.php to render an icon per menu item. Now that
