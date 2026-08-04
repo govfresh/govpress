@@ -25,11 +25,11 @@ GovPress is based on Underscores http://underscores.me/, (C) 2012-2014 Automatti
 ----------------------------------------------- */
 
 $font-stack: 'Public Sans', sans-serif;
-$text-color: #222;
-$link-color: #0071bc;
+$text-color: #1c1d1f;
+$link-color: #0076d6;
 $link-hover: #1a4480;
 $background: #f8f8f8;
-$background-alt: #0072BC;
+$background-alt: #0076d6;
 
 @import "fonts";
 
@@ -633,6 +633,7 @@ object {
 /* Footer Widgets */
 
 #footer-widgets {
+	background: $background;
 	margin-bottom: 3em;
 	padding: 0 1.5em;
 }
