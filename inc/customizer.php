@@ -27,7 +27,7 @@ function govpress_customize_register( $wp_customize ) {
 	}
 
 	$wp_customize->add_setting( 'govpress[primary_color]', array(
-		'default' => '#0076d6',
+		'default' => '#005ea2',
 		'type' => 'option',
 		'sanitize_callback' => 'sanitize_hex_color'
 	) );
@@ -39,7 +39,7 @@ function govpress_customize_register( $wp_customize ) {
 	) ) );
 
 	$wp_customize->add_setting( 'govpress[primary_link_color]', array(
-		'default' => '#0076d6',
+		'default' => '#005ea2',
 		'type' => 'option',
 		'sanitize_callback' => 'sanitize_hex_color'
 	) );
@@ -51,7 +51,7 @@ function govpress_customize_register( $wp_customize ) {
 	) ) );
 
 	$wp_customize->add_setting( 'govpress[primary_link_hover]', array(
-		'default' => '#0076d6',
+		'default' => '#005ea2',
 		'type' => 'option',
 		'sanitize_callback' => 'sanitize_hex_color'
 	) );
