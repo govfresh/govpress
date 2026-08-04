@@ -1210,12 +1210,12 @@ object {
 }
 
 #footer-widgets a {
-  color: #666;
+  color: #0076d6;
   text-decoration: none;
 }
 
 #footer-widgets a:hover {
-  color: #111;
+  color: #1a4480;
   text-decoration: underline;
 }
 

@@ -643,11 +643,11 @@ object {
 	padding: 0 1.5em;
 }
 #footer-widgets a {
-	color:#666;
+	color: $link-color;
 	text-decoration: none;
 }
 #footer-widgets a:hover {
-	color:#111;
+	color: $link-hover;
 	text-decoration: underline;
 }
 #footer-widgets .widget-title {
