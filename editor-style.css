@@ -45,7 +45,7 @@
 /* Body Styles */
 
 body {
-	color: #222222;
+	color: #1c1d1f;
 	font-family: "Public Sans", sans-serif;
 }
 
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Block Styles */
 .wp-block-quote.is-style-govpress {
-	border-left: 4px solid #0071bc;
+	border-left: 4px solid #0076d6;
 	font-style: italic;
 	padding-left: 1.5em;
 }
