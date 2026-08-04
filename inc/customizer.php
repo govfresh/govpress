@@ -97,7 +97,7 @@ function govpress_inline_styles() {
 		}
 
 		if ( isset( $options['primary_color'] ) ) {
-			$output .= "#site-navigation, #hero-widgets, #secondary .widget-title, #home-page-featured .widget-title, .site-footer, .site-footer-credit { background:" . sanitize_hex_color( $options['primary_color'] ) . " }\n";
+			$output .= "#site-navigation, #hero-widgets, #secondary .widget-title, #home-page-featured .widget-title, .site-footer-credit { background:" . sanitize_hex_color( $options['primary_color'] ) . " }\n";
 		}
 
 		if ( isset( $options['primary_link_color'] ) ) {
