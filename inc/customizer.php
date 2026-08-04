@@ -38,20 +38,6 @@ function govpress_customize_register( $wp_customize ) {
 		'settings' => 'govpress[primary_color]'
 	) ) );
 
-	$wp_customize->add_setting( 'govpress[neutral_banner]', array(
-		'default' => false,
-		'type' => 'option',
-		'sanitize_callback' => 'govpress_sanitize_checkbox',
-	) );
-
-	$wp_customize->add_control( 'govpress_neutral_banner', array(
-		'label' => __( 'Use a Neutral Dark Banner', 'govpress' ),
-		'description' => __( 'Replaces the Primary Color on the navigation, hero, and footer bands with a neutral dark background. Useful if a logo does not work well against the Primary Color. Links keep using their own colors either way.', 'govpress' ),
-		'section' => 'colors',
-		'settings' => 'govpress[neutral_banner]',
-		'type' => 'checkbox',
-	) );
-
 	$wp_customize->add_setting( 'govpress[primary_link_color]', array(
 		'default' => '#005ea2',
 		'type' => 'option',
@@ -112,15 +98,11 @@ function govpress_inline_styles() {
 			$output .= ".site-description { color:" . sanitize_hex_color( $options['header_taglinecolor'] ) . " }\n";
 		}
 
-		$banner_selectors = "#site-navigation, #hero-widgets, #secondary .widget-title, #home-page-featured .widget-title, .site-footer-credit";
-
-		if ( ! empty( $options['neutral_banner'] ) ) {
-			// A fixed neutral dark tone, same in both color schemes, for sites
-			// whose logo doesn't work well against the Primary Color. Links
-			// are untouched by this setting and keep using their own colors.
-			$output .= $banner_selectors . " { background: #1c1d1f }\n";
-		} elseif ( isset( $options['primary_color'] ) ) {
-			$output .= $banner_selectors . " { background:" . sanitize_hex_color( $options['primary_color'] ) . " }\n";
+		if ( isset( $options['primary_color'] ) ) {
+			// Light mode only: dark mode always uses the theme's own neutral
+			// --color-primary token instead of the site's Primary Color, so
+			// this never fights with the compiled stylesheet's dark palette.
+			$output .= "@media (prefers-color-scheme: light) { #site-navigation, #hero-widgets, #secondary .widget-title, #home-page-featured .widget-title, .site-footer-credit { background:" . sanitize_hex_color( $options['primary_color'] ) . " } }\n";
 		}
 
 		if ( isset( $options['primary_link_color'] ) ) {
@@ -148,16 +130,6 @@ function govpress_inline_styles() {
 }
 
 add_action( 'wp_head', 'govpress_inline_styles', 100 );
-
-/**
- * Sanitize a checkbox Customizer setting to a real boolean.
- *
- * @param mixed $checked The setting's raw value.
- * @return bool
- */
-function govpress_sanitize_checkbox( $checked ) {
-	return (bool) $checked;
-}
 
 /**
  * The core sanitize_hex_color function is only available
