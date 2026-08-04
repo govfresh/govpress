@@ -131,7 +131,7 @@ function govpress_structured_data_webpage() {
 }
 
 /**
- * Build the BlogPosting node for a single post.
+ * Build the Article node for a single post.
  *
  * @return array
  */
@@ -139,7 +139,7 @@ function govpress_structured_data_article() {
 	$permalink = get_permalink();
 
 	$node = array(
-		'@type'            => 'BlogPosting',
+		'@type'            => 'Article',
 		'@id'              => $permalink . '#article',
 		'headline'         => get_the_title(),
 		'url'              => $permalink,
