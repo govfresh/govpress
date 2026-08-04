@@ -86,8 +86,10 @@ function govpress_inline_styles() {
 
 	// Ties the footer widget area to WordPress core's own Background Color
 	// setting (Appearance > Customize > Colors) rather than a value baked
-	// into the compiled stylesheet.
-	$output = "#footer-widgets { background: #" . get_background_color() . " }\n";
+	// into the compiled stylesheet. Scoped to light mode only, since an
+	// admin-chosen light background color isn't guaranteed to work in dark
+	// mode; the compiled stylesheet's dark palette takes over there instead.
+	$output = "@media (prefers-color-scheme: light) { #footer-widgets { background: #" . get_background_color() . " } }\n";
 
 	$options = get_option( 'govpress', false );
 
@@ -97,19 +99,26 @@ function govpress_inline_styles() {
 		}
 
 		if ( isset( $options['primary_color'] ) ) {
-			$output .= "#site-navigation, #hero-widgets, #secondary .widget-title, #home-page-featured .widget-title, .site-footer-credit { background:" . sanitize_hex_color( $options['primary_color'] ) . " }\n";
+			// Light mode only: dark mode always uses the theme's own neutral
+			// --color-primary token instead of the site's Primary Color, so
+			// this never fights with the compiled stylesheet's dark palette.
+			$output .= "@media (prefers-color-scheme: light) { #site-navigation, #hero-widgets, #secondary .widget-title, #home-page-featured .widget-title, .site-footer-credit { background:" . sanitize_hex_color( $options['primary_color'] ) . " } }\n";
 		}
 
 		if ( isset( $options['primary_link_color'] ) ) {
 			$color = sanitize_hex_color( $options['primary_link_color'] );
-			$output .= "#content a { color:" . $color . " }\n";
-			$output .= "#menu-icon a, .menu-icon-container a:before { color:" . $color . " }\n";
-			$output .= 'button, .button, input[type="button"], input[type="reset"], input[type="submit"] { background: ' . $color . ' }\n';
+			// Text color on an adaptive background: only safe to force in light
+			// mode. Dark mode falls back to the theme's own --color-link token,
+			// since a light-mode link color isn't guaranteed to stay AA-compliant
+			// against a dark background.
+			$output .= "@media (prefers-color-scheme: light) { #content a { color:" . $color . " } #menu-icon a, .menu-icon-container a:before { color:" . $color . " } }\n";
+			// Background fill with white text: safe in both modes.
+			$output .= "button, .button, input[type=\"button\"], input[type=\"reset\"], input[type=\"submit\"] { background: " . $color . " }\n";
 		}
 
 		if ( isset( $options['primary_link_hover'] ) ) {
-			$output .= "#content a:hover, #content a:focus, #content a:active { color:" . sanitize_hex_color( $options['primary_link_hover'] ) . " }\n";
-			$output .= "#menu-icon a:hover, #menu-icon a:focus, #menu-icon a:active { color:" . sanitize_hex_color( $options['primary_link_hover'] ) . " }\n";
+			$hover = sanitize_hex_color( $options['primary_link_hover'] );
+			$output .= "@media (prefers-color-scheme: light) { #content a:hover, #content a:focus, #content a:active { color:" . $hover . " } #menu-icon a:hover, #menu-icon a:focus, #menu-icon a:active { color:" . $hover . " } }\n";
 		}
 	}
 
