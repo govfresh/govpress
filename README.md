@@ -24,6 +24,11 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 ### Changelog
 
+1.5.4
+---
+
+* Enhancement: Add JSON-LD structured data (schema.org) for the site, pages, posts, archives, and search results, to improve how the site appears in search results. Automatically skipped if an SEO plugin (Yoast, Rank Math, AIOSEO, SEOPress) is already providing structured data.
+
 1.5.3
 ---
 
