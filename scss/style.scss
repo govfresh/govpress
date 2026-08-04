@@ -369,6 +369,12 @@ footer.entry-meta a {
 	float:left;
 	height:3.8rem;
 }
+.search-form .search-submit,
+.wp-block-search__button {
+	background-color: #dfe1e2;
+	border: 1px solid #a9aeb1;
+	color: $text-color;
+}
 .search #main .search-form,
 .error404 #main .search-form {
 	border-radius: 5px;
