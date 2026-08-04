@@ -14,7 +14,7 @@ function govpress_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'govpress_dark_logo', array(
 		'type' => 'theme_mod',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'govpress_dark_logo', array(
@@ -119,13 +119,16 @@ function govpress_custom_logo() {
 		esc_attr( $alt )
 	);
 
-	$dark_logo_id = get_theme_mod( 'govpress_dark_logo' );
-	$dark_image   = $dark_logo_id ? wp_get_attachment_image_src( $dark_logo_id, 'full' ) : false;
+	// Stored as a URL, not an attachment ID: WP_Customize_Upload_Control (the
+	// parent of WP_Customize_Image_Control) sets the setting to the selected
+	// attachment's URL, unlike WP_Customize_Cropped_Image_Control (used for
+	// the main Custom Logo), which stores an ID.
+	$dark_logo_url = get_theme_mod( 'govpress_dark_logo' );
 
 	echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="custom-logo-link" rel="home">';
 
-	if ( $dark_image ) {
-		echo '<picture><source srcset="' . esc_url( $dark_image[0] ) . '" media="(prefers-color-scheme: dark)">' . $img . '</picture>';
+	if ( $dark_logo_url ) {
+		echo '<picture><source srcset="' . esc_url( $dark_logo_url ) . '" media="(prefers-color-scheme: dark)">' . $img . '</picture>';
 	} else {
 		echo $img;
 	}
