@@ -25,11 +25,11 @@ GovPress is based on Underscores http://underscores.me/, (C) 2012-2014 Automatti
 ----------------------------------------------- */
 
 $font-stack: 'Public Sans', sans-serif;
-$text-color: #222;
-$link-color: #0071bc;
+$text-color: #1c1d1f;
+$link-color: #005ea2;
 $link-hover: #1a4480;
 $background: #f8f8f8;
-$background-alt: #0072BC;
+$primary-color: #005ea2;
 
 @import "fonts";
 
@@ -111,7 +111,7 @@ a:hover {
 ----------------------------------------------- */
 
 #site-navigation {
-	background: $background-alt;
+	background: $primary-color;
 	position: relative;
 }
 .main-navigation ul {
@@ -369,6 +369,12 @@ footer.entry-meta a {
 	float:left;
 	height:3.8rem;
 }
+.search-form .search-submit,
+.wp-block-search__button {
+	background-color: #f1f3f6;
+	border: 1px solid #71767a;
+	color: $text-color;
+}
 .search #main .search-form,
 .error404 #main .search-form {
 	border-radius: 5px;
@@ -570,7 +576,7 @@ object {
 	}
 	.widget-title{
 		color:#fff;
-		background:$background-alt;
+		background:$primary-color;
 		padding:.5em 1.25em;
 		margin: -1.25em -1.25em 1em;
 	}
@@ -613,7 +619,7 @@ object {
 	margin-bottom:.5em;
 }
 #hero-widgets {
-	background: $background-alt;
+	background: $primary-color;
 	color:#fff;
 	margin-bottom:3em;
 	padding:1.5em 0;
@@ -637,11 +643,11 @@ object {
 	padding: 0 1.5em;
 }
 #footer-widgets a {
-	color:#666;
+	color: $link-color;
 	text-decoration: none;
 }
 #footer-widgets a:hover {
-	color:#111;
+	color: $link-hover;
 	text-decoration: underline;
 }
 #footer-widgets .widget-title {
@@ -684,7 +690,7 @@ object {
 
 .site-footer-credit {
 	font-size:1.4rem;
-	background: $background-alt;
+	background: $primary-color;
 	color:#fff;
 	padding:1.5em 0;
 	text-align: center;

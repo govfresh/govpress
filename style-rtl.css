@@ -167,7 +167,7 @@ button,
 input,
 select,
 textarea {
-  color: #222;
+  color: #1c1d1f;
   font-family: "Public Sans", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -332,7 +332,7 @@ input[type=submit] {
   border-radius: 3px;
   display: inline-block;
   padding: 0.7rem 2rem 0.9rem;
-  background-color: #0071bc;
+  background-color: #005ea2;
   -webkit-box-shadow: inset 0 -2px rgba(0, 0, 0, 0.2);
           box-shadow: inset 0 -2px rgba(0, 0, 0, 0.2);
   color: #fff;
@@ -355,7 +355,7 @@ input[type=submit]:focus {
   -webkit-box-shadow: inset 0 2px rgba(0, 0, 0, 0.15);
           box-shadow: inset 0 2px rgba(0, 0, 0, 0.15);
   padding: 0.8rem 2rem;
-  outline: 3px solid #0071bc;
+  outline: 3px solid #005ea2;
   outline-offset: 2px;
 }
 
@@ -402,7 +402,7 @@ input[type=search]:focus,
 input[type=url]:focus,
 textarea:focus {
   background-color: #fff;
-  outline: 3px solid #0071bc;
+  outline: 3px solid #005ea2;
   outline-offset: 2px;
   -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -426,7 +426,7 @@ textarea {
 
 /* Links */
 a {
-  color: #0071bc;
+  color: #005ea2;
 }
 
 a:hover,
@@ -436,7 +436,7 @@ a:active {
 
 a:focus {
   color: #1a4480;
-  outline: 3px solid #0071bc;
+  outline: 3px solid #005ea2;
   outline-offset: 2px;
 }
 
@@ -602,7 +602,7 @@ a:hover {
 /* =Menu
 ----------------------------------------------- */
 #site-navigation {
-  background: #0072BC;
+  background: #005ea2;
   position: relative;
 }
 
@@ -915,6 +915,13 @@ footer.entry-meta a {
   height: 3.8rem;
 }
 
+.search-form .search-submit,
+.wp-block-search__button {
+  background-color: #f1f3f6;
+  border: 1px solid #71767a;
+  color: #1c1d1f;
+}
+
 .search #main .search-form,
 .error404 #main .search-form {
   border-radius: 5px;
@@ -1134,7 +1141,7 @@ object {
 }
 #secondary .widget-title, #home-page-featured .widget-title {
   color: #fff;
-  background: #0072BC;
+  background: #005ea2;
   padding: 0.5em 1.25em;
   margin: -1.25em -1.25em 1em;
 }
@@ -1177,7 +1184,7 @@ object {
 }
 
 #hero-widgets {
-  background: #0072BC;
+  background: #005ea2;
   color: #fff;
   margin-bottom: 3em;
   padding: 1.5em 0;
@@ -1203,12 +1210,12 @@ object {
 }
 
 #footer-widgets a {
-  color: #666;
+  color: #005ea2;
   text-decoration: none;
 }
 
 #footer-widgets a:hover {
-  color: #111;
+  color: #1a4480;
   text-decoration: underline;
 }
 
@@ -1259,7 +1266,7 @@ object {
 ----------------------------------------------- */
 .site-footer-credit {
   font-size: 1.4rem;
-  background: #0072BC;
+  background: #005ea2;
   color: #fff;
   padding: 1.5em 0;
   text-align: center;
@@ -1317,7 +1324,7 @@ object {
 }
 
 .wp-pagenavi a {
-  color: #0071bc;
+  color: #005ea2;
   border-top: 1px solid #f8f8f8;
 }
 
@@ -1532,7 +1539,7 @@ object {
 /* =Block Styles
 ----------------------------------------------- */
 .wp-block-quote.is-style-govpress {
-  border-right: 4px solid #0071bc;
+  border-right: 4px solid #005ea2;
   font-style: italic;
   padding-right: 1.5em;
 }

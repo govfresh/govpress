@@ -13,7 +13,7 @@
 function govpress_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'govpress[header_taglinecolor]', array(
-		'default' => '#222222',
+		'default' => '#1c1d1f',
 		'type' => 'option',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
@@ -27,7 +27,7 @@ function govpress_customize_register( $wp_customize ) {
 	}
 
 	$wp_customize->add_setting( 'govpress[primary_color]', array(
-		'default' => '#0072BC',
+		'default' => '#005ea2',
 		'type' => 'option',
 		'sanitize_callback' => 'sanitize_hex_color'
 	) );
@@ -39,7 +39,7 @@ function govpress_customize_register( $wp_customize ) {
 	) ) );
 
 	$wp_customize->add_setting( 'govpress[primary_link_color]', array(
-		'default' => '#428BCA',
+		'default' => '#005ea2',
 		'type' => 'option',
 		'sanitize_callback' => 'sanitize_hex_color'
 	) );
@@ -51,7 +51,7 @@ function govpress_customize_register( $wp_customize ) {
 	) ) );
 
 	$wp_customize->add_setting( 'govpress[primary_link_hover]', array(
-		'default' => '#0072BC',
+		'default' => '#005ea2',
 		'type' => 'option',
 		'sanitize_callback' => 'sanitize_hex_color'
 	) );
@@ -84,32 +84,33 @@ add_action( 'customize_preview_init', 'govpress_customize_preview_js' );
  */
 function govpress_inline_styles() {
 
+	// Ties the footer widget area to WordPress core's own Background Color
+	// setting (Appearance > Customize > Colors) rather than a value baked
+	// into the compiled stylesheet.
+	$output = "#footer-widgets { background: #" . get_background_color() . " }\n";
+
 	$options = get_option( 'govpress', false );
 
-	if ( ! $options ) {
-		return;
-	}
+	if ( $options ) {
+		if ( isset( $options['header_taglinecolor'] ) ) {
+			$output .= ".site-description { color:" . sanitize_hex_color( $options['header_taglinecolor'] ) . " }\n";
+		}
 
-	$output = '';
+		if ( isset( $options['primary_color'] ) ) {
+			$output .= "#site-navigation, #hero-widgets, #secondary .widget-title, #home-page-featured .widget-title, .site-footer-credit { background:" . sanitize_hex_color( $options['primary_color'] ) . " }\n";
+		}
 
-	if ( isset( $options['header_taglinecolor'] ) ) {
-		$output .= ".site-description { color:" . sanitize_hex_color( $options['header_taglinecolor'] ) . " }\n";
-	}
+		if ( isset( $options['primary_link_color'] ) ) {
+			$color = sanitize_hex_color( $options['primary_link_color'] );
+			$output .= "#content a { color:" . $color . " }\n";
+			$output .= "#menu-icon a, .menu-icon-container a:before { color:" . $color . " }\n";
+			$output .= 'button, .button, input[type="button"], input[type="reset"], input[type="submit"] { background: ' . $color . ' }\n';
+		}
 
-	if ( isset( $options['primary_color'] ) ) {
-		$output .= "#site-navigation, #hero-widgets, #secondary .widget-title, #home-page-featured .widget-title, .site-footer { background:" . sanitize_hex_color( $options['primary_color'] ) . " }\n";
-	}
-
-	if ( isset( $options['primary_link_color'] ) ) {
-		$color = sanitize_hex_color( $options['primary_link_color'] );
-		$output .= "#content a { color:" . $color . " }\n";
-		$output .= "#menu-icon a, .menu-icon-container a:before { color:" . $color . " }\n";
-		$output .= 'button, .button, input[type="button"], input[type="reset"], input[type="submit"] { background: ' . $color . ' }\n';
-	}
-
-	if ( isset( $options['primary_link_hover'] ) ) {
-		$output .= "#content a:hover, #content a:focus, #content a:active { color:" . sanitize_hex_color( $options['primary_link_hover'] ) . " }\n";
-		$output .= "#menu-icon a:hover, #menu-icon a:focus, #menu-icon a:active { color:" . sanitize_hex_color( $options['primary_link_hover'] ) . " }\n";
+		if ( isset( $options['primary_link_hover'] ) ) {
+			$output .= "#content a:hover, #content a:focus, #content a:active { color:" . sanitize_hex_color( $options['primary_link_hover'] ) . " }\n";
+			$output .= "#menu-icon a:hover, #menu-icon a:focus, #menu-icon a:active { color:" . sanitize_hex_color( $options['primary_link_hover'] ) . " }\n";
+		}
 	}
 
 	// Output styles

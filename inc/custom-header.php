@@ -11,7 +11,7 @@
 function govpress_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'govpress_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '0072BC',
+		'default-text-color'     => '005ea2',
 		'width'                  => 1160,
 		'height'                 => 250,
 		'flex-width'             => true,
@@ -33,7 +33,7 @@ function govpress_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If default option is set for text, let's bail.
-	if ( '0072BC' === $header_text_color ) {
+	if ( '005ea2' === $header_text_color ) {
 		return;
 	}
 
