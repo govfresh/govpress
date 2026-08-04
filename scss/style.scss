@@ -63,28 +63,36 @@ a:hover {
 /* =Layout
 ----------------------------------------------- */
 
-.content-area {
-	float: left;
-	margin: 0 -25% 0 0;
+#page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.admin-bar #page {
+	min-height: calc(100vh - 46px);
+}
+@media screen and (min-width: 783px) {
+	.admin-bar #page {
+		min-height: calc(100vh - 32px);
+	}
+}
+#page > .col-width {
+	flex: 1 0 auto;
+	align-self: center;
 	width: 100%;
 }
+.content-area {
+	flex: 1 1 0;
+	min-width: 0;
+}
 .col-width {
-	max-width: 1160px;
-	padding:0 20px;
+	max-width: 116rem;
+	padding:0 2rem;
 	margin:0 auto;
 }
-.site-main {
-	margin: 0 30% 0 0;
-	min-height:100%;
-}
-.full-width .site-main,
-.layout-single-column .site-main {
-	margin: 0;
-}
 #secondary {
-	float: right;
-	overflow: hidden;
-	width: 25%;
+	flex: 0 0 25%;
+	min-width: 0;
 }
 .site-footer {
 	clear: both;
@@ -96,6 +104,7 @@ a:hover {
 
 .site-description {
 	font-weight: 400;
+	margin-top: 0.5em;
 }
 
 /* =Menu
@@ -113,7 +122,7 @@ a:hover {
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 .main-navigation ul ul {
-	margin-left: 20px;
+	margin-left: 2rem;
 }
 .main-navigation a {
 	color: #fff;
@@ -124,11 +133,12 @@ a:hover {
 	color:rgba(255,255,255,.8);
 }
 .main-navigation {
-	font-size: 14px;
-	min-height: 48px;
+	font-size: 1.4rem;
+	min-height: 4.8rem;
+	position: relative;
 }
 .main-navigation.toggled-on {
-	padding: 72px 0 36px;
+	padding: 7.2rem 0 3.6rem;
 }
 .main-navigation .nav-menu {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -138,33 +148,25 @@ a:hover {
 	display: block;
 }
 .main-navigation a {
-	padding: 7px 0;
+	padding: 0.7rem 0;
 }
 .menu-toggle {
 	align-items: center;
 	background: transparent;
-	border: 0;
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	border-radius: 3px;
+	color: #fff;
 	cursor: pointer;
 	display: flex;
 	font-size: 0;
 	justify-content: center;
 	margin: 0;
-	min-width: 44px;
-	min-height: 44px;
+	min-width: 4.4rem;
+	min-height: 4.4rem;
 	overflow: hidden;
 	position: absolute;
-	top: 12px;
-	right: 10px;
-}
-.menu-toggle:before {
-	-webkit-font-smoothing: antialiased;
-	display: inline-block;
-	font: normal 18px/1 FontAwesome;
-	text-decoration: inherit;
-	vertical-align: text-bottom;
-	color: #fff;
-	content: "\f0c9";
-	margin:0;
+	top: 0.2rem;
+	right: 1rem;
 }
 
 /* =Icon Menu
@@ -194,23 +196,10 @@ a:hover {
 	text-decoration: none;
 	color:#333;
 }
-.menu-icon-container a:before {
-	font-family: "FontAwesome";
-	display: inline-block;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size:52px;
-	font-size:5.2rem;
-	display: block;
-	margin:0 0 5px;
-	text-decoration: none;
-}
-.menu-icon-container a:hover:before {
-	opacity:.8;
-}
+/* Icon Menu items relied on Font Awesome classes (fa-*) assigned via
+   inc/icon-menu-extras.php to render an icon per menu item. Now that
+   Font Awesome has been removed, this feature has no icon source
+   until a replacement (e.g. inline SVG per menu item) is added. */
 
 /* =Header
 ----------------------------------------------- */
@@ -221,9 +210,9 @@ a:hover {
 	text-align: center;
 }
 .site-title {
-	font-size:36px;
 	font-size:3.6rem;
 	font-weight: 700;
+	margin: 0;
 }
 .site-title a {
 	text-decoration: none;
@@ -237,6 +226,9 @@ a:hover {
 	border-radius:5px;
 	padding:1.75em 1.5em;
 	margin:0 0 3em;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 3rem;
 }
 .sticky {
 	/* Required for theme review */
@@ -245,7 +237,6 @@ a:hover {
 	margin: 0 0 1.5em;
 }
 .entry-title {
-	font-size:30px;
 	font-size:3.0rem;
 	border-bottom: 1px solid #f8f8f8;
 	padding:0 0 .5em;
@@ -255,21 +246,21 @@ a:hover {
 	border-bottom: 1px solid #f8f8f8;
 	margin-bottom:1em;
 }
+.entry-content a {
+	text-decoration: underline;
+}
 .entry-content h1, .entry-content h2, .entry-content h3,
 .entry-content h4, .entry-content h5, .entry-content h6 {
 	margin:0 0 1em;
 	clear:none;
 }
 .entry-content h1 {
-	font-size:22px;
 	font-size:2.2rem;
 }
 .entry-content h2 {
-	font-size:20px;
 	font-size:2.0rem;
 }
 .entry-content h3 {
-	font-size:18px;
 	font-size:1.8rem;
 }
 .entry-title a:hover {
@@ -278,7 +269,7 @@ a:hover {
 }
 .entry-meta {
 	color: #666;
-	font-size:14px;
+	font-size:1.4rem;
 	border-bottom: 1px solid #f8f8f8;
 }
 .entry-meta a {
@@ -301,10 +292,9 @@ a:hover {
 	padding:0 0 1.5em;
 	margin:0 0 1.5em;
 	position: relative;
-	font-size:14px;
 	font-size:1.4rem;
 	color:#555;
-	min-height:100px;
+	min-height:10rem;
 }
 .author-avatar {
 	position: absolute;
@@ -314,16 +304,14 @@ a:hover {
 	border-radius: 50%;
 }
 .author-description {
-	margin-left:100px;
+	margin-left:10rem;
 }
 .author-description h3 {
-	font-size:18px;
 	font-size:1.8rem;
 	margin-bottom:.5em;
 }
 footer.entry-meta {
 	padding-bottom:.75em;
-	font-size:12px;
 	font-size:1.2rem;
 }
 footer.entry-meta ul {
@@ -349,15 +337,8 @@ footer.entry-meta a {
 /* =Layouts
 ----------------------------------------------- */
 
-.layout-sidebar-left .site-main {
-	margin: 0 0 0 30%;
-}
 .layout-sidebar-left #secondary {
-	float: left;
-}
-.layout-sidebar-left .content-area {
-	float: right;
-	margin: 0 0 0 -25%;
+	order: -1;
 }
 
 /* =Search and 404 page
@@ -367,7 +348,6 @@ footer.entry-meta a {
 	margin:0 0 1.5em;
 }
 .search .entry-title {
-	font-size:26px;
 	font-size:2.6rem;
 }
 .search-form:after {
@@ -377,17 +357,17 @@ footer.entry-meta a {
 }
 .search-form label {
 	width:100%;
-	padding-right:59px;
+	padding-right:5.9rem;
 	float:left;
 }
 .search-form input, .search-form button {
 	margin: 0;
 }
 .search-form .search-submit {
-	width: 54px;
-	margin-left:-54px;
+	width: 5.4rem;
+	margin-left: -5.4rem;
 	float:left;
-	height:38px;
+	height:3.8rem;
 }
 .search #main .search-form,
 .error404 #main .search-form {
@@ -401,7 +381,6 @@ footer.entry-meta a {
 	background: #fff;
 }
 .error404 .page-content .widgettitle {
-	font-size:16px;
 	font-size:1.6rem;
 	margin:0 0 .5em;
 }
@@ -487,7 +466,7 @@ object {
 	width: 50%;
 }
 .paging-navigation, .post-navigation {
-	font-size:15px;
+	font-size:1.5rem;
 	fonts-size:1.5rem;
 }
 
@@ -519,7 +498,6 @@ object {
 	border-radius: 50%;
 }
 .comment-content, .reply {
-	font-size:14px;
 	font-size:1.4rem;
 }
 .comment-content a {
@@ -532,7 +510,6 @@ object {
 	margin:0 0 .5em;
 }
 .comment-metadata {
-	font-size:13px;
 	font-size:1.3rem;
 }
 .bypostauthor {
@@ -549,12 +526,11 @@ object {
 #commentform label[for="email"],
 #commentform label[for="url"] {
   float: left;
-  padding: 5px 0;
-  width: 100px;
+  padding: 0.5rem 0;
+  width: 10rem;
 }
 .form-allowed-tags, .form-allowed-tags code {
 	font-family: 'Public Sans';
-	font-size:13px;
 	font-size:1.3rem;
 }
 
@@ -562,7 +538,7 @@ object {
 ----------------------------------------------- */
 
 .widget {
-	font-size:14px;
+	font-size:1.4rem;
 	margin: 0 0 1.5em;
 }
 .widget ul {
@@ -575,13 +551,20 @@ object {
 .widget select {
 	max-width: 100%;
 }
+/* Prevent the core Search block's flex layout from overflowing its widget */
+.widget .wp-block-search__inside-wrapper {
+	max-width: 100%;
+}
+.widget .wp-block-search__input {
+	min-width: 0;
+}
 
 /* Sidebar Widgets & Home Page Featured Widgets */
 
 #secondary, #home-page-featured {
 	.widget {
 		background:$background;
-		padding:0 0 1.5em;
+		padding: 1.25em;
 		overflow: hidden;
 		border-radius:5px;
 	}
@@ -589,43 +572,13 @@ object {
 		color:#fff;
 		background:$background-alt;
 		padding:.5em 1.25em;
-		margin-bottom:1em;
+		margin: -1.25em -1.25em 1em;
 	}
 	.widget-title a {
 		color:#fff;
 	}
 	.widget ul {
-		margin:0 1.25em;
-	}
-}
-
-/* Workarounds for lack of widget-content wrapper */
-
-#secondary,
-#home-page-featured {
-	.tagcloud,
-	.textwidget,
-	select,
-	.recentcommentsavatar,
-	#subscribe-blog,
-	.milestone-content,
-	.widgets-multi-column-grid,
-	.widgets-grid-layout,
-	#pd_top_rated_holder,
-	.widget_gravatar p,
-	.widget_image img,
-	.widget_goodreads embed,
-	.widget_goodreads img,
-	.widget_facebook_likebox iframe,
-	.widget-grofile h4,
-	.widget-grofile p,
-	.widget-grofile ul
-	.jetpack_subscription_widget form {
-		margin:0 1.25em;
-	}
-
-	.widget-grofile .grofile-thumbnail {
-		padding: 0 1.25em;
+		margin: 0;
 	}
 }
 
@@ -635,10 +588,6 @@ object {
 #home-page-featured {
 	.widget-title .rsswidget img {
 		display: none;
-	}
-	.widget_search form {
-		margin:0 1.25em;
-		padding-top:1.25em;
 	}
 	.widget_search .widget-title {
 		margin-bottom:0;
@@ -651,7 +600,7 @@ object {
 /* Header Widgets */
 
 #hero-widgets .widget {
-	font-size:18px;
+	font-size:1.8rem;
 	margin: 0 0 1em;
 	clear:both;
 }
@@ -660,7 +609,6 @@ object {
 	text-decoration: underline;
 }
 #hero-widgets .widget-title {
-	font-size: 30px;
 	font-size: 3.0rem;
 	margin-bottom:.5em;
 }
@@ -677,15 +625,16 @@ object {
 	padding: 1.75em 1.5em;
 }
 #hero-widgets .search-form {
-	max-width:360px;
+	max-width:36rem;
 	display: block;
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 /* Footer Widgets */
 
 #footer-widgets {
-	margin-bottom:3em;
+	margin-bottom: 3em;
+	padding: 0 1.5em;
 }
 #footer-widgets a {
 	color:#666;
@@ -696,7 +645,7 @@ object {
 	text-decoration: underline;
 }
 #footer-widgets .widget-title {
-	font-size: 18px;
+	font-size: 1.8rem;
 	margin-bottom:1em;
 }
 #footer-widgets .widget ul {
@@ -725,40 +674,39 @@ object {
 	background: #fff;
 }
 #footer-widgets .search-form {
-	max-width:360px;
+	max-width:36rem;
 	display: block;
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 /* =Footer
 ----------------------------------------------- */
 
-.site-footer {
-	font-size:14px;
+.site-footer-credit {
+	font-size:1.4rem;
 	background: $background-alt;
 	color:#fff;
 	padding:1.5em 0;
 	text-align: center;
 }
-.site-footer.widgets {
+.site-footer-credit.widgets {
 	padding:1.5em 0 .5em;
 }
-.site-footer a {
+.site-footer-credit a {
 	color:#fff;
 }
-.site-footer .search-form {
-	max-width:360px;
+.site-footer-credit .search-form {
+	max-width:36rem;
 	display: block;
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 /* =Plugin Support
 ----------------------------------------------- */
 
 .breadcrumb {
-	font-size:14px;
 	font-size:1.4rem;
-	padding: 8px 15px;
+	padding: 0.8rem 1.5rem;
 	margin-bottom: 1.5em;
 	list-style: none;
 	background-color: #f5f5f5;
@@ -773,21 +721,15 @@ object {
 .wp-pagenavi a,
 .wp-pagenavi span {
 	color: #999;
-	font-size: 15px;
 	font-size:1.5rem;
-	padding: 7px 8px;
+	padding: 0.7rem 0.8rem;
 	display: inline;
-	margin: 0 2px;
+	margin: 0 0.2rem;
 }
 .wp-pagenavi span.pages {
 	display: block;
 	color:#999;
 	margin-bottom: 1em;
-}
-.wp-pagenavi span.pages:before {
-	content: "\f15c";
-	font-family: FontAwesome;
-	margin-right: 10px;
 }
 .wp-pagenavi a:hover,
 .wp-pagenavi a:active,
@@ -859,14 +801,14 @@ object {
 	.main-navigation li {
 		border: 0;
 		display: inline-block;
-		height: 48px;
-		line-height: 48px;
+		height: 4.8rem;
+		line-height: 4.8rem;
 		position: relative;
 	}
 
 	.main-navigation a {
 		display: inline-block;
-		padding: 0 12px;
+		padding: 0 1.2rem;
 		white-space: nowrap;
 	}
 
@@ -893,7 +835,7 @@ object {
 		float: left;
 		margin: 0 0 0 -1px;
 		position: absolute;
-		top: 48px;
+		top: 4.8rem;
 		left: -999em;
 		z-index: 99999;
 		opacity:0;
@@ -914,9 +856,9 @@ object {
 
 	.main-navigation ul ul a {
 		color:#555;
-		padding: 16px 12px;
+		padding: 1.6rem 1.2rem;
 		white-space: normal;
-		width: 190px;
+		width: 19rem;
 	}
 
 	.main-navigation ul ul a:hover,
@@ -947,25 +889,27 @@ object {
 
 	.main-navigation .menu-item-has-children > a,
 	.main-navigation .page_item_has_children > a {
-		padding-right: 26px;
+		padding-right: 2.6rem;
 	}
 
 	.main-navigation .menu-item-has-children > a:after,
 	.main-navigation .page_item_has_children > a:after {
-		-webkit-font-smoothing: antialiased;
-		content: "\f0d7";
+		content: "";
 		display: inline-block;
-		font: normal 10px/1 FontAwesome;
+		width: 0;
+		height: 0;
+		border-left: 0.4rem solid transparent;
+		border-right: 0.4rem solid transparent;
+		border-top: 0.4rem solid #fff;
 		position: absolute;
-		right: 12px;
-		top: 20px;
-		vertical-align: text-bottom;
+		right: 1.2rem;
+		top: 2.2rem;
 	}
 
 	.main-navigation li .menu-item-has-children > a,
 	.main-navigation li .page_item_has_children > a {
-		padding-right: 20px;
-		width: 168px;
+		padding-right: 2rem;
+		width: 16.8rem;
 	}
 
 	.main-navigation .menu-item-has-children li.menu-item-has-children > a:after,
@@ -973,21 +917,18 @@ object {
 	.main-navigation .page_item_has_children li.menu-item-has-children > a:after,
 	.main-navigation .page_item_has_children li.page_item_has_children > a:after {
 		content: "\f0da";
-		right: 8px;
-		top: 20px;
+		right: 0.8rem;
+		top: 2rem;
 	}
 }
 
 @media screen and (max-width: 840px) {
-	.site-main,
-	.layout-sidebar-left .site-main,
-	.layout-sidebar-right .site-main {
-		margin: 0;
-	}
+	.content-area,
 	#secondary {
-		clear: both;
-		float: none;
-		width: auto;
+		flex-basis: 100%;
+	}
+	.layout-sidebar-left #secondary {
+		order: 0;
 	}
 }
 
@@ -1007,15 +948,14 @@ object {
 	.col-width {
 		padding: 0;
 	}
-	#footer-widgets.col-width,
 	.site-footer .col-width {
 		padding: 0 1.5em;
 	}
 	.main-navigation.toggled-on {
-		padding: 42px 0 0px;
+		padding: 4.2rem 0 0;
 	}
 	.main-navigation a {
-		padding: 7px 20px;
+		padding: 0.7rem 2rem;
 	}
 }
 
