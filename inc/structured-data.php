@@ -116,6 +116,14 @@ function govpress_structured_data_webpage() {
 
 	if ( is_search() ) {
 		$node['@type'] = 'SearchResultsPage';
+	} elseif ( is_author() ) {
+		$author_id          = get_queried_object_id();
+		$node['@type']      = 'ProfilePage';
+		$node['mainEntity'] = array(
+			'@type' => 'Person',
+			'name'  => get_the_author_meta( 'display_name', $author_id ),
+			'url'   => get_author_posts_url( $author_id ),
+		);
 	} elseif ( is_home() || is_archive() ) {
 		$node['@type'] = 'CollectionPage';
 	} else {
