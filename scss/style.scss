@@ -31,6 +31,50 @@ $link-hover: #1a4480;
 $background: #f8f8f8;
 $primary-color: #005ea2;
 
+/*
+ * Color tokens for dark mode support (prefers-color-scheme).
+ * --color-primary is intentionally identical in both schemes: it's used
+ * for the blue nav/hero/footer-credit bands with white text, which already
+ * passes contrast regardless of how dark the surrounding page is.
+ */
+:root {
+	--color-text: #{$text-color};
+	--color-text-muted: #666;
+	--color-link: #{$link-color};
+	--color-link-hover: #{$link-hover};
+	--color-primary: #{$primary-color};
+	--color-page-bg: #{$background};
+	--color-surface: #fff;
+	--color-border: #f8f8f8;
+	--color-button-neutral-bg: #f1f3f6;
+	--color-button-neutral-border: #71767a;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-text: #f0f0f1;
+		--color-text-muted: #a9aeb1;
+		--color-link: #4da3ff;
+		--color-link-hover: #8ec1ff;
+		--color-primary: #{$primary-color};
+		--color-page-bg: #1b1b1b;
+		--color-surface: #2d2e30;
+		--color-border: #3a3b3d;
+		--color-button-neutral-bg: #353638;
+		--color-button-neutral-border: #a9aeb1;
+	}
+
+	/*
+	 * Overrides inc/customizer.php's light-mode-only inline rule for the
+	 * same selector (an admin's chosen Background Color isn't guaranteed
+	 * to work against a dark page, so dark mode uses the theme's own token
+	 * instead).
+	 */
+	#footer-widgets {
+		background: var(--color-page-bg);
+	}
+}
+
 @import "fonts";
 
 @import "reset";
@@ -48,7 +92,7 @@ body.rtl {
 
 body {
 	-webkit-font-smoothing: antialiased;
-	background: $background;
+	background: var(--color-page-bg);
 }
 a {
   text-decoration: none;
@@ -111,7 +155,7 @@ a:hover {
 ----------------------------------------------- */
 
 #site-navigation {
-	background: $primary-color;
+	background: var(--color-primary);
 	position: relative;
 }
 .main-navigation ul {
@@ -176,7 +220,7 @@ a:hover {
 	margin: 0 0 1.5em;
 }
 .menu-icon-container {
-	background:#fff;
+	background: var(--color-surface);
 	border-radius:5px;
 	padding:1em;
 }
@@ -222,7 +266,7 @@ a:hover {
 ----------------------------------------------- */
 
 #content {
-	background:#fff;
+	background: var(--color-surface);
 	border-radius:5px;
 	padding:1.75em 1.5em;
 	margin:0 0 3em;
@@ -238,12 +282,12 @@ a:hover {
 }
 .entry-title {
 	font-size:3.0rem;
-	border-bottom: 1px solid #f8f8f8;
+	border-bottom: 1px solid var(--color-border);
 	padding:0 0 .5em;
 	margin:0 0 .5em;
 }
 .entry-content {
-	border-bottom: 1px solid #f8f8f8;
+	border-bottom: 1px solid var(--color-border);
 	margin-bottom:1em;
 }
 .entry-content a {
@@ -264,16 +308,16 @@ a:hover {
 	font-size:1.8rem;
 }
 .entry-title a:hover {
-	color:#111;
+	color: var(--color-text);
 	text-decoration: none;
 }
 .entry-meta {
-	color: #666;
+	color: var(--color-text-muted);
 	font-size:1.4rem;
-	border-bottom: 1px solid #f8f8f8;
+	border-bottom: 1px solid var(--color-border);
 }
 .entry-meta a {
-	color: #666;
+	color: var(--color-text-muted);
 }
 .entry-header .entry-meta {
 	padding:0 0 1em;
@@ -288,12 +332,12 @@ a:hover {
 	display: inline;
 }
 .author-meta {
-	border-bottom: 1px solid #f8f8f8;
+	border-bottom: 1px solid var(--color-border);
 	padding:0 0 1.5em;
 	margin:0 0 1.5em;
 	position: relative;
 	font-size:1.4rem;
-	color:#555;
+	color: var(--color-text-muted);
 	min-height:10rem;
 }
 .author-avatar {
@@ -324,9 +368,9 @@ footer.entry-meta li {
 }
 footer.entry-meta a {
 	display: block;
-	background: #efefef;
+	background: var(--color-page-bg);
 	border-radius: 5px;
-	color: #666;
+	color: var(--color-text-muted);
 	padding: .5em .75em;
 }
 .page-links {
@@ -371,20 +415,20 @@ footer.entry-meta a {
 }
 .search-form .search-submit,
 .wp-block-search__button {
-	background-color: #f1f3f6;
-	border: 1px solid #71767a;
-	color: $text-color;
+	background-color: var(--color-button-neutral-bg);
+	border: 1px solid var(--color-button-neutral-border);
+	color: var(--color-text);
 }
 .search #main .search-form,
 .error404 #main .search-form {
 	border-radius: 5px;
-	background:#f8f8f8;
+	background: var(--color-page-bg);
 	padding:1em;
 	margin:0 0 1.5em;
 }
 .search #main .search-form .search-field,
 .error404 #main .search-form .search-field {
-	background: #fff;
+	background: var(--color-surface);
 }
 .error404 .page-content .widgettitle {
 	font-size:1.6rem;
@@ -569,14 +613,14 @@ object {
 
 #secondary, #home-page-featured {
 	.widget {
-		background:$background;
+		background: var(--color-page-bg);
 		padding: 1.25em;
 		overflow: hidden;
 		border-radius:5px;
 	}
 	.widget-title{
 		color:#fff;
-		background:$primary-color;
+		background: var(--color-primary);
 		padding:.5em 1.25em;
 		margin: -1.25em -1.25em 1em;
 	}
@@ -599,7 +643,7 @@ object {
 		margin-bottom:0;
 	}
 	.widget_search .search-field {
-		background: #fff;
+		background: var(--color-surface);
 	}
 }
 
@@ -619,7 +663,7 @@ object {
 	margin-bottom:.5em;
 }
 #hero-widgets {
-	background: $primary-color;
+	background: var(--color-primary);
 	color:#fff;
 	margin-bottom:3em;
 	padding:1.5em 0;
@@ -643,11 +687,11 @@ object {
 	padding: 0 1.5em;
 }
 #footer-widgets a {
-	color: $link-color;
+	color: var(--color-link);
 	text-decoration: none;
 }
 #footer-widgets a:hover {
-	color: $link-hover;
+	color: var(--color-link-hover);
 	text-decoration: underline;
 }
 #footer-widgets .widget-title {
@@ -677,7 +721,7 @@ object {
 	margin-right:0;
 }
 #footer-widgets .widget_search .search-field {
-	background: #fff;
+	background: var(--color-surface);
 }
 #footer-widgets .search-form {
 	max-width:36rem;
@@ -690,7 +734,7 @@ object {
 
 .site-footer-credit {
 	font-size:1.4rem;
-	background: $primary-color;
+	background: var(--color-primary);
 	color:#fff;
 	padding:1.5em 0;
 	text-align: center;
@@ -715,7 +759,7 @@ object {
 	padding: 0.8rem 1.5rem;
 	margin-bottom: 1.5em;
 	list-style: none;
-	background-color: #f5f5f5;
+	background-color: var(--color-page-bg);
 	border-radius: 4px;
 }
 
@@ -726,7 +770,7 @@ object {
 }
 .wp-pagenavi a,
 .wp-pagenavi span {
-	color: #999;
+	color: var(--color-text-muted);
 	font-size:1.5rem;
 	padding: 0.7rem 0.8rem;
 	display: inline;
@@ -734,17 +778,17 @@ object {
 }
 .wp-pagenavi span.pages {
 	display: block;
-	color:#999;
+	color: var(--color-text-muted);
 	margin-bottom: 1em;
 }
 .wp-pagenavi a:hover,
 .wp-pagenavi a:active,
 .wp-pagenavi span.current {
-	color: #333;
+	color: var(--color-text);
 }
 .wp-pagenavi a {
-	color: $link-color;
-	border-top: 1px solid #f8f8f8;
+	color: var(--color-link);
+	border-top: 1px solid var(--color-border);
 }
 
 /* =Infinite Scroll
@@ -979,7 +1023,7 @@ object {
 /* =Block Styles
 ----------------------------------------------- */
 .wp-block-quote.is-style-govpress {
-	border-left: 4px solid $link-color;
+	border-left: 4px solid var(--color-link);
 	font-style: italic;
 	padding-left: 1.5em;
 }

@@ -6,7 +6,7 @@ button,
 input,
 select,
 textarea {
-	color: $text-color;
+	color: var(--color-text);
 	font-family: $font-stack;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -145,7 +145,7 @@ input[type="submit"] {
 	border-radius:3px;
 	display: inline-block;
 	padding: 0.7rem 2rem 0.9rem;
-	background-color: $link-color;
+	background-color: var(--color-primary);
 	box-shadow: inset 0 -2px rgba(0,0,0,.2);
 	color: #fff;
 	font-size:1.5rem;
@@ -169,7 +169,7 @@ input[type="reset"]:focus,
 input[type="submit"]:focus {
 	box-shadow: inset 0 2px rgba(0,0,0,.15);
 	padding: 0.8rem 2rem;
-	outline: 3px solid $link-color;
+	outline: 3px solid var(--color-link);
 	outline-offset: 2px;
 }
 input[type="checkbox"],
@@ -191,11 +191,11 @@ input[type="tel"],
 input[type="email"],
 textarea {
 	-webkit-appearance: none;
-	background-color: #fafafa;
+	background-color: var(--color-surface);
 	font-family: inherit;
 	border:none;
 	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.025), inset 0 1px 1px rgba(0, 0, 0, 0.2);
-	color: rgba(0, 0, 0, 0.75);
+	color: var(--color-text);
 	display: block;
 	font-size: 1.5rem;
 	margin: 0 0 1em 0;
@@ -210,8 +210,8 @@ input[type="email"]:focus,
 input[type="search"]:focus,
 input[type="url"]:focus,
 textarea:focus {
-	background-color: #fff;
-	outline: 3px solid $link-color;
+	background-color: var(--color-surface);
+	outline: 3px solid var(--color-link);
 	outline-offset: 2px;
 	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.2);
 }
@@ -231,15 +231,15 @@ textarea {
 
 /* Links */
 a {
-	color: $link-color;
+	color: var(--color-link);
 }
 a:hover,
 a:active {
-	color: $link-hover;
+	color: var(--color-link-hover);
 }
 a:focus {
-	color: $link-hover;
-	outline: 3px solid $link-color;
+	color: var(--color-link-hover);
+	outline: 3px solid var(--color-link);
 	outline-offset: 2px;
 }
 

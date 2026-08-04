@@ -86,8 +86,10 @@ function govpress_inline_styles() {
 
 	// Ties the footer widget area to WordPress core's own Background Color
 	// setting (Appearance > Customize > Colors) rather than a value baked
-	// into the compiled stylesheet.
-	$output = "#footer-widgets { background: #" . get_background_color() . " }\n";
+	// into the compiled stylesheet. Scoped to light mode only, since an
+	// admin-chosen light background color isn't guaranteed to work in dark
+	// mode; the compiled stylesheet's dark palette takes over there instead.
+	$output = "@media (prefers-color-scheme: light) { #footer-widgets { background: #" . get_background_color() . " } }\n";
 
 	$options = get_option( 'govpress', false );
 
