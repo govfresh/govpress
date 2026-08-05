@@ -241,6 +241,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/structured-data.php';
 
 /**
+ * Head <meta> output.
+ */
+require get_template_directory() . '/inc/head-meta.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
