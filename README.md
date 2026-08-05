@@ -25,6 +25,11 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 ### Changelog
 
+1.5.6
+---
+
+* Enhancement: Restore the Icon Menu feature (Appearance > Menus > Icon Menu), which has been non-functional since Font Awesome was removed in 1.5.3. Self-hosts Font Awesome 7 (solid style only) rather than the old, unmaintained 4.5.0 that was previously removed.
+
 1.5.4
 ---
 
