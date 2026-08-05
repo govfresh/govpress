@@ -216,7 +216,10 @@ function govpress_inline_styles() {
 
 	if ( $options ) {
 		if ( isset( $options['header_taglinecolor'] ) ) {
-			$output .= ".site-description { color:" . sanitize_hex_color( $options['header_taglinecolor'] ) . " }\n";
+			// Light mode only: dark mode uses the theme's own --color-text
+			// token instead, since a light-mode tagline color isn't
+			// guaranteed to stay readable against a dark background.
+			$output .= "@media (prefers-color-scheme: light) { .site-description { color:" . sanitize_hex_color( $options['header_taglinecolor'] ) . " } }\n";
 		}
 
 		if ( isset( $options['primary_color'] ) ) {
