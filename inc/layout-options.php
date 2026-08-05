@@ -40,7 +40,7 @@ function govpress_nav_position() {
 }
 
 /**
- * Output the site banner: an agency's custom "Footer Text" widget
+ * Output the site banner: an agency's custom "Banner Text" widget
  * content (e.g. an official government website notice) if one is set,
  * otherwise a default "Powered by GovPress" credit. Can render at the
  * top or bottom of the page depending on the Site Banner Position

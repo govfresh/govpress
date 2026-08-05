@@ -25,7 +25,7 @@ function govpress_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'govpress_site_banner_position', array(
 		'label'       => __( 'Site Banner Position', 'govpress' ),
-		'description' => __( 'The site banner shows your "Footer Text" widget content (e.g. an official government website notice), or "Powered by GovPress" if none is set.', 'govpress' ),
+		'description' => __( 'The site banner shows your "Banner Text" widget content (e.g. an official government website notice), or "Powered by GovPress" if none is set.', 'govpress' ),
 		'section'     => 'govpress_layout',
 		'settings'    => 'govpress[site_banner_position]',
 		'type'        => 'radio',

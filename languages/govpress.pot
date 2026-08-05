@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: GovPress 1.5.7\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/govpress-theme-dev\n"
-"POT-Creation-Date: 2026-08-05 05:28:03+00:00\n"
+"POT-Creation-Date: 2026-08-05 06:03:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -199,7 +199,7 @@ msgid "Footer Area Three"
 msgstr ""
 
 #: functions.php:169
-msgid "Footer Text"
+msgid "Banner Text"
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -238,7 +238,7 @@ msgstr ""
 
 #: inc/customizer.php:28
 msgid ""
-"The site banner shows your \"Footer Text\" widget content (e.g. an official "
+"The site banner shows your \"Banner Text\" widget content (e.g. an official "
 "government website notice), or \"Powered by GovPress\" if none is set."
 msgstr ""
 
