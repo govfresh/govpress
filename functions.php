@@ -201,6 +201,21 @@ function govpress_scripts() {
 add_action( 'wp_enqueue_scripts', 'govpress_scripts' );
 
 /**
+ * Enqueue fonts
+ */
+function govpress_fonts() {
+
+	wp_enqueue_style(
+		'fontawesome',
+		get_template_directory_uri() . '/fonts/font-awesome/font-awesome.css',
+		array(),
+		'7.3.1'
+	);
+
+}
+add_action( 'wp_enqueue_scripts', 'govpress_fonts' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

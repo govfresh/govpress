@@ -4,7 +4,7 @@ Theme URI: https://github.com/govfresh/govpress
 Author: GovFresh
 Author URI: https://github.com/govfresh/govpress
 Description: GovPress is a free WordPress theme designed for government use. Features include customized homepage, color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu. Extensive documentation and recommended plugins can be found at https://github.com/govfresh/govpress. All code is peer reviewed and patches are welcome via GitHub.
-Version: 1.5.4
+Version: 1.5.6
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.4
@@ -752,10 +752,43 @@ a:hover {
   color: var(--color-text);
 }
 
-/* Icon Menu items relied on Font Awesome classes (fa-*) assigned via
-   inc/icon-menu-extras.php to render an icon per menu item. Now that
-   Font Awesome has been removed, this feature has no icon source
-   until a replacement (e.g. inline SVG per menu item) is added. */
+/*
+ * Icon Menu items get a Font Awesome class (fa-*) assigned via
+ * inc/icon-menu-extras.php, plus a base "fa" class that Font Awesome 5+
+ * requires. That base class's rule sets font-family/font-weight on the
+ * whole <a> (not just the icon), which would otherwise make the menu
+ * item's visible text render in the icon font too. Reset it back to the
+ * theme's normal font on the link itself, then re-apply Font Awesome's
+ * font explicitly on :before, where the icon glyph actually lives.
+ */
+.menu-icon-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.menu-icon-container a:before {
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  font-size: 5.2rem;
+  margin: 0 0 1.5rem;
+  text-decoration: none;
+}
+
+.menu-icon-container a:hover:before {
+  opacity: 0.8;
+}
+
 /* =Header
 ----------------------------------------------- */
 .site-header {
