@@ -243,12 +243,21 @@ a:hover {
 }
 /*
  * Icon Menu items get a Font Awesome class (fa-*) assigned via
- * inc/icon-menu-extras.php. Font Awesome's own CSS handles font-family
- * and font-weight (via the .fa base class); this rule only supplies the
- * layout/sizing specific to how this theme displays the icon.
+ * inc/icon-menu-extras.php, plus a base "fa" class that Font Awesome 5+
+ * requires. That base class's rule sets font-family/font-weight on the
+ * whole <a> (not just the icon), which would otherwise make the menu
+ * item's visible text render in the icon font too. Reset it back to the
+ * theme's normal font on the link itself, then re-apply Font Awesome's
+ * font explicitly on :before, where the icon glyph actually lives.
  */
+.menu-icon-container a {
+	font-family: $font-stack;
+	font-weight: 400;
+}
 .menu-icon-container a:before {
 	display: block;
+	font-family: "Font Awesome 7 Free";
+	font-weight: 900;
 	font-size: 5.2rem;
 	margin: 0 0 5px;
 	text-decoration: none;
