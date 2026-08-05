@@ -17,6 +17,7 @@
 ### Credits
 
 * Public Sans by USWDS - https://public-sans.digital.gov. License: SIL OFL 1.1.
+* Font Awesome Free by Fonticons - https://fontawesome.com. License: SIL OFL 1.1 (fonts), CC BY 4.0 (icons), MIT (code).
 
 ### Contribute
 

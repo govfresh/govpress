@@ -752,10 +752,23 @@ a:hover {
   color: var(--color-text);
 }
 
-/* Icon Menu items relied on Font Awesome classes (fa-*) assigned via
-   inc/icon-menu-extras.php to render an icon per menu item. Now that
-   Font Awesome has been removed, this feature has no icon source
-   until a replacement (e.g. inline SVG per menu item) is added. */
+/*
+ * Icon Menu items get a Font Awesome class (fa-*) assigned via
+ * inc/icon-menu-extras.php. Font Awesome's own CSS handles font-family
+ * and font-weight (via the .fa base class); this rule only supplies the
+ * layout/sizing specific to how this theme displays the icon.
+ */
+.menu-icon-container a:before {
+  display: block;
+  font-size: 5.2rem;
+  margin: 0 0 5px;
+  text-decoration: none;
+}
+
+.menu-icon-container a:hover:before {
+  opacity: 0.8;
+}
+
 /* =Header
 ----------------------------------------------- */
 .site-header {

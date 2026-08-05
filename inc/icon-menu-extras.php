@@ -49,7 +49,10 @@ function govpress_nav_menu_link_attributes( $atts, $item, $args ) {
 			}
 		}
 		if ( $class ) {
-			$atts['class'] = $class;
+			// Font Awesome 5+ needs a base "fa" class alongside the icon
+			// class (fa-info-circle etc.) to render; FA4 didn't require this,
+			// but the v4-shims compatibility layer still expects it.
+			$atts['class'] = 'fa ' . $class;
 		}
 
 	}
