@@ -251,15 +251,17 @@ a:hover {
  * font explicitly on :before, where the icon glyph actually lives.
  */
 .menu-icon-container a {
+	display: inline-block;
 	font-family: $font-stack;
 	font-weight: 400;
+	text-align: center;
 }
 .menu-icon-container a:before {
 	display: block;
 	font-family: "Font Awesome 7 Free";
 	font-weight: 900;
 	font-size: 5.2rem;
-	margin: 0 0 5px;
+	margin: 0 0 1rem;
 	text-decoration: none;
 }
 .menu-icon-container a:hover:before {
