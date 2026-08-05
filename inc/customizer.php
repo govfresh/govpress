@@ -13,7 +13,7 @@
 function govpress_customize_register( $wp_customize ) {
 
 	$wp_customize->add_section( 'govpress_layout', array(
-		'title'    => __( 'Layout', 'govpress' ),
+		'title'    => __( 'Banner & Menu Position', 'govpress' ),
 		'priority' => 50,
 	) );
 

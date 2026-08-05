@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: GovPress 1.5.7\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/govpress-theme-dev\n"
-"POT-Creation-Date: 2026-08-05 05:06:56+00:00\n"
+"POT-Creation-Date: 2026-08-05 05:28:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -228,9 +228,8 @@ msgstr ""
 msgid "Learn More"
 msgstr ""
 
-#: inc/customizer.php:16 inc/theme-layouts.php:458 inc/theme-layouts.php:565
-#: inc/theme-layouts.php:650
-msgid "Layout"
+#: inc/customizer.php:16
+msgid "Banner & Menu Position"
 msgstr ""
 
 #: inc/customizer.php:27
@@ -352,6 +351,11 @@ msgstr ""
 msgid ""
 "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
 "%2$s</span>"
+msgstr ""
+
+#: inc/theme-layouts.php:458 inc/theme-layouts.php:565
+#: inc/theme-layouts.php:650
+msgid "Layout"
 msgstr ""
 
 #: inc/theme-layouts.php:683
