@@ -169,6 +169,12 @@ function govpress_custom_logo() {
 
 	$alt = get_post_meta( $logo_id, '_wp_attachment_image_alt', true );
 
+	if ( ! $alt ) {
+		// The logo is the only content inside its link to the homepage;
+		// without alt text that link has no accessible name at all.
+		$alt = get_bloginfo( 'name' );
+	}
+
 	$img = sprintf(
 		'<img src="%1$s" width="%2$d" height="%3$d" class="custom-logo" alt="%4$s">',
 		esc_url( $light_image[0] ),
