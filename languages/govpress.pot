@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: GovPress 1.5.4\n"
+"Project-Id-Version: GovPress 1.5.7\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/govpress-theme-dev\n"
-"POT-Creation-Date: 2026-08-04 03:36:04+00:00\n"
+"POT-Creation-Date: 2026-08-05 05:06:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -154,10 +154,6 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: footer.php:37
-msgid "Powered by %s"
-msgstr ""
-
 #: functions.php:58
 msgid "Primary Menu"
 msgstr ""
@@ -206,18 +202,6 @@ msgstr ""
 msgid "Footer Text"
 msgstr ""
 
-#: header.php:26
-msgid "Primary"
-msgstr ""
-
-#: header.php:30
-msgid "Menu"
-msgstr ""
-
-#: header.php:32
-msgid "Skip to content"
-msgstr ""
-
 #. Theme Name of the plugin/theme
 msgid "GovPress"
 msgstr ""
@@ -244,19 +228,83 @@ msgstr ""
 msgid "Learn More"
 msgstr ""
 
-#: inc/customizer.php:23
+#: inc/customizer.php:16 inc/theme-layouts.php:458 inc/theme-layouts.php:565
+#: inc/theme-layouts.php:650
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer.php:27
+msgid "Site Banner Position"
+msgstr ""
+
+#: inc/customizer.php:28
+msgid ""
+"The site banner shows your \"Footer Text\" widget content (e.g. an official "
+"government website notice), or \"Powered by GovPress\" if none is set."
+msgstr ""
+
+#: inc/customizer.php:33
+msgid "Bottom of page"
+msgstr ""
+
+#: inc/customizer.php:34
+msgid "Top of page"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Site Banner Alignment"
+msgstr ""
+
+#: inc/customizer.php:50
+msgid "Center"
+msgstr ""
+
+#: inc/customizer.php:51
+msgid "Left"
+msgstr ""
+
+#: inc/customizer.php:62
+msgid "Primary Menu Position"
+msgstr ""
+
+#: inc/customizer.php:63
+msgid ""
+"Position of the primary menu relative to the logo, site title, and tagline. "
+"If the Site Banner is also set to the top of the page, the menu renders "
+"just below it."
+msgstr ""
+
+#: inc/customizer.php:68
+msgid "Above logo/title"
+msgstr ""
+
+#: inc/customizer.php:69
+msgid "Below logo/title"
+msgstr ""
+
+#: inc/customizer.php:79
+msgid "Dark Mode Logo"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid ""
+"Optional. Shown instead of the main logo when a visitor's device is set to "
+"dark mode. If left blank, the main logo is used in both modes."
+msgstr ""
+
+#: inc/customizer.php:93
 msgid "Header Tagline Color"
 msgstr ""
 
-#: inc/customizer.php:36
+#: inc/customizer.php:106
 msgid "Primary Color"
 msgstr ""
 
-#: inc/customizer.php:48
+#: inc/customizer.php:118
 msgid "Primary Link Color"
 msgstr ""
 
-#: inc/customizer.php:60
+#: inc/customizer.php:130
 msgid "Primary Link Hover"
 msgstr ""
 
@@ -264,7 +312,23 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: inc/structured-data.php:198
+#: inc/layout-options.php:63
+msgid "Powered by %s"
+msgstr ""
+
+#: inc/layout-options.php:79
+msgid "Primary"
+msgstr ""
+
+#: inc/layout-options.php:83
+msgid "Menu"
+msgstr ""
+
+#: inc/layout-options.php:85
+msgid "Skip to content"
+msgstr ""
+
+#: inc/structured-data.php:206
 msgid "Home"
 msgstr ""
 
@@ -288,11 +352,6 @@ msgstr ""
 msgid ""
 "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
 "%2$s</span>"
-msgstr ""
-
-#: inc/theme-layouts.php:458 inc/theme-layouts.php:565
-#: inc/theme-layouts.php:650
-msgid "Layout"
 msgstr ""
 
 #: inc/theme-layouts.php:683

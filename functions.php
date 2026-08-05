@@ -236,6 +236,11 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Layout options: site banner and primary menu positioning.
+ */
+require get_template_directory() . '/inc/layout-options.php';
+
+/**
  * JSON-LD structured data.
  */
 require get_template_directory() . '/inc/structured-data.php';

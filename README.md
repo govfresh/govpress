@@ -25,6 +25,11 @@ We'd love to have as many eyes on this project as possible.  If you find a bug o
 
 ### Changelog
 
+1.5.7
+---
+
+* Enhancement: Add Customizer options (under Layout) to move the site banner ("Powered by GovPress," or an agency's own "official website" notice via the Footer Text widget) to the top or bottom of the page and left-align its text, and to move the primary menu above or below the logo/title/tagline. Renames the site banner's CSS class from `site-footer-credit` to `site-banner` to reflect its broader purpose.
+
 1.5.6
 ---
 

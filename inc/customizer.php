@@ -12,6 +12,64 @@
  */
 function govpress_customize_register( $wp_customize ) {
 
+	$wp_customize->add_section( 'govpress_layout', array(
+		'title'    => __( 'Layout', 'govpress' ),
+		'priority' => 50,
+	) );
+
+	$wp_customize->add_setting( 'govpress[site_banner_position]', array(
+		'default'           => 'bottom',
+		'type'              => 'option',
+		'sanitize_callback' => 'govpress_sanitize_site_banner_position',
+	) );
+
+	$wp_customize->add_control( 'govpress_site_banner_position', array(
+		'label'       => __( 'Site Banner Position', 'govpress' ),
+		'description' => __( 'The site banner shows your "Footer Text" widget content (e.g. an official government website notice), or "Powered by GovPress" if none is set.', 'govpress' ),
+		'section'     => 'govpress_layout',
+		'settings'    => 'govpress[site_banner_position]',
+		'type'        => 'radio',
+		'choices'     => array(
+			'bottom' => __( 'Bottom of page', 'govpress' ),
+			'top'    => __( 'Top of page', 'govpress' ),
+		),
+	) );
+
+	$wp_customize->add_setting( 'govpress[site_banner_align]', array(
+		'default'           => 'center',
+		'type'              => 'option',
+		'sanitize_callback' => 'govpress_sanitize_site_banner_align',
+	) );
+
+	$wp_customize->add_control( 'govpress_site_banner_align', array(
+		'label'    => __( 'Site Banner Alignment', 'govpress' ),
+		'section'  => 'govpress_layout',
+		'settings' => 'govpress[site_banner_align]',
+		'type'     => 'radio',
+		'choices'  => array(
+			'center' => __( 'Center', 'govpress' ),
+			'left'   => __( 'Left', 'govpress' ),
+		),
+	) );
+
+	$wp_customize->add_setting( 'govpress[nav_position]', array(
+		'default'           => 'above',
+		'type'              => 'option',
+		'sanitize_callback' => 'govpress_sanitize_nav_position',
+	) );
+
+	$wp_customize->add_control( 'govpress_nav_position', array(
+		'label'       => __( 'Primary Menu Position', 'govpress' ),
+		'description' => __( 'Position of the primary menu relative to the logo, site title, and tagline. If the Site Banner is also set to the top of the page, the menu renders just below it.', 'govpress' ),
+		'section'     => 'govpress_layout',
+		'settings'    => 'govpress[nav_position]',
+		'type'        => 'radio',
+		'choices'     => array(
+			'above' => __( 'Above logo/title', 'govpress' ),
+			'below' => __( 'Below logo/title', 'govpress' ),
+		),
+	) );
+
 	$wp_customize->add_setting( 'govpress_dark_logo', array(
 		'type' => 'theme_mod',
 		'sanitize_callback' => 'esc_url_raw',
@@ -159,7 +217,7 @@ function govpress_inline_styles() {
 			// Light mode only: dark mode always uses the theme's own neutral
 			// --color-primary token instead of the site's Primary Color, so
 			// this never fights with the compiled stylesheet's dark palette.
-			$output .= "@media (prefers-color-scheme: light) { #site-navigation, #hero-widgets, #secondary .widget-title, #home-page-featured .widget-title, .site-footer-credit { background:" . sanitize_hex_color( $options['primary_color'] ) . " } }\n";
+			$output .= "@media (prefers-color-scheme: light) { #site-navigation, #hero-widgets, #secondary .widget-title, #home-page-featured .widget-title, .site-banner { background:" . sanitize_hex_color( $options['primary_color'] ) . " } }\n";
 		}
 
 		if ( isset( $options['primary_link_color'] ) ) {
@@ -187,6 +245,36 @@ function govpress_inline_styles() {
 }
 
 add_action( 'wp_head', 'govpress_inline_styles', 100 );
+
+/**
+ * Sanitize the Site Banner Position setting.
+ *
+ * @param string $value The setting's raw value.
+ * @return string
+ */
+function govpress_sanitize_site_banner_position( $value ) {
+	return in_array( $value, array( 'top', 'bottom' ), true ) ? $value : 'bottom';
+}
+
+/**
+ * Sanitize the Site Banner Alignment setting.
+ *
+ * @param string $value The setting's raw value.
+ * @return string
+ */
+function govpress_sanitize_site_banner_align( $value ) {
+	return in_array( $value, array( 'center', 'left' ), true ) ? $value : 'center';
+}
+
+/**
+ * Sanitize the Primary Menu Position setting.
+ *
+ * @param string $value The setting's raw value.
+ * @return string
+ */
+function govpress_sanitize_nav_position( $value ) {
+	return in_array( $value, array( 'above', 'below' ), true ) ? $value : 'above';
+}
 
 /**
  * The core sanitize_hex_color function is only available
