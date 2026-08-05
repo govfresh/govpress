@@ -166,7 +166,7 @@ function govpress_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer Text', 'govpress' ),
+		'name'          => __( 'Banner Text', 'govpress' ),
 		'id'            => 'footer-text',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -234,6 +234,11 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Layout options: site banner and primary menu positioning.
+ */
+require get_template_directory() . '/inc/layout-options.php';
 
 /**
  * JSON-LD structured data.

@@ -11,12 +11,6 @@
 		</div><!-- #content -->
 	</div><!-- .col-width -->
 
-	<?php
-	$fclass = 'site-footer-credit no-widgets';
-	if ( is_active_sidebar( 'footer-text' ) ) {
-		$fclass = 'site-footer-credit widgets';
-	} ?>
-
 	<footer class="site-footer" role="contentinfo">
 		<?php
 			/*
@@ -27,17 +21,9 @@
 				get_sidebar( 'footer' );
 		?>
 
-		<div class="<?php echo $fclass; ?>">
-			<div class="col-width">
-				<?php if ( is_active_sidebar( 'footer-text' ) ) { ?>
-					<div class="widget-area" role="complementary">
-						<?php dynamic_sidebar( 'footer-text' ); ?>
-					</div>
-				<?php } else { ?>
-					<?php printf( __( 'Powered by %s', 'govpress' ), '<a href="https://github.com/govfresh/govpress">GovPress</a>' ); ?>
-				<?php } ?>
-			</div><!-- .col-width -->
-		</div><!-- .site-footer-credit -->
+		<?php if ( 'bottom' === govpress_site_banner_position() ) : ?>
+			<?php govpress_site_banner(); ?>
+		<?php endif; ?>
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
 
