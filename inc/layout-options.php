@@ -80,7 +80,7 @@ function govpress_primary_nav() {
 		<div class="col-width">
 			<button type="button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 				<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-				<?php _e( 'Menu', 'govpress' ); ?>
+				<span class="screen-reader-text"><?php _e( 'Menu', 'govpress' ); ?></span>
 			</button>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'govpress' ); ?></a>
 
