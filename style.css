@@ -733,8 +733,14 @@ a:hover {
 }
 
 .menu-icon-container ul {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 1.5em 1em;
   text-align: center;
   list-style: none;
@@ -742,6 +748,9 @@ a:hover {
 }
 
 .menu-icon-container li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 16rem;
+          flex: 0 1 16rem;
   padding: 1em 0;
 }
 
@@ -770,6 +779,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   font-family: "Public Sans", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -1586,9 +1596,6 @@ object {
         -ms-flex-order: 0;
             order: 0;
   }
-  .menu-icon-container ul {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 @media screen and (max-width: 680px) {
   #footer-widgets.widgets-count-3 .widget-area {
@@ -1613,9 +1620,6 @@ object {
   }
   .main-navigation a {
     padding: 0.7rem 2rem;
-  }
-  .menu-icon-container ul {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 /* =Post Thumbnails

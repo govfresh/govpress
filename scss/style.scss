@@ -226,14 +226,16 @@ a:hover {
 	padding:1em;
 }
 .menu-icon-container ul {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 1.5em 1em;
 	text-align: center;
 	list-style: none;
 	margin:0;
 }
 .menu-icon-container li {
+	flex: 0 1 16rem;
 	padding:1em 0;
 }
 .menu-icon-container a:hover {
@@ -253,6 +255,7 @@ a:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100%;
 	font-family: $font-stack;
 	font-weight: 400;
 	text-align: center;
@@ -1014,9 +1017,6 @@ object {
 	.layout-sidebar-left #secondary {
 		order: 0;
 	}
-	.menu-icon-container ul {
-		grid-template-columns: repeat(3, 1fr);
-	}
 }
 
 @media screen and (max-width: 680px) {
@@ -1043,9 +1043,6 @@ object {
 	}
 	.main-navigation a {
 		padding: 0.7rem 2rem;
-	}
-	.menu-icon-container ul {
-		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
