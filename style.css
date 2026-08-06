@@ -1373,8 +1373,8 @@ object {
   text-align: center;
 }
 
-.site-banner.widgets {
-  padding: 0.75em 0 0.5em;
+.site-banner .widget-area :last-child {
+  margin-bottom: 0;
 }
 
 .site-banner.align-left {

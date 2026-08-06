@@ -780,8 +780,8 @@ object {
 	padding:.75em 0;
 	text-align: center;
 }
-.site-banner.widgets {
-	padding:.75em 0 .5em;
+.site-banner .widget-area :last-child {
+	margin-bottom: 0;
 }
 .site-banner.align-left {
 	text-align: left;
