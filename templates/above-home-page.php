@@ -22,9 +22,11 @@
 		<div class="col-width">
 			<?php
 			wp_nav_menu( array(
-				'theme_location' => 'icon',
-				'depth' => '1',
-				'container_class' => 'menu-icon-container'
+				'theme_location'      => 'icon',
+				'depth'               => '1',
+				'container'           => 'nav',
+				'container_class'     => 'menu-icon-container',
+				'container_aria_label' => __( 'Icon Menu', 'govpress' ),
 			) ); ?>
 		</div>
 	</div>

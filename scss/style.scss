@@ -4,7 +4,7 @@ Theme URI: https://github.com/govfresh/govpress
 Author: GovFresh
 Author URI: https://github.com/govfresh/govpress
 Description: GovPress is a free WordPress theme designed for government use. Features include customized homepage, color customizations options, custom headers, multiple widget areas, and an optional icon navigation menu. Extensive documentation and recommended plugins can be found at https://github.com/govfresh/govpress. All code is peer reviewed and patches are welcome via GitHub.
-Version: 1.5.8
+Version: 1.5.9
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.4
@@ -226,16 +226,15 @@ a:hover {
 	padding:1em;
 }
 .menu-icon-container ul {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 1.5em 1em;
 	text-align: center;
 	list-style: none;
 	margin:0;
 }
 .menu-icon-container li {
-	display: inline-block;
-	padding:1em 5%;
-}
-.menu-icon-container li:before {
-	content:none;
+	padding:1em 0;
 }
 .menu-icon-container a:hover {
 	text-decoration: none;
@@ -1015,6 +1014,9 @@ object {
 	.layout-sidebar-left #secondary {
 		order: 0;
 	}
+	.menu-icon-container ul {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 
 @media screen and (max-width: 680px) {
@@ -1041,6 +1043,9 @@ object {
 	}
 	.main-navigation a {
 		padding: 0.7rem 2rem;
+	}
+	.menu-icon-container ul {
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
