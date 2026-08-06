@@ -80,6 +80,18 @@ remove_action( 'wp_head', 'wp_shortlink_wp_head' );
 remove_action( 'wp_head', 'rsd_link' );
 
 /**
+ * Remove WordPress's emoji detection script and styles. This is a
+ * canvas-based feature-detection routine from the era before browsers
+ * reliably supported emoji natively; every browser in this theme's own
+ * browserslist config has had native emoji support for years, so the
+ * polyfill it guards essentially never actually loads today - the
+ * detection script itself is now pure overhead on every page load.
+ */
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+remove_action( 'wp_enqueue_scripts', 'wp_enqueue_emoji_styles' );
+
+/**
  * Output theme-color meta tags matching the site's Primary Color (light
  * mode) and the theme's fixed neutral dark-mode banner color, so mobile
  * browser chrome matches the page.

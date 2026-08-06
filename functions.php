@@ -202,8 +202,17 @@ add_action( 'wp_enqueue_scripts', 'govpress_scripts' );
 
 /**
  * Enqueue fonts
+ *
+ * Font Awesome is only needed by the Icon Menu, which itself only ever
+ * renders on the home page template when a menu is assigned to the
+ * 'icon' location (see templates/above-home-page.php) - so it's only
+ * enqueued when both of those are true, rather than on every page.
  */
 function govpress_fonts() {
+
+	if ( ! is_page_template( 'templates/home-page.php' ) || ! has_nav_menu( 'icon' ) ) {
+		return;
+	}
 
 	wp_enqueue_style(
 		'fontawesome',

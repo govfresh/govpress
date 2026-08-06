@@ -12,6 +12,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/fonts/public-sans/PublicSans-Regular.woff2' ); ?>" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/fonts/public-sans/PublicSans-Bold.woff2' ); ?>" as="font" type="font/woff2" crossorigin>
   <?php wp_head(); ?>
 </head>
 
