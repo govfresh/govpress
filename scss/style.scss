@@ -4,7 +4,7 @@ Theme URI: https://github.com/govfresh/govpress
 Author: GovFresh
 Author URI: https://github.com/govfresh/govpress
 Description: GovPress is a free WordPress theme for government and public-sector websites, designed around WCAG accessibility guidelines with automatic light and dark mode that follows each visitor's device settings — no toggle required. Banner position, menu placement, colors, and an optional icon navigation menu are all configurable from the Customizer, without touching code. All code is peer reviewed and patches are welcome via GitHub: https://github.com/govfresh/govpress.
-Version: 1.5.11
+Version: 1.5.12
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.4
@@ -703,6 +703,17 @@ object {
 	border-radius: 10px;
 	background: rgba(255,255,255, 0.3);
 	padding: 1.75em 1.5em;
+}
+@media (prefers-color-scheme: dark) {
+	/*
+	 * The overlay above is tuned for a lighter-blue card against the
+	 * light-mode primary color; against dark mode's near-black
+	 * --color-primary the same overlay reads as a flat mid-gray, so it
+	 * needs a much lower opacity here instead.
+	 */
+	#hero-widgets .section-wrap {
+		background: rgba(255,255,255,.06);
+	}
 }
 #hero-widgets .search-form {
 	max-width:36rem;
