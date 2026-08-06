@@ -8,6 +8,10 @@
 
 [GovPress on WordPress.org](https://wordpress.org/themes/govpress/)
 
+### Documentation
+
+[GovPress Documentation](https://github.com/govfresh/govpress/wiki)
+
 ### Requirements
 
 * WordPress 5.0+
