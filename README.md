@@ -12,6 +12,10 @@
 
 [GovPress Documentation](https://github.com/govfresh/govpress/wiki)
 
+### Releases
+
+[Release Notes](https://github.com/govfresh/govpress/releases)
+
 ### Requirements
 
 * WordPress 5.0+
