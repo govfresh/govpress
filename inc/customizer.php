@@ -176,7 +176,7 @@ function govpress_custom_logo() {
 	}
 
 	$img = sprintf(
-		'<img src="%1$s" width="%2$d" height="%3$d" class="custom-logo" alt="%4$s">',
+		'<img src="%1$s" width="%2$d" height="%3$d" class="custom-logo" alt="%4$s" decoding="async">',
 		esc_url( $light_image[0] ),
 		absint( $light_image[1] ),
 		absint( $light_image[2] ),
