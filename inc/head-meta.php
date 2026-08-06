@@ -61,25 +61,6 @@ function govpress_meta_description() {
 add_action( 'wp_head', 'govpress_meta_description', 1 );
 
 /**
- * Remove the WordPress version number from the front end. A minor
- * hardening step: no reason to advertise the exact core version running.
- */
-remove_action( 'wp_head', 'wp_generator' );
-
-/**
- * Remove the shortlink tag. Nothing meaningful consumes it today.
- */
-remove_action( 'wp_head', 'wp_shortlink_wp_head' );
-
-/**
- * Remove the RSD (Really Simple Discovery) link, used by legacy desktop
- * blog clients to auto-discover the XML-RPC endpoint. This only stops
- * advertising the endpoint - xmlrpc.php itself is untouched and still
- * responds, so this isn't a substitute for actually disabling XML-RPC.
- */
-remove_action( 'wp_head', 'rsd_link' );
-
-/**
  * Remove WordPress's emoji detection script and styles. This is a
  * canvas-based feature-detection routine from the era before browsers
  * reliably supported emoji natively; every browser in this theme's own
